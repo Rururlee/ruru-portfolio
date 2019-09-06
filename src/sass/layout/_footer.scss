@@ -1,0 +1,11 @@
+.footer {
+  flex-shrink: 0;
+  padding: 3rem;
+  background-color: $color-white;
+}
+
+@include media-breakpoint-down(sm) {
+  .footer {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+html {
+  font-size: 0.8rem;
+  position: relative;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: $color-grey-1;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #0c0c0e;
+}
+
+
+
+.wrapper{
+  flex: 1 0 auto;
+  margin-bottom: 6rem;
+}

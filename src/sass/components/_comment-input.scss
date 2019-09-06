@@ -1,0 +1,51 @@
+.comment-input {
+
+
+  &__title {
+    color: $color-grey-d;
+    // font-weight: 500;
+  }
+
+  &__count {
+    color: $color-grey-m;
+    font-size: 1rem;
+  }
+
+  &__textarea {
+    background-color: $color-grey-m2;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    /*remove the resize handle on the bottom right*/
+    flex: 1;
+
+    &::-webkit-input-placeholder ,
+    &::-moz-input-placeholder,
+    &:-moz-input-placeholder ,
+    &:-ms-input-placeholder {
+      padding-left: 2rem;
+      color: blue
+    }
+  }
+
+  &__btn {
+
+    &,
+    &:link,
+    &:visited {
+      line-height: 8;
+      background-color: $color-grey-m3;
+      color: $color-white;
+    }
+  }
+  &__text-count{
+    text-align: right;
+    color: $color-grey-m;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+}

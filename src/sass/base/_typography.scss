@@ -1,0 +1,37 @@
+.s5-label{
+  padding: 0.5rem 0;
+  color: $color-blue-light;
+  letter-spacing: 1px;
+
+}
+
+.s5-heading-secondary{
+  color: $color-black;
+  letter-spacing: 2px;
+}
+
+.s5-heading-tertiary{
+  color: $color-white;
+}
+
+.s5-paragaph-1{
+  color: $color-grey-2;
+  letter-spacing: 1px;
+}
+
+.s5-paragaph-2{
+  color: $color-grey-3;
+  letter-spacing: 1px;
+}
+
+.s5-text-link{
+  @include linkNoStyle{
+    color: $color-blue;
+  }
+}
+
+.s5-text-link--purple{
+  @include linkNoStyle{
+    color: $color-purple;
+  }
+}

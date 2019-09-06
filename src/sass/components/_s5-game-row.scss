@@ -1,0 +1,14 @@
+.s5-game-row {
+  &__link{
+    @include linkNoStyle;
+    display: block;
+    color: $color-grey-2;
+  }
+  &__item {
+    padding: 10px;
+    border-radius: 2.5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.09);
+    background-color: $color-white;
+    margin-bottom: 1rem;
+  }
+}

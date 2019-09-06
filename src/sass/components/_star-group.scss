@@ -1,0 +1,22 @@
+.star-group{
+  color: $color-grey-m;
+  // justify-content: space-between;
+  align-items: center;
+  display: flex;
+  &__star{
+    width: 1rem;
+    height: 0.9rem;
+    padding: 0 0.6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/star-b.svg);
+    &--active{
+      background-repeat: no-repeat;
+      background-image: url(../img/star-l.svg);
+    }
+  }
+  &__count{
+    margin-left: 5px;
+    font-size: 0.8rem;
+  }
+}

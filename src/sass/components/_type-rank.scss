@@ -1,0 +1,22 @@
+.type-rank{
+  &__title{
+    border-bottom: 1px solid $color-grey-m;
+  }
+  &__item{
+    border-bottom: 1px solid $color-grey-m;
+  }
+  &__link{
+    &,&:link,&:visited{
+      text-decoration: none;
+      color: $color-black;
+    }
+  }
+  &__img{
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+  }
+  &__author{
+    color: $color-grey-d;
+  }
+}

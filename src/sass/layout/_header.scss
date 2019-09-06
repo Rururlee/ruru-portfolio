@@ -1,0 +1,80 @@
+.setn-header {
+  background-color: $color-navy;
+  color: #fff;
+  height: 40px;
+
+  &__link {
+    display: block;
+    width: 75px;
+    padding-top: 8px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.s5-header {
+  background-color: $color-blue;
+
+  &__link {
+    @include linkNoStyle {
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      width: 25%;
+    }
+  }
+
+  &__img {
+    width: 3.5rem;
+    padding: 0.8rem 0;
+    vertical-align: middle;
+  }
+
+  &__title {
+    // display: inline-block;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 6px;
+    letter-spacing: 3px;
+  }
+
+  &__nav-item {
+    color: $color-white;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+}
+
+.nav-link {
+  padding: 0.5rem 0.5rem;
+}
+
+.mobile-header{
+  display: none;
+  background-color: $color-navy;
+  padding: 0.5rem 0;
+  &__left{
+    border-right: 1px $color-white solid;
+  }
+  &__img{
+    &--left{
+      width: 7rem;
+    }
+    &--right{
+      width: 3.5rem;
+    }
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  .header {
+    display: none;
+  }
+  .mobile-header{
+    display: block;
+  }
+}

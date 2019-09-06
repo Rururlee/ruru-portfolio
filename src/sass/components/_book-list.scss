@@ -1,0 +1,42 @@
+.book-list{
+  margin-bottom: 2rem;
+  &__link{
+    &:link,
+    &:visited{
+      text-decoration: none;
+      color: $color-black;
+    }
+  }
+  &__img{
+    width: 80%;
+  }
+  &__item:first-child{
+    border-top: 1px solid rgba($color-grey-m,0.3);
+  }
+  &__item{
+    padding: 15px 0;
+    border-bottom: 1px solid rgba($color-grey-m,0.3);
+  }
+  &__info{
+    justify-content: space-around;
+    display:flex;
+    align-items:baseline;
+  }
+}
+
+// SMALL SCREEN DEVICES
+@include media-breakpoint-down(sm) {
+  .book-list{
+    &__info{
+      align-items:baseline;
+    }
+
+    &__chapter{
+      position: absolute;
+      right: 5%;
+      top: -50%;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+  }
+}

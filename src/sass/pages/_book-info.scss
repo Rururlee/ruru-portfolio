@@ -1,0 +1,57 @@
+.cash-box {
+    background: $color-white;
+     a{
+      color:$color-yellow;
+      transition: color 0.15s ease-in-out, background 0.15s ease-in-out;
+     } 
+     a:hover{
+      color:$color-white;
+      background: $color-yellow;
+     }
+}
+.cash-content{
+  border: 3px solid #f5a623 !important;
+  text-align: center;
+  padding:10px;
+  height: 130px;
+  display: flex;
+  text-decoration: none !important;
+    div{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-decoration: none;
+    }
+}
+
+.book-b {
+  font-size: 2.5rem;
+}
+
+.book-d{
+  display:none;
+}
+
+.book-info{
+  display: flex;
+  align-items: baseline;
+}
+
+
+@include media-breakpoint-down(sm) {
+  .book-info{
+    display: block;
+  }
+  .book-b {
+    font-size: 1.3rem;
+  }
+  .book-c{
+    display:none;
+  }
+  .book-d {
+    display: block;
+  }
+  .sm-none{
+    display: none;
+  }
+}
