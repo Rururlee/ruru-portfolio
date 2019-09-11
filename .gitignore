@@ -1,5 +1,6 @@
 node_modules/
 
+
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
@@ -13,3 +14,4 @@ node_modules/
 *.tar
 *.zip
 *.psd
+*.txt
