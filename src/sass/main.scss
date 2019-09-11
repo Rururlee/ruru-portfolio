@@ -8,17 +8,27 @@
 // Vendors
 @import "vendors/bootstrap/scss/bootstrap";
 @import "vendors/baguetteBox.min";
+@import "vendors/swiper";
 
 // Layout
 @import "layout/header";
 @import "layout/footer";
 
 // Components
-// @import "./components/s5-column";
+@import "./components/book-list";
+@import "./components/card-item";
+@import "./components/chapter-list";
+@import "./components/comment-input";
+@import "./components/comment-list";
+@import "./components/star-group";
+@import "./components/like-group";
+@import "./components/wk-column";
 
 //pages
 @import "pages/index";
-
+@import "pages/book-info";
+@import "pages/content";
+@import "pages/content-info";
 
 // Base
 @import "base/base";
@@ -26,11 +36,9 @@
 
 
 //font
-
-
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC|Manjari&display=swap');
 @font-face {
   font-family: MyCustomFont;
-  src: url('https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans&display=swap');
+  src: url('https://fonts.googleapis.com/css?family=Noto+Sans+TC|Manjari&display=swap');
 }
 

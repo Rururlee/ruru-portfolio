@@ -1,80 +1,111 @@
-.setn-header {
-  background-color: $color-navy;
-  color: #fff;
-  height: 40px;
-
-  &__link {
-    display: block;
-    width: 75px;
-    padding-top: 8px;
-  }
-
-  &__img {
-    width: 100%;
-  }
-}
-
-.s5-header {
-  background-color: $color-blue;
-
-  &__link {
-    @include linkNoStyle {
-      color: $color-white;
-      display: flex;
-      align-items: center;
-      width: 25%;
-    }
-  }
-
-  &__img {
-    width: 3.5rem;
-    padding: 0.8rem 0;
-    vertical-align: middle;
-  }
-
-  &__title {
-    // display: inline-block;
-    font-weight: bold;
-    margin-left: 10px;
-    margin-top: 6px;
-    letter-spacing: 3px;
-  }
-
-  &__nav-item {
-    color: $color-white;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    font-weight: 400;
-  }
-}
-
 .nav-link {
-  padding: 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
 }
 
-.mobile-header{
-  display: none;
-  background-color: $color-navy;
-  padding: 0.5rem 0;
-  &__left{
-    border-right: 1px $color-white solid;
-  }
-  &__img{
-    &--left{
-      width: 7rem;
+
+.header {
+    padding: 2rem 0 1.5rem 0;
+    background-color: #7c7575;
+    margin-bottom: 0.2rem;
+
+    &__logo {
+        font-weight: bold;
+        color: #ffffff;
+        // font-size: 1.2rem !important;
+
     }
-    &--right{
-      width: 3.5rem;
+
+    &__img {
+        width: 100%;
+        margin-left: 1rem;
     }
-  }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        padding: 0 1.5rem;
+        font-size: 1.25rem;
+        position: relative;
+
+        &--chapter {
+            color: #4a4a4a;
+        }
+    }
+
+    &__link {
+        color: #ffffff;
+        text-decoration: none;
+        transition: all .3s;
+        font-size: 1rem;
+        padding:0 3rem; 
+
+        &:visited,
+        &:link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        &:hover{
+            color: #4a4a4a;
+        }
+
+        &--active,
+        &--active:visited,
+        &--active:link {
+            color: #3194ff;
+        }
+        &--page,
+        &--page:visited,
+        &--page:link {
+            color: #4a4a4a;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+    }
+
 }
+
+
+
+
 
 
 @include media-breakpoint-down(sm) {
-  .header {
-    display: none;
-  }
-  .mobile-header{
-    display: block;
-  }
+    .header {
+        margin-bottom: 0;
+
+        &__nav::after {
+            display: none;
+        }
+
+        &__search {
+            display: none !important;
+        }
+
+        &__logo {
+            display: none !important;
+        }
+        &__link {
+            padding:0 2rem; 
+        }
+    }
+
+    .sm__title {
+        display: block;
+        font-size: 1.6rem;
+    }
+
+    .login {
+        display: none !important;
+    }
+
+
+}
+
+.heading-secondary {
+    color: #4a4a4a;
+    padding: 0.5rem 0;
+    display: inline-block;
 }

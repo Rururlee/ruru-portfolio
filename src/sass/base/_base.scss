@@ -29,13 +29,8 @@ html, body {
 body{
   display: flex;
   flex-direction: column;
-  background-color: $color-grey-1;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Noto Sans TC', sans-serif;
-  background-color: #0c0c0e;
+  background-color: #f1f1f1;
 }
-
-
 
 .wrapper{
   flex: 1 0 auto;

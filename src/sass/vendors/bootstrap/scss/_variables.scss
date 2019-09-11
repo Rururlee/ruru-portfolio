@@ -34,16 +34,23 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$blue:        #007bff !default;
+$indigo:      #6610f2 !default;
+$purple:      #6f42c1 !default;
+$pink:        #e83e8c !default;
+$red:         #dc3545 !default;
+$orange:      #fd7e14 !default;
+$yellow:      #ffc107 !default;
+$green:       #28a745 !default;
+$teal:        #20c997 !default;
+$cyan:        #17a2b8 !default;
+$wyellow:     #f5a623 !default;
+$wgrey:       #9e9e9e !default;
+$wgrey-dark:  #4a4a4a !default;
+$wturquoise:  #38DECE !default;
+$wred:        #ef002b !default;
+$wblack:      #2f2f2f !default; 
+
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -74,19 +81,33 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
+$wk-yellow:     $wyellow !default;
+$wk-grey:       $wgrey !default;
+$wk-grey-dark:  $wgrey-dark !default;
+$wk-turquoise:  $wturquoise !default;
+$wk-red:        $wred !default;
+$wk-black:      $wblack !default;
+
+
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
-    "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    "wk-yellow": $wk-yellow,
+    "wk-grey": $wk-grey,
+    "wk-grey-dark":$wk-grey-dark,
+    "wk-turquoise": $wk-turquoise,
+    "wk-red": $wk-red,
+    "wk-black": $wk-black
   ),
   $theme-colors
 );
@@ -213,7 +234,7 @@ $container-max-widths: map-merge(
     sm: 540px,
     md: 720px,
     lg: 960px,
-    xl: 960px
+    xl: 1300px
   ),
   $container-max-widths
 );
@@ -275,7 +296,7 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Open Sans', 'Noto Sans TC', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue",  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+$font-family-sans-serif:      'Manjari', 'Noto Sans TC', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue",  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monoace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
