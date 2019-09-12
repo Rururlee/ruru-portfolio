@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC|Manjari&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC|Manjari&display=swap");
 .small-icon {
   width: 1rem; }
 
@@ -8526,9 +8526,12 @@ button.swiper-pagination-bullet {
   padding: 0.5rem 0.5rem; }
 
 .header {
+  width: 100%;
   padding: 2rem 0 1.5rem 0;
   background-color: #7c7575;
-  margin-bottom: 0.2rem; }
+  position: fixed;
+  z-index: 1;
+  transition: all .3s; }
   .header__logo {
     font-weight: bold;
     color: #ffffff; }
@@ -8946,88 +8949,52 @@ button.swiper-pagination-bullet {
     height: 35%;
     margin-left: -3.3rem; } }
 
-@media (max-width: 375.98px) {
-  .top div:nth-child(1) {
-    bottom: -25%; }
-  .item {
-    margin-left: -3.1rem; } }
+.main {
+  background: #7c7575;
+  padding: 10rem 0 6rem 0;
+  color: white; }
+  .main__left {
+    padding-right: 3rem; }
+  .main__right {
+    padding-right: 3rem; }
+    .main__right span:nth-child(1) {
+      font-size: 3rem;
+      line-height: 2rem; }
+    .main__right a {
+      color: #4a4a4a;
+      transition: all .3s; }
+      .main__right a:hover {
+        color: black; }
 
-@media (max-width: 320.98px) {
-  .top div:nth-child(1) {
-    bottom: -25%; }
-  .item {
-    margin-left: -2.72rem; } }
+.scroll {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem; }
+  .scroll__arrow {
+    transform: rotate(45deg) translateY(-15px) translateX(5px);
+    border-bottom: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    height: 30px;
+    width: 30px;
+    cursor: point; }
 
-.sort-tab__text {
-  padding: 0 1rem; }
-
-.sort-tab__group {
-  position: relative;
-  display: inline-block;
-  width: 13.5rem;
-  height: 2.3rem;
-  transform: translateY(30%);
-  background-color: #d8d8d8;
-  border-radius: 3rem;
-  color: #9b9b9b;
-  cursor: pointer; }
-
-.sort-tab__tab {
-  border: none;
-  position: absolute;
-  padding: 0.3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.5s; }
-  .sort-tab__tab-1 {
-    left: 0;
-    z-index: 1; }
-  .sort-tab__tab-2 {
-    left: 30%;
-    z-index: 1; }
-  .sort-tab__tab-3 {
-    right: 0;
-    z-index: 1; }
-  .sort-tab__tab--active {
-    z-index: 2;
-    background-color: #3194ff;
-    color: #ffffff !important; }
+@media (max-width: 991.98px) {
+  .main__left {
+    width: 50%; }
+  .main__right {
+    margin: 2rem 0; } }
 
 @media (max-width: 767.98px) {
-  .sort-tab {
-    display: none; } }
-
-.bottom-menu {
-  display: none; }
-
-@media (max-width: 767.98px) {
-  .bottom-menu {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-top: 1px #eeeeee solid;
-    background-color: #ffffff; }
-    .bottom-menu__image {
-      display: block;
-      width: 2rem;
-      height: 2rem;
-      fill: currentColor;
-      margin: 0.2rem auto; }
-    .bottom-menu__link, .bottom-menu__link:visited, .bottom-menu__link:link {
-      text-decoration: none;
-      display: block;
-      padding-top: 1rem;
-      color: #4a4a4a; }
-    .bottom-menu__link--active, .bottom-menu__link--active:visited, .bottom-menu__link--active:link {
-      color: #3194ff; }
-    .bottom-menu__item {
-      flex: 1; }
-    .bottom-menu__name {
-      text-align: center; } }
+  .main {
+    padding: 7rem 0 6rem 0; }
+    .main__left {
+      width: 90%;
+      padding-right: 0;
+      margin: 0 auto; }
+    .main__right {
+      width: 90%;
+      padding-right: 0;
+      margin: 2rem auto; } }
 
 .scroll-row {
   flex-wrap: nowrap !important;
@@ -9314,4 +9281,4 @@ body {
 
 @font-face {
   font-family: MyCustomFont;
-  src: url("https://fonts.googleapis.com/css?family=Noto+Sans+TC|Manjari&display=swap"); }
+  src: url("https://fonts.googleapis.com/css?family=Noto+Serif+TC|Manjari&display=swap"); }

@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>路路而 | RURUR</title>
-  <link rel="stylesheet" href="./css/all.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>路路而 | RURUR</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/vue.js"></script>
 </head>
 
 <body>
-  <!-- 
+    <!-- 
 
 使用 Ajax 與後端合作串接資料 
 基本 JavaScript 語法、ES6 語法
@@ -25,85 +25,63 @@ jQuery 動態效果
 研究Vue CLI 、Vue Router、Vuex
 
 -->
-  <div class="content-wrapper">
-        <!-- 頂部選單 開始-->
+    <div class="content-wrapper">
         <header class="header">
             <div class="container-fluid">
-                <div class="row align-items-center justify-content-between">                    
+                <div class="row align-items-center justify-content-center">
                     <div class="col-md-4">
-                      <h5><a href="#" class="header__link header__logo">RU</a></h5>
+                        <h5><a href="#" class="header__link header__logo">RU</a></h5>
                     </div>
-                     <div class="col-md-4">
-                        <div class="header__nav menu__nav d-flex justify-content-center h5">
+                    <div class="col-md-4">
+                        <nav class="header__nav menu__nav d-flex justify-content-center h5">
                             <!--選單 開始-->
                             <item-list></item-list>
                             <!--選單 結束-->
-                        </div>
+                        </nav>
                     </div>
-                     <div class="col-md-4">
+                    <div class="col-md-4">
                     </div>
                 </div>
             </div>
         </header>
-        <!-- 頂部選單 結束 -->
-
-
-  </div>
-
-
-  <!-- 底部資訊開始 -->
-  <div class="footer">
-    <div class="container">
-      <div class="section-content">
-        <div class="row align-items-center">
-          <div class="col-2">
-            <div class="footer__logo">
-              <img src="./img/logo.png" alt="xforce logo" class="img-fluid">
-            </div>
-          </div>
-          <div class="col-6">
-            <p class="footer__intro">異軍互動娛樂是一家專注於 HTML 5 及數位經營的公司，為精通網際網路行業生態精英所組成的中小型企業，運用 HTML5 ( 簡稱 H5 )
-              跨平台的技術，建立遊戲及數位內容整合平台，以協助解決行動
-              APP/
-              Web Site 使用者流量變現等問題</p>
-          </div>
-          <div class="col-4">
-            <ul class="contact">
-              <li><img src="./img/envelope.svg" alt="envelope" class="contact__icon"> <span class="contact__type">客服信箱</span><a
-                  href="#" class="contact__link">cs.wakool@gmail.com</a></li>
-              <li><img src="./img/phone-call.svg" alt="envelope" class="contact__icon"><span class="contact__type">聯絡電話</span><a
-                  class="contact__link" href="#"> 02-2748 8805</a></li>
-              <li><img src="./img/clock.svg" alt="envelope" class="contact__icon"><span class="contact__type">週一～週五</span>
-                10:00~18:00</li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__nav">
-          <ul class="nav justify-content-center text-muted">
-            <li class="nav-item">
-              <a class="nav-link text-muted" href="#">意見回饋</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-muted" href="#">幫助</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-muted" href="#">條款</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-muted" href="#">隱私權保護</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+        <main class="main">
+            <section class="d-flex flex-column flex-md-row justify-content-center align-items-md-center">
+                <img src="img/isme.jpg" class="main__left" alt="ruru">
+                <div class="main__right">
+                        <span>RURUR</span><br>
+                        <span>Welcome To Shu's Personal Portfolio Site.</span><br>
+                        <span>李英如<br>
+                            目前專職於前端網頁開發<br><br>
+                            對設計充滿熱情，喜歡學習新技術<br>
+                            相信自己沒有極限，必須不斷充實自我</span><br>
+                        <a href="#">往作品集</a>
+                </div>
+            </section>
+            <section class="scroll">
+               <div class="scroll__arrow"></div>
+            </section>
+        </main>
     </div>
-
-  </div>
-  <!-- 底部資訊結束 -->
-
-
-
-  <script src="./js/all.js"></script>
-
+    <!-- 底部資訊開始 -->
+    <div class="footer">
+        <div class="container">
+            <div class="section-content">
+                <div class="row align-items-center">
+                    <div class="col-2">
+                        <!-- content -->
+                    </div>
+                    <div class="col-6">
+                        <!-- content -->
+                    </div>
+                    <div class="col-4">
+                        <!-- content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部資訊結束 -->
+    <script src="./js/all.js"></script>
 </body>
 
 </html>
