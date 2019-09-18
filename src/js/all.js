@@ -58,3 +58,12 @@ Vue.component("item-list", {
 //         e.preventDefault(),
 //             $("body").toggleClass("hamburger-expanded")
 //     })
+
+
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var height = $(window).height();
+    $('#fadeout').css({
+        'opacity': ((height - scrollTop) / height)
+    });
+});
