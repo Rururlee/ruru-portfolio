@@ -8854,9 +8854,6 @@ button.swiper-pagination-bullet {
   .container-fluid {
     width: 100%; } }
 
-.container .main-btn {
-  width: 90%; }
-
 .top {
   display: flex;
   align-items: flex-end;
@@ -8941,10 +8938,6 @@ button.swiper-pagination-bullet {
       bottom: 0%; }
     to {
       bottom: 3%; } }
-  .container .main-btn {
-    width: 100%; }
-    .container .main-btn div {
-      padding: 0 0.3rem 0 0.3rem; }
   .item {
     width: 35%;
     height: 35%;
@@ -9011,13 +9004,46 @@ button.swiper-pagination-bullet {
   .scroll {
     bottom: 10px; } }
 
-.about {
+.work {
   position: relative;
   bottom: -100vh;
   width: 100%;
   height: 100vh;
   z-index: 1;
   background: #f1f1f1; }
+  .work__web {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    cursor: pointer; }
+    .work__web img {
+      width: 100%;
+      border-radius: 25px; }
+    .work__web:after {
+      content: 'learn more';
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0p;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      transition: .3s ease;
+      opacity: 1; }
+      .work__web:after:hover {
+        opacity: 1; }
 
 .scroll-row {
   flex-wrap: nowrap !important;
