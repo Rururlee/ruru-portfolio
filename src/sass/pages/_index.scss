@@ -336,7 +336,14 @@ html::-webkit-scrollbar {
     }
 }
 
+// html{
+//     -ms-overflow-style: none;
+//     overflow: -moz-scrollbars-none;
+// }
 
+// html::-webkit-scrollbar { 
+//     width: 0 !important;
+// }
 //show
 .show{
     &__fullscreen {
@@ -347,12 +354,20 @@ html::-webkit-scrollbar {
             height: 100%;
             z-index: 1000;
             background: rgba(255,255,255,1);
-            overflow:hidden;
+            // overflow:hidden;
+            overflow:scroll;
+            -ms-overflow-style: none;
+            overflow: -moz-scrollbars-none;
+            &::-webkit-scrollbar {
+                width: 0 !important;
+            }
+
     }
     &__box{
         display: flex;
         justify-content:center;
         width: 100%;
+
 
     }
     &__info{
@@ -364,7 +379,7 @@ html::-webkit-scrollbar {
         width: 100%;
         background: #B2B0FF;
         & img{
-        width: 50%;
+        width: 100%;
 
         }
      }          

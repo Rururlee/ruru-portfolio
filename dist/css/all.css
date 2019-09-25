@@ -9071,7 +9071,11 @@ html::-webkit-scrollbar {
   height: 100%;
   z-index: 1000;
   background: white;
-  overflow: hidden; }
+  overflow: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none; }
+  .show__fullscreen::-webkit-scrollbar {
+    width: 0 !important; }
 
 .show__box {
   display: flex;
@@ -9086,7 +9090,7 @@ html::-webkit-scrollbar {
   width: 100%;
   background: #B2B0FF; }
   .show__img img {
-    width: 50%; }
+    width: 100%; }
 
 .lock {
   position: absolute;
