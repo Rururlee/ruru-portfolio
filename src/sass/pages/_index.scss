@@ -1,81 +1,90 @@
-@include media-breakpoint-down(lg)  {
-.container-fluid {
-    width: 100%; 
-    } 
+html{
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
 }
 
- .top {
-        display: flex;
-        align-items: flex-end;
-        height:100%;
-        text-align: center;
-        margin: 0 auto;
+html::-webkit-scrollbar { 
+    width: 0 !important;
+}
 
-        div {
-            position: relative;
-
-            &:nth-child(1) {
-                display: none;
-                animation-name: topgo;
-                animation-duration: 1.5s;
-            }
-
-            &:nth-child(2) {
-                width: 25%;
-                bottom: 22%;
-                left: 0;
-                animation-name: topgo;
-                animation-duration: 1.5s;
-
-                img {
-                    width: 70%;
-                }
-            }
-
-            &:nth-child(4) {
-                width: 25%;
-                bottom: 20%;
-                left: 0;
-                animation-name: topgo;
-                animation-duration: 1.5s;
-
-                img {
-                    width: 35%;
-                }
-            }
-
-
-            &:nth-child(3) {
-                width: 50%;
-                bottom: 15%;
-                left: 0;
-                animation-name: topgo_2;
-                animation-duration: 1s;
-            }
-
-        }
+@include media-breakpoint-down(lg) {
+    .container-fluid {
+        width: 100%;
     }
+}
 
+.top {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
 
-    @keyframes topgo {
-        from {
-            opacity: 0;
+    div {
+        position: relative;
+
+        &:nth-child(1) {
+            display: none;
+            animation-name: topgo;
+            animation-duration: 1.5s;
         }
 
-        to {
-            opacity: 1;
-        }
-    }
+        &:nth-child(2) {
+            width: 25%;
+            bottom: 22%;
+            left: 0;
+            animation-name: topgo;
+            animation-duration: 1.5s;
 
-    @keyframes topgo_2 {
-        from {
-            bottom: 0%;
+            img {
+                width: 70%;
+            }
         }
 
-        to {
+        &:nth-child(4) {
+            width: 25%;
+            bottom: 20%;
+            left: 0;
+            animation-name: topgo;
+            animation-duration: 1.5s;
+
+            img {
+                width: 35%;
+            }
+        }
+
+
+        &:nth-child(3) {
+            width: 50%;
             bottom: 15%;
+            left: 0;
+            animation-name: topgo_2;
+            animation-duration: 1s;
         }
+
     }
+}
+
+
+@keyframes topgo {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes topgo_2 {
+    from {
+        bottom: 0%;
+    }
+
+    to {
+        bottom: 15%;
+    }
+}
 
 
 
@@ -101,9 +110,9 @@
     }
 
     .top div:nth-child(3) {
-            width: 100%;
+        width: 100%;
     }
-    
+
 }
 
 @media (max-width: 767.98px) {
@@ -113,40 +122,40 @@
 }
 
 @media (max-width: 414.98px) {
-    
-     .top {
-            flex-wrap: wrap;
 
-            div {
-                &:nth-child(1) {
-                    display: block;
-                    bottom: -26%;
-                    width: 80%;
-                    margin: 0 auto;
-                    text-align: center;
+    .top {
+        flex-wrap: wrap;
+
+        div {
+            &:nth-child(1) {
+                display: block;
+                bottom: -26%;
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            &:nth-child(even) {
+                display: none;
+            }
+
+            &:nth-child(3) {
+                bottom: 3%;
+            }
+
+            @keyframes topgo_2 {
+                from {
+                    bottom: 0%;
                 }
 
-                &:nth-child(even) {
-                    display: none;
-                }
-
-                &:nth-child(3) {
+                to {
                     bottom: 3%;
                 }
-
-                @keyframes topgo_2 {
-                    from {
-                        bottom: 0%;
-                    }
-
-                    to {
-                        bottom: 3%;
-                    }
-                }
-
             }
+
         }
-    
+    }
+
 
 
     .item {
@@ -165,31 +174,35 @@
     position: fixed;
     background: #7c7575;
     padding: 10rem 0 6rem 0;
-    color:white;
+    color: white;
     width: 100%;
-    height:100vh;
+    height: 100vh;
     overflow: hidden;
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
-    &__left{
-        padding-right:3rem;
+
+    &__left {
+        padding-right: 3rem;
         width: 30%;
     }
-    &__right{
-        padding-right:3rem; 
 
-        & span:nth-child(1){
-            font-size: 3rem;   
-            line-height:2rem;
+    &__right {
+        padding-right: 3rem;
+
+        & span:nth-child(1) {
+            font-size: 3rem;
+            line-height: 2rem;
         }
-        & span:nth-child(2){     
-        }
-        & a{  
-            color:#4a4a4a;
-            transition:all .3s;
-            &:hover{
-                color:black;
+
+        & span:nth-child(2) {}
+
+        & a {
+            color: #4a4a4a;
+            transition: all .3s;
+
+            &:hover {
+                color: black;
             }
         }
     }
@@ -199,137 +212,183 @@
     // display: flex;
     // justify-content:center;
     // margin-top: 5rem;
-    bottom:105px;
+    bottom: 105px;
     position: absolute;
     left: calc(50% - 26px);
-    &__arrow{
+
+    &__arrow {
         transform: rotate(45deg) translateY(-15px) translateX(0px);
         border-bottom: 1px solid #ffffff;
         border-right: 1px solid #ffffff;
         height: 30px;
         width: 30px;
         cursor: point;
-            
+
     }
 }
-@include media-breakpoint-down(md) { 
-   
+
+@include media-breakpoint-down(md) {
+
 
     .main {
-        &__left{
-            width:50%;
+        &__left {
+            width: 50%;
         }
-        &__right{
+
+        &__right {
             margin: 2rem 0;
         }
     }
 
 }
 
-@include media-breakpoint-down(sm) { 
-    .scroll{
-       bottom:90px;
+@include media-breakpoint-down(sm) {
+    .scroll {
+        bottom: 90px;
     }
 
     .main {
         padding: 3rem 0 6rem 0;
-            &__left{
-                width:90%;
-                padding-right:0;
-                margin: 0 auto;
-            }
-             &__right{
-                width:90%;
-                padding-right:0;
-                margin:2rem auto;
-            }
+
+        &__left {
+            width: 90%;
+            padding-right: 0;
+            margin: 0 auto;
         }
 
+        &__right {
+            width: 90%;
+            padding-right: 0;
+            margin: 2rem auto;
+        }
+    }
+
 }
-@media (max-width: 320.98px) { 
-    .scroll{
-       bottom:10px;
+
+@media (max-width: 320.98px) {
+    .scroll {
+        bottom: 10px;
     }
 }
 
-.work{
+.work {
     position: relative;
     bottom: -100vh;
     width: 100%;
     height: 100%;
     z-index: 1;
     background: #f1f1f1;
-        &__web{
-                width:90%;
-                margin: auto;
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                min-width: 0;
-                word-wrap: break-word;
-                background-color: #fff;
-                background-clip: border-box;
-                cursor: pointer;
-             & img{
-                width: 100%;
-                border-radius: 25px;
-             }
-             &:hover{
-                        &:after{/*移標過去，__web:after透明度變1*/
-                            opacity: 1;
-                        }
-            }
-             &:after{
-                content:'learn more';
-                color:#ffffff;
-                display: flex;
-                justify-content:center;
-                align-items: center;
-                border-radius: 25px;
-                width: 50px;
-                height: 50px;
-                background-color: rgba(0,0,0,0.7);
-                position: absolute;
-                top: 0p;
-                right: 0;
-                width: 100% ;
-                height: 100% ;
-                transition: .3s ease;
-                opacity: 0;
-                
-             }
+
+    &__web {
+        width: 90%;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        cursor: pointer;
+        border-radius: 25px;
+
+        //for ie
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+
+        & img {
+            width: 100%;
+            height: 100%; //for ie 
+            border-radius: 25px;
         }
+
+        &:hover {
+            &:after {
+                /*移標過去，__web:after透明度變1*/
+                opacity: 1;
+            }
+        }
+
+        &:after {
+            content: 'learn more';
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            transition: .3s ease;
+            opacity: 0;
+
+            //for ie
+            display: -ms-flexbox;
+            -ms-flex-pack: center;
+            -ms-flex-align: center;
+        }
+       
+    }
 }
 
 
+//show
+.show{
+    &__fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background: rgba(255,255,255,1);
+            overflow:hidden;
+    }
+    &__box{
+        display: flex;
+        justify-content:center;
+        width: 100%;
 
-// .show > ul > li:after {
-//     content: 'more';
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: absolute;
-//     top: 10px;
-//     right: 10px;
-//     width: calc( 100% - 20px );
-//     height: calc( 100% - 20px );
-//     background: rgba(30,30,30,0.85);
-//     color: #fff;
-//     transition: .3s;
-//     opacity: 0;
-// }
+    }
+    &__info{
+        width: 100%;
+        background: #FFB0B0;
+
+    } 
+    &__img {
+        width: 100%;
+        background: #B2B0FF;
+        & img{
+        width: 50%;
+
+        }
+     }          
+}
+
+//使用這個呼叫class 當lightbox開啟，母元素不能捲動
+.lock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+}
 
 
+.scroll-row {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 
-  .scroll-row {
-      flex-wrap: nowrap !important;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-
-      &::-webkit-scrollbar {
-          display: none;
-      }
-  }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
 
 
 
@@ -337,37 +396,39 @@
 
 
 //手機版縱向
-@media (max-height: 400px) { //width:662px
+@media (max-height: 400px) {
+
+    //width:662px
     .main {
-         
-        &__left{
+
+        &__left {
             width: 40%;
             height: 40%;
-            margin:0;
+            margin: 0;
         }
 
-         &__right{
-                width:40%;
-                padding-left:2rem;
-                margin:3rem 0;
+        &__right {
+            width: 40%;
+            padding-left: 2rem;
+            margin: 3rem 0;
 
-                & span:nth-child(1){
-                    font-size: 2.5rem;   
-                }
+            & span:nth-child(1) {
+                font-size: 2.5rem;
+            }
         }
 
-        & div{
-            flex-direction:row !important;
+        & div {
+            flex-direction: row !important;
         }
     }
 
     .scroll {
-        bottom:65px;
-        &__arrow{
+        bottom: 65px;
+
+        &__arrow {
             height: 20px;
             width: 20px;
-                
+
         }
     }
 }
-

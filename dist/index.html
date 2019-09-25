@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="./js/jquery.min.js"></script>
-    <script src="./js/vue.js"></script>
+    <!-- <script src="./js/vue.js"></script> -->
 </head>
 
 <body>
@@ -25,7 +25,7 @@ jQuery 動態效果
 研究Vue CLI 、Vue Router、Vuex
 
 -->
-<script type="text/javascript">
+    <script type="text/javascript">
     //lightbox跳出圖片動態仔入
     // $(".list_show_section3 li").click(function(){
     //     var clickTab1 = $(this).attr('rel'),
@@ -43,7 +43,7 @@ jQuery 動態效果
     //         $("#info_3").fadeIn(300);
     //     },300);
     // });
-</script>
+    </script>
     <div class="content-wrapper">
         <header class="header">
             <div class="container-fluid">
@@ -52,9 +52,14 @@ jQuery 動態效果
                         <h5><a href="#" class="header__link header__logo">RU</a></h5>
                     </div>
                     <div class="col-md-4">
-                        <nav class="header__nav menu__nav d-flex justify-content-center h5">
+                        <nav class="header__nav menu__nav h5">
                             <!--選單 開始-->
-                            <item-list></item-list>
+                            <!-- <item-list></item-list> -->
+                            <div class="nav__active">
+                                <a href="index.html" class="header__link">about</a>
+                                <a href="#" class="header__link">web</a>
+                                <a href="#" class="header__link">design</a>
+                            </div>
                             <!--選單 結束-->
                         </nav>
                     </div>
@@ -101,7 +106,6 @@ jQuery 動態效果
                     <div class="col-12 col-md-4 mt-5">
                         <div class="work__web"><img class="m-auto" src="img/web_6.jpg"></div>
                     </div>
-                    
                 </div>
             </div>
         </section>
@@ -125,7 +129,20 @@ jQuery 動態效果
         </div>
     </div>
     <!-- footer end -->
-    <script src="./js/all.js"></script>
+
+    <!-- work__web__fullscreen start -->
+    <div class="show__fullscreen">
+        <section class="show__box">
+            <div class="show__info">Qちゃん包子饅頭店</div>
+            <div class="show__img">
+                <img src="img/layout_1_2.jpg" alt="">
+                <img src="img/layout_1.jpg" alt="">
+            </div>
+
+        </section >
+    </div>
+    <!-- web__fullscreen end -->
+    <!-- <script src="./js/all.js"></script> -->
 </body>
 
 </html>

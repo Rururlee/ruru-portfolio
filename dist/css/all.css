@@ -8544,7 +8544,9 @@ button.swiper-pagination-bullet {
     justify-content: center;
     padding: 0 1.5rem;
     font-size: 1.25rem;
-    position: relative; }
+    position: relative;
+    display: -ms-flexbox;
+    -ms-flex-pack: center; }
     .header__nav--chapter {
       color: #4a4a4a; }
   .header__link {
@@ -8851,6 +8853,13 @@ button.swiper-pagination-bullet {
 .s5-column {
   border-radius: 2.5px; }
 
+html {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none; }
+
+html::-webkit-scrollbar {
+  width: 0 !important; }
+
 @media (max-width: 1199.98px) {
   .container-fluid {
     width: 100%; } }
@@ -9022,9 +9031,13 @@ button.swiper-pagination-bullet {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    cursor: pointer; }
+    cursor: pointer;
+    border-radius: 25px;
+    display: -ms-flexbox;
+    -ms-flex-direction: column; }
     .work__web img {
       width: 100%;
+      height: 100%;
       border-radius: 25px; }
     .work__web:hover:after {
       /*移標過去，__web:after透明度變1*/
@@ -9040,12 +9053,47 @@ button.swiper-pagination-bullet {
       height: 50px;
       background-color: rgba(0, 0, 0, 0.7);
       position: absolute;
-      top: 0p;
+      top: 0;
       right: 0;
       width: 100%;
       height: 100%;
       transition: .3s ease;
-      opacity: 0; }
+      opacity: 0;
+      display: -ms-flexbox;
+      -ms-flex-pack: center;
+      -ms-flex-align: center; }
+
+.show__fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: white;
+  overflow: hidden; }
+
+.show__box {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+
+.show__info {
+  width: 100%;
+  background: #FFB0B0; }
+
+.show__img {
+  width: 100%;
+  background: #B2B0FF; }
+  .show__img img {
+    width: 50%; }
+
+.lock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden; }
 
 .scroll-row {
   flex-wrap: nowrap !important;

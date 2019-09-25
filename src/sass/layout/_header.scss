@@ -30,6 +30,10 @@
         font-size: 1.25rem;
         position: relative;
 
+        //for ie
+        display:-ms-flexbox;
+        -ms-flex-pack: center;
+
         &--chapter {
             color: #4a4a4a;
         }
