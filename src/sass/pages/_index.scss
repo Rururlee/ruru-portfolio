@@ -5,6 +5,7 @@ html{
 
 html::-webkit-scrollbar { 
     width: 0 !important;
+    height: 0 !important;
 }
 
 @include media-breakpoint-down(lg) {
@@ -365,16 +366,16 @@ html::-webkit-scrollbar {
     &__info{
         width: 50%;
         background: #E9E9E9;
+        // display:flex;
+        // align-items: center;
+        // justify-content: center;
         &__box{
-            width: 50%;
-            background: #D2D2D2;
-            position: relative;
-            top:calc( 100% - 300px );
-            left:calc( 100% - 300px );
+            width: 70%;
         }
         &__title{
-            font-size: 1.1rem;
-            font-weight: bold
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding-top: 1rem ;
         }
         &__text{
             font-size: 0.9rem;

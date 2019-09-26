@@ -8852,7 +8852,8 @@ html {
   overflow: -moz-scrollbars-none; }
 
 html::-webkit-scrollbar {
-  width: 0 !important; }
+  width: 0 !important;
+  height: 0 !important; }
 
 @media (max-width: 1199.98px) {
   .container-fluid {
@@ -9081,14 +9082,11 @@ html::-webkit-scrollbar {
   width: 50%;
   background: #E9E9E9; }
   .show__info__box {
-    width: 50%;
-    background: #D2D2D2;
-    position: relative;
-    top: calc( 100% - 300px);
-    left: calc( 100% - 300px); }
+    width: 70%; }
   .show__info__title {
-    font-size: 1.1rem;
-    font-weight: bold; }
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 1rem; }
   .show__info__text {
     font-size: 0.9rem; }
 
