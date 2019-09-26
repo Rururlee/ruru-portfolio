@@ -336,14 +336,7 @@ html::-webkit-scrollbar {
     }
 }
 
-// html{
-//     -ms-overflow-style: none;
-//     overflow: -moz-scrollbars-none;
-// }
 
-// html::-webkit-scrollbar { 
-//     width: 0 !important;
-// }
 //show
 .show{
     &__fullscreen {
@@ -354,42 +347,45 @@ html::-webkit-scrollbar {
             height: 100%;
             z-index: 1000;
             background: rgba(255,255,255,1);
-<<<<<<< Updated upstream
             // overflow:hidden;
             overflow:scroll;
             -ms-overflow-style: none;
             overflow: -moz-scrollbars-none;
             &::-webkit-scrollbar {
                 width: 0 !important;
+                height: 0 !important;
             }
-
-=======
-            overflow:scroll;
->>>>>>> Stashed changes
     }
     &__box{
         display: flex;
         justify-content:center;
         width: 100%;
 
-
     }
     &__info{
-        width: 100%;
-        background: #FFB0B0;
+        width: 50%;
+        background: #E9E9E9;
+        &__box{
+            width: 50%;
+            background: #D2D2D2;
+            position: relative;
+            top:calc( 100% - 300px );
+            left:calc( 100% - 300px );
+        }
+        &__title{
+            font-size: 1.1rem;
+            font-weight: bold
+        }
+        &__text{
+            font-size: 0.9rem;
+        }
 
     } 
     &__img {
-        width: 100%;
-        background: #B2B0FF;
-        & img{
-<<<<<<< Updated upstream
-        width: 100%;
-
-=======
         width: 50%;
-    
->>>>>>> Stashed changes
+        background: #C3C3C3;
+        & img{
+            width: 80%;
         }
      }          
 }

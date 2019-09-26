@@ -78,7 +78,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Manjari", "Noto Sans TC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  --font-family-sans-serif: "Manjari", "Noto Serif TC", serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monoace; }
 
 *,
@@ -97,7 +97,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Manjari", "Noto Sans TC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: "Manjari", "Noto Serif TC", serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -483,7 +483,7 @@ pre {
   overflow-y: scroll; }
 
 .container {
-  width: 90%;
+  width: 100%;
   padding-right: 7.5px;
   padding-left: 7.5px;
   margin-right: auto;
@@ -499,10 +499,10 @@ pre {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1300px; } }
+      max-width: 1140px; } }
 
 .container-fluid {
-  width: 90%;
+  width: 100%;
   padding-right: 7.5px;
   padding-left: 7.5px;
   margin-right: auto;
@@ -4713,7 +4713,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Manjari", "Noto Sans TC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: "Manjari", "Noto Serif TC", serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4798,7 +4798,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Manjari", "Noto Sans TC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  font-family: "Manjari", "Noto Serif TC", serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "spHelvetica Neue", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -8542,7 +8542,7 @@ button.swiper-pagination-bullet {
   .header__nav {
     display: flex;
     justify-content: center;
-    padding: 0 1.5rem;
+    padding: 1.5rem 1.5rem 0;
     font-size: 1.25rem;
     position: relative;
     display: -ms-flexbox;
@@ -8561,12 +8561,6 @@ button.swiper-pagination-bullet {
       font-size: 1rem; }
     .header__link:hover {
       color: #4a4a4a; }
-    .header__link--active, .header__link--active:visited, .header__link--active:link {
-      color: #3194ff; }
-    .header__link--page, .header__link--page:visited, .header__link--page:link {
-      color: #4a4a4a;
-      text-decoration: none;
-      font-size: 1.2rem; }
 
 @media (max-width: 767.98px) {
   .header {
@@ -9071,15 +9065,12 @@ html::-webkit-scrollbar {
   height: 100%;
   z-index: 1000;
   background: white;
-<<<<<<< Updated upstream
   overflow: scroll;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none; }
   .show__fullscreen::-webkit-scrollbar {
-    width: 0 !important; }
-=======
-  overflow: scroll; }
->>>>>>> Stashed changes
+    width: 0 !important;
+    height: 0 !important; }
 
 .show__box {
   display: flex;
@@ -9087,14 +9078,25 @@ html::-webkit-scrollbar {
   width: 100%; }
 
 .show__info {
-  width: 100%;
-  background: #FFB0B0; }
+  width: 50%;
+  background: #E9E9E9; }
+  .show__info__box {
+    width: 50%;
+    background: #D2D2D2;
+    position: relative;
+    top: calc( 100% - 300px);
+    left: calc( 100% - 300px); }
+  .show__info__title {
+    font-size: 1.1rem;
+    font-weight: bold; }
+  .show__info__text {
+    font-size: 0.9rem; }
 
 .show__img {
-  width: 100%;
-  background: #B2B0FF; }
+  width: 50%;
+  background: #C3C3C3; }
   .show__img img {
-    width: 100%; }
+    width: 80%; }
 
 .lock {
   position: absolute;
