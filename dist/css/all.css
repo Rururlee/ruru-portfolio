@@ -9071,11 +9071,15 @@ html::-webkit-scrollbar {
   height: 100%;
   z-index: 1000;
   background: white;
+<<<<<<< Updated upstream
   overflow: scroll;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none; }
   .show__fullscreen::-webkit-scrollbar {
     width: 0 !important; }
+=======
+  overflow: scroll; }
+>>>>>>> Stashed changes
 
 .show__box {
   display: flex;

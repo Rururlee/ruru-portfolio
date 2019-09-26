@@ -354,6 +354,7 @@ html::-webkit-scrollbar {
             height: 100%;
             z-index: 1000;
             background: rgba(255,255,255,1);
+<<<<<<< Updated upstream
             // overflow:hidden;
             overflow:scroll;
             -ms-overflow-style: none;
@@ -362,6 +363,9 @@ html::-webkit-scrollbar {
                 width: 0 !important;
             }
 
+=======
+            overflow:scroll;
+>>>>>>> Stashed changes
     }
     &__box{
         display: flex;
@@ -379,8 +383,13 @@ html::-webkit-scrollbar {
         width: 100%;
         background: #B2B0FF;
         & img{
+<<<<<<< Updated upstream
         width: 100%;
 
+=======
+        width: 50%;
+    
+>>>>>>> Stashed changes
         }
      }          
 }
