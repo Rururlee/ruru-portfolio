@@ -8,164 +8,15 @@ html::-webkit-scrollbar {
     height: 0 !important;
 }
 
+::selection {
+    background: #868686;
+    color: #fff;
+}
+
 @include media-breakpoint-down(lg) {
     .container-fluid {
         width: 100%;
     }
-}
-
-.top {
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
-    text-align: center;
-    margin: 0 auto;
-
-    div {
-        position: relative;
-
-        &:nth-child(1) {
-            display: none;
-            animation-name: topgo;
-            animation-duration: 1.5s;
-        }
-
-        &:nth-child(2) {
-            width: 25%;
-            bottom: 22%;
-            left: 0;
-            animation-name: topgo;
-            animation-duration: 1.5s;
-
-            img {
-                width: 70%;
-            }
-        }
-
-        &:nth-child(4) {
-            width: 25%;
-            bottom: 20%;
-            left: 0;
-            animation-name: topgo;
-            animation-duration: 1.5s;
-
-            img {
-                width: 35%;
-            }
-        }
-
-
-        &:nth-child(3) {
-            width: 50%;
-            bottom: 15%;
-            left: 0;
-            animation-name: topgo_2;
-            animation-duration: 1s;
-        }
-
-    }
-}
-
-
-@keyframes topgo {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes topgo_2 {
-    from {
-        bottom: 0%;
-    }
-
-    to {
-        bottom: 15%;
-    }
-}
-
-
-
-//slogan 適應高度
-@media (max-height: 898.98px) {
-    .main-banner {
-        height: 900px;
-    }
-
-}
-
-
-.item {
-    width: 25%;
-    height: 25%;
-    margin-left: -6.15rem;
-}
-
-
-@media (max-width: 992.98px) {
-    .item {
-        margin-left: -6rem;
-    }
-
-    .top div:nth-child(3) {
-        width: 100%;
-    }
-
-}
-
-@media (max-width: 767.98px) {
-    .item {
-        margin-left: -5.1rem;
-    }
-}
-
-@media (max-width: 414.98px) {
-
-    .top {
-        flex-wrap: wrap;
-
-        div {
-            &:nth-child(1) {
-                display: block;
-                bottom: -26%;
-                width: 80%;
-                margin: 0 auto;
-                text-align: center;
-            }
-
-            &:nth-child(even) {
-                display: none;
-            }
-
-            &:nth-child(3) {
-                bottom: 3%;
-            }
-
-            @keyframes topgo_2 {
-                from {
-                    bottom: 0%;
-                }
-
-                to {
-                    bottom: 3%;
-                }
-            }
-
-        }
-    }
-
-
-
-    .item {
-        width: 35%;
-        height: 35%;
-        margin-left: -3.3rem;
-    }
-
-
 }
 
 
@@ -174,7 +25,8 @@ html::-webkit-scrollbar {
 .main {
     position: fixed;
     background: #7c7575;
-    padding: 10rem 0 6rem 0;
+    // padding: 10rem 0 6rem 0;
+    padding-top: 10rem;
     color: white;
     width: 100%;
     height: 100vh;
@@ -210,9 +62,7 @@ html::-webkit-scrollbar {
 }
 
 .scroll {
-    // display: flex;
-    // justify-content:center;
-    // margin-top: 5rem;
+
     bottom: 105px;
     position: absolute;
     left: calc(50% - 26px);
@@ -359,35 +209,49 @@ html::-webkit-scrollbar {
     }
     &__box{
         display: flex;
-        justify-content:center;
-        width: 100%;
+        width:90%;
 
     }
     &__info{
         width: 50%;
-        background: #E9E9E9;
-        // display:flex;
-        // align-items: center;
-        // justify-content: center;
+        & a{
+            color:#000000;
+            text-decoration: none;
+            transition: 0.3s ease;
+            &:hover{
+                color:#CCCCCC;
+            }
+        }
         &__box{
             width: 70%;
+            padding: 6rem 2rem 6rem 0;
         }
         &__title{
             font-size: 1.5rem;
             font-weight: bold;
-            padding-top: 1rem ;
         }
         &__text{
             font-size: 0.9rem;
+            line-height: 1.5rem;
         }
 
     } 
     &__img {
-        width: 50%;
-        background: #C3C3C3;
+        width: 60%;
+        padding:6rem 0 5rem 0;
+        background: #ffffff;
+        text-align: center;
         & img{
-            width: 80%;
         }
+        & img:nth-child(1){
+            width: 90%;
+            margin-bottom:3rem;
+        }
+        & img:nth-child(2){
+            width: 60%;
+            box-shadow: 0px 0px 8px 2px #C9C9C9;
+        }
+
      }          
 }
 

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RURUR</title>
     <link rel="stylesheet" href="./css/all.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src="./js/jquery.min.js"></script>
     <!-- <script src="./js/vue.js"></script> -->
 </head>
@@ -44,7 +44,7 @@ jQuery 動態效果
     //     },300);
     // });
     </script>
-    <div class="content-wrapper">
+    <div class="content-wrapper" style="height: 100%">
         <header class="header">
             <div class="container-fluid">
                 <div class="row align-items-center justify-content-center">
@@ -56,8 +56,8 @@ jQuery 動態效果
                             <!-- <item-list></item-list> -->
                         <nav class="header__nav menu__nav h5">
                                 <a href="index.html" class="header__link">about</a>
-                                <a href="#" class="header__link">web</a>
-                                <a href="#" class="header__link">design</a>
+                                <a href="#" class="header__link">work</a>
+                                <a href="#" class="header__link">contact</a>
                         </nav>
                         <!--選單 結束-->
                     </div>
@@ -83,7 +83,36 @@ jQuery 動態效果
                 <div class="scroll__arrow"></div>
             </div>
         </main>
+        <!--about start-->
+       <!--  <section class="work">
+            about
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 mt-5">
+                        <div class="work__web"><img class="m-auto" src="img/web_1.jpg"></div>
+                    </div>
+                    <div class="col-12 col-md-4 mt-5">
+                        <div class="work__web"><img class="m-auto" src="img/web_2.jpg"></div>
+                    </div>
+                    <div class="col-12 col-md-4 mt-5">
+                        <div class="work__web"><img class="m-auto" src="img/web_3.jpg"></div>
+                    </div>
+                    <div class="col-12 col-md-4 mt-5">
+                        <div class="work__web"><img class="m-auto" src="img/web_4.jpg"></div>
+                    </div>
+                    <div class="col-12 col-md-4 mt-5">
+                        <div class="work__web"><img class="m-auto" src="img/web_5.jpg"></div>
+                    </div>
+                    <div class="col-12 col-md-4 mt-5">
+                        <div class="work__web"><img class="m-auto" src="img/web_6.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!--about end-->
+        <!--work start-->
         <section class="work">
+            work/web
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-4 mt-5">
@@ -107,6 +136,8 @@ jQuery 動態效果
                 </div>
             </div>
         </section>
+        <!--work end-->
+
     </div>
     <!-- footer start -->
     <div class="footer">
@@ -128,19 +159,22 @@ jQuery 動態效果
     </div>
     <!-- footer end -->
 
-    <!-- work__web__fullscreen start -->
-    <div class="show__fullscreen">
+    <!-- work__web__fullscreen start --><!--ie add position-fixed-->
+<!--     <div class="show__fullscreen">
         <section class="show__box">
             <div class="show__info">
-                <div class="sticky-top d-flex justify-content-center pt-5"> <!--ie add position-fixed-->
+                <div class="sticky-top d-flex justify-content-end pt-5"> 
                     <div class="show__info__box">   
                         <p class="show__info__title">Qちゃん包子饅頭店</p>
-                        <p class="show__info__text mb-5">一家位於東京小巷的包子店。<br>一位遠嫁日本的台灣人妻，由於想念家鄉，且想把這份台灣味分享給這片土地的人，便在東京開設了家台灣包子店。<br>隱身於東京住宅區小巷內，雖然店面不大，卻充滿人情味，時常可以聽到老闆與客人的談笑聲。</p>
+                        <p class="show__info__text mb-5">隱身於東京住宅區小巷的包子店，雖然店面不大，卻充滿人情味，時常可以聽到老闆與客人的談笑聲。<br>一位遠嫁日本的台灣人妻，想把這份台灣味分享給在地人，便在東京開設了家台灣包子店。</p>
                         <p class="show__info__text">
-                            <span class="pr-2">#版面設計</span>
-                            <span class="pr-2">#html</span>
-                            <span class="pr-2">#css</span>
-                            <span class="pr-2">#jQuery</span>
+                            #版面設計<br>#html<br>#css<br>#jQuery
+                        </p>
+                        <p class="text-right">
+                            <a href="#">
+                                    <i class="fas fa-link"></i>
+                                    <span class="font-weight-bold">開啟網頁</span>
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -151,7 +185,7 @@ jQuery 動態效果
             </div>
 
         </section >
-    </div>
+    </div> -->
     <!-- web__fullscreen end -->
     <script src="./js/all.js"></script>
 </body>
