@@ -160,7 +160,7 @@ jQuery 動態效果
     <!-- footer end -->
 
     <!-- work__web__fullscreen start --><!--ie add position-fixed-->
-<!--     <div class="show__fullscreen">
+    <div class="show__fullscreen">
         <section class="show__box">
             <div class="show__info">
                 <div class="sticky-top d-flex justify-content-end pt-5"> 
@@ -183,11 +183,20 @@ jQuery 動態效果
                 <img src="img/layout_1_2.jpg" alt="">
                 <img src="img/layout_1.jpg" alt="">
             </div>
+            <div class="show__close">
+                <img src="img/close.svg" class="close__btn medium-icon">
+            </div>
 
         </section >
-    </div> -->
+    </div>
     <!-- web__fullscreen end -->
     <script src="./js/all.js"></script>
+    <script type="text/javascript">
+        $('.close__btn').click(function(){
+            console.log('clicked');
+            $('.show__fullscreen').fadeOut(200);
+        })
+    </script>
 </body>
 
 </html>

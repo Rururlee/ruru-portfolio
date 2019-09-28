@@ -252,9 +252,21 @@ html::-webkit-scrollbar {
             box-shadow: 0px 0px 8px 2px #C9C9C9;
         }
 
-     }          
+     }
+     &__close{
+        position:fixed;
+        top:40px;
+        right:50px
+     }       
 }
 
+.close__btn{
+    cursor:pointer;
+    &__hide{
+        display: none;
+    }
+
+}
 //使用這個呼叫class 當lightbox開啟，母元素不能捲動
 .lock {
     position: absolute;
