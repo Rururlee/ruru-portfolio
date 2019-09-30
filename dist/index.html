@@ -192,8 +192,13 @@ jQuery 動態效果
     <!-- web__fullscreen end -->
     <script src="./js/all.js"></script>
     <script type="text/javascript">
+        //show
+        $('.work__web').click(function(){
+            $('.show__fullscreen').fadeIn(200);
+        })
+
+        //hide
         $('.close__btn').click(function(){
-            console.log('clicked');
             $('.show__fullscreen').fadeOut(200);
         })
     </script>

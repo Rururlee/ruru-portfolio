@@ -8983,7 +8983,8 @@ html::-webkit-scrollbar {
   background: white;
   overflow: scroll;
   -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none; }
+  overflow: -moz-scrollbars-none;
+  display: none; }
   .show__fullscreen::-webkit-scrollbar {
     width: 0 !important;
     height: 0 !important; }
@@ -9028,7 +9029,10 @@ html::-webkit-scrollbar {
   right: 50px; }
 
 .close__btn {
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.3s ease; }
+  .close__btn:hover {
+    opacity: 0.3; }
   .close__btn__hide {
     display: none; }
 

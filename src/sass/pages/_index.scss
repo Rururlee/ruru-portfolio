@@ -202,6 +202,7 @@ html::-webkit-scrollbar {
             overflow:scroll;
             -ms-overflow-style: none;
             overflow: -moz-scrollbars-none;
+            display:none;
             &::-webkit-scrollbar {
                 width: 0 !important;
                 height: 0 !important;
@@ -262,6 +263,10 @@ html::-webkit-scrollbar {
 
 .close__btn{
     cursor:pointer;
+    transition: 0.3s ease;
+    &:hover{
+        opacity:0.3;
+    }
     &__hide{
         display: none;
     }
