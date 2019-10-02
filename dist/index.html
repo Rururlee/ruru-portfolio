@@ -25,39 +25,21 @@ jQuery 動態效果
 研究Vue CLI 、Vue Router、Vuex
 
 -->
-    <script type="text/javascript">
-    //lightbox跳出圖片動態仔入
-    // $(".list_show_section3 li").click(function(){
-    //     var clickTab1 = $(this).attr('rel'),
-    //         clickTab2 = $(this).children('img').attr('alt'), //取用li img的alt來當作#box_3 img src的參數
-    //         clickTab3 = $(this).children('img').attr('title'),
-    //         clickTab4 = $(this).children('img').attr('rel');
-    //     $("#box_3 img").attr('src','./images/pic_'+clickTab2+'.jpg');
-    //     $("#info_3 h3").html(clickTab1);
-    //     $("#info_3 p").html(clickTab3);
-    //     $("#info_3 div#description").html(clickTab4);
-    //     $("#inside_3").addClass('toshow');
-    //     setTimeout(function(){
-    //         $("#back_3").fadeIn(300);
-    //         $("#box_3").fadeIn(300);
-    //         $("#info_3").fadeIn(300);
-    //     },300);
-    // });
-    </script>
-    <div class="content-wrapper" style="height: 100%">
+
+    <div class="content-wrapper">
         <header class="header">
             <div class="container-fluid">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-4">
-                        <h5><a href="#" class="header__link header__logo">RU</a></h5>
+                        <a href="#" class="header__link header__logo">RU</a>
                     </div>
                     <div class="col-4">
                         <!--選單 開始-->
-                            <!-- <item-list></item-list> -->
-                        <nav class="header__nav menu__nav h5">
-                                <a href="index.html" class="header__link">about</a>
-                                <a href="#" class="header__link">work</a>
-                                <a href="#" class="header__link">contact</a>
+                        <!-- <item-list></item-list> -->
+                        <nav class="header__nav menu__nav">
+                            <a href="index.html" class="header__link">about</a>
+                            <a href="#" class="header__link">work</a>
+                            <a href="#" class="header__link">contact</a>
                         </nav>
                         <!--選單 結束-->
                     </div>
@@ -84,7 +66,7 @@ jQuery 動態效果
             </div>
         </main>
         <!--about start-->
-       <!--  <section class="work">
+        <section class="work">
             about
             <div class="container">
                 <div class="row">
@@ -108,7 +90,7 @@ jQuery 動態效果
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!--about end-->
         <!--work start-->
         <section class="work">
@@ -116,7 +98,9 @@ jQuery 動態效果
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-4 mt-5">
-                        <div class="work__web"><img class="m-auto" src="img/web_1.jpg"></div>
+                        <div class="work__web" rel="Qちゃん包子饅頭店">
+                            <img alt="a_1" title="Qちゃん包子饅頭店" rel="隱身於東京住宅區小巷的包子店，雖然店面不大，卻充滿人情味，時常可以聽到老闆與客人的談笑聲。" src="img/web_1.jpg" class="m-auto">
+                        </div>
                     </div>
                     <div class="col-12 col-md-4 mt-5">
                         <div class="work__web"><img class="m-auto" src="img/web_2.jpg"></div>
@@ -137,70 +121,101 @@ jQuery 動態效果
             </div>
         </section>
         <!--work end-->
-
     </div>
     <!-- footer start -->
-    <div class="footer">
+    <!--  <div class="footer">
         <div class="container">
             <div class="section-content">
                 <div class="row align-items-center">
                     <div class="col-2">
-                        <!-- content -->
+                        
                     </div>
                     <div class="col-6">
-                        <!-- content -->
+                        
                     </div>
                     <div class="col-4">
-                        <!-- content -->
+                        
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- footer end -->
-
-    <!-- work__web__fullscreen start --><!--ie add position-fixed-->
+    <!-- work__web__fullscreen start -->
+    <!--ie add position-fixed-->
     <div class="show__fullscreen">
         <section class="show__box">
             <div class="show__info">
-                <div class="sticky-top d-flex justify-content-end pt-5"> 
-                    <div class="show__info__box">   
-                        <p class="show__info__title">Qちゃん包子饅頭店</p>
-                        <p class="show__info__text mb-5">隱身於東京住宅區小巷的包子店，雖然店面不大，卻充滿人情味，時常可以聽到老闆與客人的談笑聲。<br>一位遠嫁日本的台灣人妻，想把這份台灣味分享給在地人，便在東京開設了家台灣包子店。</p>
-                        <p class="show__info__text">
+                <div class="sticky-top d-flex justify-content-end pt-5">
+                    <div class="show__info__box">
+                        <p class="show__info__title"><!-- Qちゃん包子饅頭店 --></p>
+                        <p class="show__info__text mb-5"><!-- 隱身於東京住宅區小巷的包子店，雖然店面不大，卻充滿人情味，時常可以聽到老闆與客人的談笑聲。<br>一位遠嫁日本的台灣人妻，想把這份台灣味分享給在地人，便在東京開設了家台灣包子店。 --></p>
+                        <p class="show__info__text_2">
                             #版面設計<br>#html<br>#css<br>#jQuery
                         </p>
                         <p class="text-right">
                             <a href="#">
-                                    <i class="fas fa-link"></i>
-                                    <span class="font-weight-bold">開啟網頁</span>
+                                <i class="fas fa-link"></i>
+                                <span class="font-weight-bold">開啟網頁</span>
                             </a>
                         </p>
                     </div>
                 </div>
             </div>
             <div class="show__img">
-                <img src="img/layout_1_2.jpg" alt="">
-                <img src="img/layout_1.jpg" alt="">
+                <img class="temp" alt="">
+                <img class="temp_2" alt="">
+                <!-- <img src="img/layout_1_2.jpg" alt="">
+                <img src="img/layout_1.jpg" alt=""> -->
             </div>
             <div class="show__close">
                 <img src="img/close.svg" class="close__btn medium-icon">
             </div>
-
-        </section >
+        </section>
     </div>
     <!-- web__fullscreen end -->
     <script src="./js/all.js"></script>
     <script type="text/javascript">
-        //show
-        $('.work__web').click(function(){
-            $('.show__fullscreen').fadeIn(200);
-        })
+    //show
+    // $('.work__web').click(function() {
+    //     $('.show__fullscreen').fadeIn(200);
+    // })
 
-        //hide
-        $('.close__btn').click(function(){
-            $('.show__fullscreen').fadeOut(200);
-        })
+    //hide
+    $('.close__btn').click(function() {
+        $('.show__fullscreen').fadeOut(200);
+    })
+
+    $(".work__web").click(function() {
+        // var clickTab1 = $(this).attr('rel');
+            var clickTab2 = $(this).children('img').attr('alt');
+            // clickTab3 = $(this).children('img').attr('title'),
+            // clickTab4 = $(this).children('img').attr('rel');
+        $(".show__img .temp").attr('src', './img/layout_' + clickTab2 + '.jpg');
+        // $(".show__img .temp_2").attr('src', './img/layout_2_' + clickTab2 + '.jpg');
+        // $(".show__info__text").html(clickTab1);
+        // $(".show__info__title").html(clickTab3);
+        // $("#info_1 div#description").html(clickTab4);
+        $('.show__fullscreen').fadeIn(200);
+        // $("#inside_1").addClass('toshow');
+        // setTimeout(function() {
+        //     $("#back_1").fadeIn(300);
+        //     $("#box_1").fadeIn(300);
+        //     $("#info_1").fadeIn(300);
+        // }, 300);
+    });
+
+    // $("#back_1").click(function() {
+    //     $("#back_1").fadeOut(300);
+    //     $("#box_1").fadeOut(300);
+    //     $("#info_1").fadeOut(300);
+    //     setTimeout(function() {
+    //         $("#box_1 img").attr('src', '');
+    //         $("#info_1 h3").html('');
+    //         $("#info_1 p").html('');
+    //         $("#inside_1").removeClass('toshow');
+    //     }, 300);
+    // });
     </script>
 </body>
 
