@@ -9021,7 +9021,7 @@ html::-webkit-scrollbar {
     width: 90%;
     margin-bottom: 3rem; }
   .show__img img:nth-child(2) {
-    width: 60%;
+    width: 80%;
     box-shadow: 0px 0px 8px 2px #C9C9C9; }
 
 .show__close {
@@ -9031,7 +9031,9 @@ html::-webkit-scrollbar {
 
 .close__btn {
   cursor: pointer;
-  transition: 0.3s ease; }
+  transition: 0.3s ease;
+  width: 1.5rem;
+  height: 1.5rem; }
   .close__btn:hover {
     opacity: 0.3; }
   .close__btn__hide {
