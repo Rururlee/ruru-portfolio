@@ -8529,7 +8529,7 @@ button.swiper-pagination-bullet {
 .header {
   width: 100%;
   padding: 2rem 0 2rem 0;
-  background-color: #fed9ca;
+  background-color: #ad796c;
   position: fixed;
   z-index: 2;
   transition: all .3s; }
@@ -8552,10 +8552,9 @@ button.swiper-pagination-bullet {
       color: #4a4a4a; }
   .header__link {
     transition: all .3s;
-    padding: 0 3rem;
-    font-weight: bold; }
+    padding: 0 3rem; }
     .header__link:visited, .header__link:link {
-      color: #3e3e3e;
+      color: #fff;
       text-decoration: none;
       font-size: 1rem; }
     .header__link:hover {
@@ -8864,10 +8863,9 @@ html::-webkit-scrollbar {
 
 .main {
   position: fixed;
-  background: #fed9ca;
+  background: #ad796c;
   padding-top: 13rem;
-  font-weight: bold;
-  color: #3e3e3e;
+  color: #fff;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -8883,11 +8881,11 @@ html::-webkit-scrollbar {
       font-size: 3rem;
       line-height: 2rem; }
     .main__right a {
-      color: #b77c64;
+      color: #3e3e3e;
       transition: all .3s;
       text-decoration: underline; }
       .main__right a:hover {
-        color: #3e3e3e; }
+        color: #b77c64; }
 
 .scroll {
   bottom: 105px;
