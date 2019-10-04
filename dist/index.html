@@ -107,7 +107,7 @@ jQuery 動態效果
                 </div>
             </div>
         </section>
-    <!-- <section class="work">
+    <section class="work">
             work/design
             <div class="container">
                 <div class="row">
@@ -131,7 +131,7 @@ jQuery 動態效果
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!--work end-->
     </div>
     <!-- footer start -->
@@ -206,6 +206,7 @@ jQuery 動態效果
         $(".show__img .temp").attr('src', './img/layout_' + infoImg + '.png');
         $(".show__img .temp_2").attr('src', './img/layout_2_' + infoImg + '.jpg');
         $('.show__fullscreen').fadeIn(200);
+        $('html,body').animate({ scrollTop: $('#work').offset().top}, 500);
     });
 
     //hide
