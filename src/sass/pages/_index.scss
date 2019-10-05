@@ -19,12 +19,15 @@ html::-webkit-scrollbar {
     }
 }
 
+.text-purple-ru{
+    color:#483F57;
+}
 
 
 //main
 .main {
     position: fixed;
-    background: #ad796c;
+    background: #483F57;
     padding-top: 13rem;
     color: #fff;
     width: 100%;
@@ -50,12 +53,12 @@ html::-webkit-scrollbar {
         & span:nth-child(2) {}
 
         & a {
-            color: #3e3e3e;
+            color: #b8b8ec;
             transition: all .3s;
             text-decoration: underline;
 
             &:hover {
-                color: #b77c64;
+                color: #FF9970;
             }
         }
     }
@@ -69,8 +72,8 @@ html::-webkit-scrollbar {
 
     &__arrow {
         transform: rotate(45deg) translateY(-15px) translateX(0px);
-        border-bottom: 1px solid #3e3e3e;
-        border-right: 1px solid #3e3e3e;
+        border-bottom: 1px solid #f1f1f1;
+        border-right: 1px solid #f1f1f1;
         height: 30px;
         width: 30px;
         cursor: point;
@@ -122,16 +125,17 @@ html::-webkit-scrollbar {
     }
 }
 
-.work {
+.work__web,.work__design {
     position: relative;
     bottom: -100vh;
     width: 100%;
     height: 100%;
+    padding-top: 5rem;
     z-index: 1;
     background: #f1f1f1;
 
-    &__web {
-        width: 90%;
+    &__box {
+        width: 95%;
         margin: auto;
         position: relative;
         display: flex;
@@ -142,6 +146,7 @@ html::-webkit-scrollbar {
         background-clip: border-box;
         cursor: pointer;
         border-radius: 25px;
+        margin-bottom: 2rem;
 
         //for ie
         display: -ms-flexbox;
@@ -188,17 +193,36 @@ html::-webkit-scrollbar {
 }
 
 
+.work__design{
+    padding-top: 1rem!important;
+    bottom: -50vh!important;
+    height: auto!important;
+}
+
+
+
+@include media-breakpoint-down(md) {
+    .work__design{
+        bottom: -60vh!important;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .work__design{
+        bottom: -30vh!important;
+    }
+}
 //show
 .show{
     &__fullscreen {
-            border:15px solid #fed9ca;        
+            border:15px solid #A4A4BE;        
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: 1000;
-            background:#FFF2E6;
+            background:#dfdfea;
             overflow:scroll;
             -ms-overflow-style: none;
             overflow: -moz-scrollbars-none;
@@ -214,7 +238,7 @@ html::-webkit-scrollbar {
 
     }
     &__info{
-        width: 50%;
+        width: 40%;
         color:#3e3e3e;
         & a{
             color:#3e3e3e;
@@ -225,8 +249,10 @@ html::-webkit-scrollbar {
             }
         }
         &__box{
-            width: 70%;
-            padding: 6rem 2rem 6rem 0;
+            width: 60%;
+            background: #cecee2;
+            margin-top: 3rem;
+            padding: 3rem 3rem 2rem 3rem;
         }
         &__title{
             font-size: 1.5rem;
@@ -272,8 +298,8 @@ html::-webkit-scrollbar {
     &__hide{
         display: none;
     }
-
 }
+
 //使用這個呼叫class 當lightbox開啟，母元素不能捲動
 .lock {
     position: absolute;

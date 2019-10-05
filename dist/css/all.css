@@ -499,7 +499,7 @@ pre {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 1200px; } }
 
 .container-fluid {
   width: 100%;
@@ -8529,7 +8529,7 @@ button.swiper-pagination-bullet {
 .header {
   width: 100%;
   padding: 2rem 0 2rem 0;
-  background-color: #ad796c;
+  background-color: #483F57;
   position: fixed;
   z-index: 2;
   transition: all .3s; }
@@ -8606,10 +8606,6 @@ button.swiper-pagination-bullet {
     color: #4a4a4a; }
   .contact__type {
     margin-right: 0.6rem; }
-
-@media (max-width: 767.98px) {
-  .footer {
-    display: none; } }
 
 .book-list {
   margin-bottom: 2rem; }
@@ -8861,9 +8857,12 @@ html::-webkit-scrollbar {
   .container-fluid {
     width: 100%; } }
 
+.text-purple-ru {
+  color: #483F57; }
+
 .main {
   position: fixed;
-  background: #ad796c;
+  background: #483F57;
   padding-top: 13rem;
   color: #fff;
   width: 100%;
@@ -8881,11 +8880,11 @@ html::-webkit-scrollbar {
       font-size: 3rem;
       line-height: 2rem; }
     .main__right a {
-      color: #3e3e3e;
+      color: #b8b8ec;
       transition: all .3s;
       text-decoration: underline; }
       .main__right a:hover {
-        color: #b77c64; }
+        color: #FF9970; }
 
 .scroll {
   bottom: 105px;
@@ -8893,8 +8892,8 @@ html::-webkit-scrollbar {
   left: calc(50% - 26px); }
   .scroll__arrow {
     transform: rotate(45deg) translateY(-15px) translateX(0px);
-    border-bottom: 1px solid #3e3e3e;
-    border-right: 1px solid #3e3e3e;
+    border-bottom: 1px solid #f1f1f1;
+    border-right: 1px solid #f1f1f1;
     height: 30px;
     width: 30px;
     cursor: point; }
@@ -8923,15 +8922,16 @@ html::-webkit-scrollbar {
   .scroll {
     bottom: 10px; } }
 
-.work {
+.work__web, .work__design {
   position: relative;
   bottom: -100vh;
   width: 100%;
   height: 100%;
+  padding-top: 5rem;
   z-index: 1;
   background: #f1f1f1; }
-  .work__web {
-    width: 90%;
+  .work__web__box, .work__design__box {
+    width: 95%;
     margin: auto;
     position: relative;
     display: flex;
@@ -8942,16 +8942,17 @@ html::-webkit-scrollbar {
     background-clip: border-box;
     cursor: pointer;
     border-radius: 25px;
+    margin-bottom: 2rem;
     display: -ms-flexbox;
     -ms-flex-direction: column; }
-    .work__web img {
+    .work__web__box img, .work__design__box img {
       width: 100%;
       height: 100%;
       border-radius: 25px; }
-    .work__web:hover:after {
+    .work__web__box:hover:after, .work__design__box:hover:after {
       /*移標過去，__web:after透明度變1*/
       opacity: 1; }
-    .work__web:after {
+    .work__web__box:after, .work__design__box:after {
       content: 'learn more';
       color: #ffffff;
       display: flex;
@@ -8972,15 +8973,28 @@ html::-webkit-scrollbar {
       -ms-flex-pack: center;
       -ms-flex-align: center; }
 
+.work__design {
+  padding-top: 1rem !important;
+  bottom: -50vh !important;
+  height: auto !important; }
+
+@media (max-width: 991.98px) {
+  .work__design {
+    bottom: -60vh !important; } }
+
+@media (max-width: 767.98px) {
+  .work__design {
+    bottom: -30vh !important; } }
+
 .show__fullscreen {
-  border: 15px solid #fed9ca;
+  border: 15px solid #A4A4BE;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1000;
-  background: #FFF2E6;
+  background: #dfdfea;
   overflow: scroll;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
@@ -8994,7 +9008,7 @@ html::-webkit-scrollbar {
   width: 90%; }
 
 .show__info {
-  width: 50%;
+  width: 40%;
   color: #3e3e3e; }
   .show__info a {
     color: #3e3e3e;
@@ -9003,8 +9017,10 @@ html::-webkit-scrollbar {
     .show__info a:hover {
       color: #CCCCCC; }
   .show__info__box {
-    width: 70%;
-    padding: 6rem 2rem 6rem 0; }
+    width: 60%;
+    background: #cecee2;
+    margin-top: 3rem;
+    padding: 3rem 3rem 2rem 3rem; }
   .show__info__title {
     font-size: 1.5rem;
     font-weight: bold; }

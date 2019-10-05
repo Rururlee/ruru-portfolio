@@ -8,9 +8,9 @@ $(window).scroll(function() {
 });
 
 
-$('.header__nav a:nth-child(2)').click(function() {
-    $('html,body').animate({ scrollTop: $('#work').offset().top + 35 }, 500);
-});
-$('#goto').click(function() {
-    $('html,body').animate({ scrollTop: $('#work').offset().top + 35 }, 500);
-});
+// $('.header__nav a:nth-child(2)').click(function() {
+//     $('html,body').animate({ scrollTop: $('#work').offset().top + 35 }, 500);
+// });
+// $('#goto').click(function() {
+//     $('html,body').animate({ scrollTop: $('#work').offset().top + 35 }, 500);
+// });
