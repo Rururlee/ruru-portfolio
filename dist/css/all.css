@@ -8584,28 +8584,11 @@ button.swiper-pagination-bullet {
   display: inline-block; }
 
 .footer {
-  color: #4a4a4a;
-  background-color: #ffffff;
+  background-color: #f1f1f1;
   padding: 1.5rem 0;
-  font-size: 0.7rem;
-  flex-shrink: 0; }
-  .footer__intro {
-    padding: 2rem;
-    line-height: 1.8;
-    border-right: 1px solid #d8d8d8; }
-
-.contact {
-  list-style: none;
-  padding: 2rem; }
-  .contact__icon {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 8px; }
-  .contact__link, .contact__link:link, .contact__link:visited {
-    text-decoration: none;
-    color: #4a4a4a; }
-  .contact__type {
-    margin-right: 0.6rem; }
+  font-size: 1rem;
+  flex-shrink: 0;
+  text-align: center; }
 
 .book-list {
   margin-bottom: 2rem; }
@@ -8922,7 +8905,7 @@ html::-webkit-scrollbar {
   .scroll {
     bottom: 10px; } }
 
-.work__web, .work__design {
+.work {
   position: relative;
   bottom: -100vh;
   width: 100%;
@@ -8930,7 +8913,7 @@ html::-webkit-scrollbar {
   padding-top: 5rem;
   z-index: 1;
   background: #f1f1f1; }
-  .work__web__box, .work__design__box {
+  .work__web, .work__design {
     width: 95%;
     margin: auto;
     position: relative;
@@ -8945,14 +8928,14 @@ html::-webkit-scrollbar {
     margin-bottom: 2rem;
     display: -ms-flexbox;
     -ms-flex-direction: column; }
-    .work__web__box img, .work__design__box img {
+    .work__web img, .work__design img {
       width: 100%;
       height: 100%;
       border-radius: 25px; }
-    .work__web__box:hover:after, .work__design__box:hover:after {
+    .work__web:hover:after, .work__design:hover:after {
       /*移標過去，__web:after透明度變1*/
       opacity: 1; }
-    .work__web__box:after, .work__design__box:after {
+    .work__web:after, .work__design:after {
       content: 'learn more';
       color: #ffffff;
       display: flex;
@@ -8972,19 +8955,6 @@ html::-webkit-scrollbar {
       display: -ms-flexbox;
       -ms-flex-pack: center;
       -ms-flex-align: center; }
-
-.work__design {
-  padding-top: 1rem !important;
-  bottom: -50vh !important;
-  height: auto !important; }
-
-@media (max-width: 991.98px) {
-  .work__design {
-    bottom: -60vh !important; } }
-
-@media (max-width: 767.98px) {
-  .work__design {
-    bottom: -30vh !important; } }
 
 .show__fullscreen {
   border: 15px solid #A4A4BE;
@@ -9008,7 +8978,7 @@ html::-webkit-scrollbar {
   width: 90%; }
 
 .show__info {
-  width: 40%;
+  width: 35%;
   color: #3e3e3e; }
   .show__info a {
     color: #3e3e3e;
@@ -9029,7 +8999,7 @@ html::-webkit-scrollbar {
     line-height: 1.7rem; }
 
 .show__img {
-  width: 60%;
+  width: 65%;
   padding: 6rem 0 5rem 0;
   text-align: center; }
   .show__img img:nth-child(1) {
