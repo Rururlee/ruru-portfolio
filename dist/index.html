@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <!-- 
-
+<!-- 
+1
 使用 Ajax 與後端合作串接資料 
 基本 JavaScript 語法、ES6 語法
 串接 API
@@ -30,7 +30,7 @@ jQuery 動態效果
             <div class="container-fluid">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-4">
-                        <a href="#" class="header__link header__logo">RU</a>
+                        <a href="index.html" class="header__link header__logo">RU</a>
                     </div>
                     <div class="col-4">
                         <!--選單 開始-->
@@ -64,19 +64,60 @@ jQuery 動態效果
                 <div class="scroll__arrow"></div>
                 <div></div>
             </div>
-
         </main>
-        
-        <!--work start--> 
+        <!--work start-->
         <section class="work">
             <!--about start-->
-        <div class="container about" id="about">
-                <h3 class="text-purple-ru mb-4 text-center">About</h3>
-                <h4 class="text-purple-ru mb-4">Skills</h4>
-                <h5 class="text-purple-ru mb-4">HTML5 / CSS3 / JavaScript (ES6+)</h5>
-                <h4 class="text-purple-ru mb-4">Experience</h4>
-        </div>
-        <!--about end-->
+            <div class="container about" id="about">
+                <h3 class="text-purple-ru mb-4 text-center">About/Skills</h3>
+                <div class="row mb-5">
+                    <div class="col-4">
+                        <h5 class="text-purple-ru mb-1 skill__title">Front-end</h5>
+                        <h5 class="text-purple-ru">HTML5 / CSS3 / SASS / Bootstrap
+                            <h5 class="text-purple-ru">JavaScript / JQuery / Ajax</h5>
+                            <h5 class="text-purple-ru">Vue</h5>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="text-purple-ru mb-1 skill__title">Back-end
+                        </h5>
+                        <h5 class="text-purple-ru">Node.js</h5>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="text-purple-ru mb-1 skill__title">Others</h5>
+                        <h5 class="text-purple-ru">Git</h5>
+                        <h5 class="text-purple-ru">Webpack</h5>
+                        <h5 class="text-purple-ru">Photoshop</h5>
+                    </div>
+                </div>
+                <h3 class="text-purple-ru mb-4 text-center">About/Experience</h3>
+                <div class="row experience" title="">
+                    <div class="col-xs-2 col-sm-1 item-num"></div>
+                    <div class="col-xs-8 col-sm-9 item">
+                        <h4>前端工程師</h4>
+                        <p></p>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <p></p>
+                    </div>
+                    <div class="col-xs-2 item-image text-right"></div>
+                </div>
+                <div class="row experience" title="">
+                    <div class="col-xs-2 col-sm-1 item-num"></div>
+                    <div class="col-xs-8 col-sm-9 item">
+                        <h4>2前端工程師</h4>
+                        <p></p>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <p></p>
+                    </div>
+                    <div class="col-xs-2 item-image text-right"></div>
+                </div>
+            </div>
+            <!--about end-->
             <!--web start-->
             <div class="container" id="work_web">
                 <h3 class="text-purple-ru mb-4 text-center">Work/Web</h3>
@@ -172,7 +213,6 @@ jQuery 動態效果
             </div>
             <!--design end-->
             <!--work end-->
-
             <!-- footer start -->
             <div class="footer">
                 <div class="container">
@@ -181,11 +221,8 @@ jQuery 動態效果
             </div>
             <!-- footer end -->
         </section>
-        
-        
-        
-    </div><!--content-wrapper end-->
-    
+    </div>
+    <!--content-wrapper end-->
     <!-- work__web__fullscreen start -->
     <!--ie add position-fixed-->
     <div class="show__fullscreen">
@@ -225,8 +262,6 @@ jQuery 動態效果
     <!-- web__fullscreen end -->
     <script src="./js/all.js"></script>
     <script type="text/javascript">
-
-
     /*這寫開啟網頁+使用語言參數start*/
     /*這寫開啟網頁+使用語言參數end*/
 
@@ -249,13 +284,13 @@ jQuery 動態效果
     $(".work__web").click(function() {
         var infoTittle = $(this).children('img').attr('title'),
             infoImg = $(this).children('img').attr('alt');
-            infoContent = $(this).children('img').attr('rel');
+        infoContent = $(this).children('img').attr('rel');
         $(".show__info__title").html(infoTittle);
         $(".show__info__text").html(infoContent);
         $(".show__img .temp").attr('src', './img/layout_' + infoImg + '.png');
         $(".show__img .temp_2").attr('src', './img/layout_2_' + infoImg + '.jpg');
         $('.show__fullscreen').fadeIn(200);
-        $('html,body').animate({ scrollTop: $('#work_web').offset().top - navHeight }, 300);    
+        $('html,body').animate({ scrollTop: $('#work_web').offset().top - navHeight }, 300);
     });
 
     //hide
@@ -265,14 +300,9 @@ jQuery 動態效果
         $(".show__info__text").html('');
         $(".show__img .temp").attr('src', '');
         $(".show__img .temp_2").attr('src', '');
-        $('html,body').animate({ scrollTop: $('#work_web').offset().top - navHeight }, 300);  
+        $('html,body').animate({ scrollTop: $('#work_web').offset().top - navHeight }, 300);
     });
-
-
-
     </script>
-
-
 </body>
 
 </html>

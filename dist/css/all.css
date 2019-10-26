@@ -8905,8 +8905,14 @@ html::-webkit-scrollbar {
   .scroll {
     bottom: 10px; } }
 
-#work_web, .about {
+#work_web,
+.about {
   padding-top: 5rem; }
+
+.skill__title {
+  padding-top: 1rem;
+  border-top: 1px solid #483F57;
+  font-weight: bold; }
 
 .work {
   position: relative;
@@ -8957,6 +8963,50 @@ html::-webkit-scrollbar {
       display: -ms-flexbox;
       -ms-flex-pack: center;
       -ms-flex-align: center; }
+
+@media (max-width: 767.98px) {
+  .work {
+    padding: 0 1rem; }
+    .work__web, .work__design {
+      width: 100%; } }
+
+.experience {
+  position: relative; }
+  .experience:before, .experience:after {
+    content: " ";
+    display: table; }
+  .experience:nth-child(2) .item-num:before {
+    content: "1"; }
+  .experience .item-num {
+    position: static;
+    text-align: center; }
+    .experience .item-num:before {
+      content: '';
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 16px;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+      background-color: #a8a8a8;
+      color: #fff;
+      position: relative;
+      z-index: 1; }
+    .experience .item-num:after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background-color: #979797;
+      display: block;
+      position: absolute;
+      left: 4.16666667%;
+      top: 0;
+      z-index: 0; }
+
+@media (max-width: 767px) {
+  .experience .item-num:after {
+    left: 8.33333333%; } }
 
 .show__fullscreen {
   border: 15px solid #A4A4BE;
