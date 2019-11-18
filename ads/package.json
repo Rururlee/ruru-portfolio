@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "baguettebox.js": "^1.11.0",
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "bootstrap.native": "^2.0.25",
     "rater-js": "^0.5.8",
     "swiper": "^4.4.6"
