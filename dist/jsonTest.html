@@ -55,7 +55,7 @@
             let name = $('#create > input').val().trim(); //trim()去空白
             if (!name) return false;
             $.ajax({
-                url: 'http://localhost:3000/users',
+                url: 'https://rururlee.github.io/osakayotei/ruru.json',
                 method: 'post',
                 dataType: 'json',
                 data: {
@@ -69,7 +69,7 @@
             let id = $('#delete > input').val().trim(); //trim()去空白
             if (!id) return false;
             $.ajax({
-                url: 'http://localhost:3000/users/' + id,
+                url: 'https://rururlee.github.io/osakayotei/ruru.json/' + id,
                 method: 'delete',
                 dataType: 'json',
                 //不需要data
@@ -87,7 +87,7 @@
             let name = $('#update > input[name=name]').val().trim();
             if (!name) return false;
             $.ajax({
-                url: 'http://localhost:3000/users/' + id,
+                url: 'https://rururlee.github.io/osakayotei/ruru.json/' + id,
                 method: 'put',
                 dataType: 'json',
                 data:{
