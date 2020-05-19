@@ -2,12 +2,9 @@
   background-color: #f1f1f1;
   padding: 1.5rem 0;
   font-size: 1rem;
-  flex-shrink: 0; 
+  flex-shrink: 0;
   text-align: center;
 }
 
-// @include media-breakpoint-down(sm) {
-//   .footer {
-//     display: none;
-//   }
-// }
+@include media-breakpoint-down(sm) {
+}

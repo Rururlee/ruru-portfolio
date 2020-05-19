@@ -1,0 +1,13 @@
+.portfolio {
+  width: 75%;
+  margin: 5rem auto;
+  background-color: #ca9f8e;
+  &__title {
+    font-size: 1.3rem;
+    color: $ruru-word-l;
+    letter-spacing: 0.2rem;
+    border-bottom: 1px solid $ruru-word-l;
+    padding-bottom: 0.2rem;
+    padding-right: 1rem;
+  }
+}

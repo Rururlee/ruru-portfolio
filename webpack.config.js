@@ -1,13 +1,13 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require('webpack')
+const path = require('path')
 
 module.exports = (env) => {
   return {
     mode: 'production',
     entry: './src/js/all.js',
     output: {
-      path: path.resolve(__dirname, 'dist/js'),
-      filename: 'all.js'
+      path: path.resolve(__dirname, 'js'),
+      filename: 'all.js',
     },
     module: {
       rules: [
@@ -17,15 +17,15 @@ module.exports = (env) => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env']
-            }
-          }
-        }
-      ]
+              presets: ['@babel/preset-env'],
+            },
+          },
+        },
+      ],
     },
     devServer: {
-      contentBase: './dist',
-      hot: true
-    }
-  } 
+      contentBase: './',
+      hot: true,
+    },
+  }
 }

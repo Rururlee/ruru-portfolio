@@ -3,6 +3,20 @@ html {
   position: relative;
 }
 
+// html {
+//   -ms-overflow-style: none;
+//   overflow: -moz-scrollbars-none;
+// }
+
+// html::-webkit-scrollbar {
+//   width:0 !important;
+//   height: 0 !important;
+// }
+
+::selection {
+  background: #868686;
+  color: #fff;
+}
 @include media-breakpoint-up(sm) {
   html {
     font-size: 0.8rem;
@@ -21,18 +35,18 @@ html {
   }
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
-
-body{
+body {
   display: flex;
   flex-direction: column;
-  background-color: #f1f1f1;
+  background-color: #ca9f8e;
 }
 
-.wrapper{
+.wrapper {
   flex: 1 0 auto;
   margin-bottom: 6rem;
 }
