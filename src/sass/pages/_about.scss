@@ -1,0 +1,17 @@
+.about {
+  width: 100%;
+  padding: 5rem 0;
+  background-color: $ruru-bg-m;
+  &__box {
+    width: 70%;
+    margin: auto;
+  }
+  &__title {
+    font-size: 1.5rem;
+    color: $ruru-word-l;
+    letter-spacing: 0.2rem;
+    border-bottom: 1px solid $ruru-word-l;
+    padding-bottom: 0.2rem;
+    padding-right: 1rem;
+  }
+}

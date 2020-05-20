@@ -7750,7 +7750,9 @@ a.text-purple:hover, a.text-purple:focus {
   margin-left: 30%; }
 
 .box {
-  margin: 10px 0; }
+  margin: 1rem 0; }
+  .box img {
+    margin-bottom: 0.5rem; }
 
 .box-1 img {
   width: 100%; }
@@ -7901,11 +7903,40 @@ a.text-purple:hover, a.text-purple:focus {
     .ru-col-12 {
       width: 50%; } }
 
-.portfolio {
-  width: 70%;
-  margin: 5rem auto;
+.work {
+  width: 100%;
+  padding: 5rem 0;
   background-color: #ca9f8e; }
-  .portfolio__title {
+  .work__box {
+    width: 70%;
+    margin: auto; }
+  .work__title {
+    font-size: 1.5rem;
+    color: #f5eee8;
+    letter-spacing: 0.2rem;
+    border-bottom: 1px solid #f5eee8;
+    padding-bottom: 0.2rem;
+    padding-right: 1rem; }
+  .work__line {
+    width: 15%;
+    height: 1px;
+    background: #f5eee8;
+    margin: 0.5rem 0; }
+  .work__item {
+    color: #f5eee8;
+    font-size: 1rem; }
+  .work__skill {
+    color: #f5eee8;
+    font-size: 1rem; }
+
+.about {
+  width: 100%;
+  padding: 5rem 0;
+  background-color: #dbc1b7; }
+  .about__box {
+    width: 70%;
+    margin: auto; }
+  .about__title {
     font-size: 1.5rem;
     color: #f5eee8;
     letter-spacing: 0.2rem;

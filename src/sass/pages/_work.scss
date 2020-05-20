@@ -8,8 +8,10 @@ $grid-num: 12;
 }
 
 .box {
-  //height: 50px;
-  margin: 10px 0;
+  margin: 1rem 0;
+  & img {
+    margin-bottom: 0.5rem;
+  }
 }
 
 @for $i from 1 through 22 {
@@ -42,10 +44,14 @@ $grid-num: 12;
   }
 }
 
-.portfolio {
-  width: 70%;
-  margin: 5rem auto;
-  background-color: #ca9f8e;
+.work {
+  width: 100%;
+  padding: 5rem 0;
+  background-color: $ruru-bg-d;
+  &__box {
+    width: 70%;
+    margin: auto;
+  }
   &__title {
     font-size: 1.5rem;
     color: $ruru-word-l;
@@ -53,5 +59,20 @@ $grid-num: 12;
     border-bottom: 1px solid $ruru-word-l;
     padding-bottom: 0.2rem;
     padding-right: 1rem;
+  }
+
+  &__line {
+    width: 15%;
+    height: 1px;
+    background: $ruru-word-l;
+    margin: 0.5rem 0;
+  }
+  &__item {
+    color: $ruru-word-l;
+    font-size: 1rem;
+  }
+  &__skill {
+    color: $ruru-word-l;
+    font-size: 1rem;
   }
 }
