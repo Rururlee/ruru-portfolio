@@ -7750,7 +7750,7 @@ a.text-purple:hover, a.text-purple:focus {
   margin-left: 30%; }
 
 .box {
-  margin: 1rem 0; }
+  margin: 0.5rem 0 1rem; }
   .box img {
     margin-bottom: 0.5rem; }
 
@@ -7822,7 +7822,6 @@ a.text-purple:hover, a.text-purple:focus {
 
 .ru-row {
   display: flex;
-  margin-top: 2em;
   margin-left: -15px;
   margin-right: -15px;
   flex-wrap: wrap; }
@@ -7917,6 +7916,9 @@ a.text-purple:hover, a.text-purple:focus {
     border-bottom: 1px solid #f5eee8;
     padding-bottom: 0.2rem;
     padding-right: 1rem; }
+    .work__title--secondary {
+      color: #f5eee8;
+      margin: 2rem 0 0; }
   .work__line {
     width: 15%;
     height: 1px;
@@ -7927,7 +7929,7 @@ a.text-purple:hover, a.text-purple:focus {
     font-size: 1rem; }
   .work__skill {
     color: #f5eee8;
-    font-size: 1rem; }
+    font-size: 0.8rem; }
 
 .about {
   width: 100%;
