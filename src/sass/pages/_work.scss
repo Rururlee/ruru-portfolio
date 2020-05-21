@@ -9,9 +9,6 @@ $grid-num: 12;
 
 .box {
   margin: 0.5rem 0 1rem;
-  & img {
-    margin-bottom: 0.5rem;
-  }
 }
 
 @for $i from 1 through 22 {
@@ -52,6 +49,29 @@ $grid-num: 12;
     width: 70%;
     margin: auto;
   }
+  &__img {
+    margin-bottom: 0.5rem;
+    position: relative;
+    &::after {
+      content: 'open';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 10px;
+      width: 100%;
+      height: 100%;
+      background: rgba(219, 193, 183, 0.9);
+      color: $color-grey-3;
+      transition: 0.3s;
+      opacity: 0;
+    }
+    &--cover {
+      opacity: 1;
+    }
+  }
   &__title {
     font-size: 1.5rem;
     color: $ruru-word-l;
@@ -61,6 +81,7 @@ $grid-num: 12;
     padding-right: 1rem;
     &--secondary {
       color: $ruru-word-l;
+      font-size: 1rem;
       margin: 2rem 0 0;
     }
   }
