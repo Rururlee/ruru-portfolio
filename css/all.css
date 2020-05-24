@@ -8013,6 +8013,10 @@ a.text-purple:hover, a.text-purple:focus {
   .box {
     margin: 0.5rem 0 1.5rem; } }
 
+@media (max-width: 767.98px) {
+  .work__img::after {
+    display: none; } }
+
 .about {
   width: 100%;
   padding: 5rem 0;
