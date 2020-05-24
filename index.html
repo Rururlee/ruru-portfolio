@@ -283,7 +283,10 @@
         $('html,body').animate({ scrollTop: $('.contact').offset().top }, 500)
       })
 
-      $(window).load(function () {
+      // $(window).load(function () {
+      //   $('.loading').fadeOut()
+      // })
+      window.addEventListener('load', function (event) {
         $('.loading').fadeOut()
       })
     </script>
