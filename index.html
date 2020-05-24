@@ -18,6 +18,10 @@
 
   <body>
     <div class="content-wrapper">
+      <div class="loading">
+        <div class="spinner spinner5"></div>
+      </div>
+
       <!-- https://www.cakeresume.com/resumes/lynnlee/draft -->
       <!-- 左側 -->
       <header class="header">
@@ -277,6 +281,10 @@
       //content-btn
       $('.content-btn').click(function () {
         $('html,body').animate({ scrollTop: $('.contact').offset().top }, 500)
+      })
+
+      $(window).load(function () {
+        $('.loading').fadeOut()
       })
     </script>
   </body>

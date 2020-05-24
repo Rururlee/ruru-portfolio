@@ -7774,6 +7774,51 @@ a.text-purple:hover, a.text-purple:focus {
   text-align: center;
   color: #f5eee8; }
 
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ca9f8e;
+  z-index: 999; }
+
+.spinner {
+  width: 4rem;
+  height: 4rem; }
+  .spinner.spinner5 {
+    margin-top: 2rem;
+    overflow: hidden;
+    position: relative;
+    height: 0.5rem;
+    background: rgba(255, 255, 255, 0.25); }
+    .spinner.spinner5::before {
+      content: '';
+      position: absolute;
+      left: -130%;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      animation: progress 4s linear infinite; }
+
+@keyframes progress {
+  0% {
+    left: -130%;
+    background: rgba(0, 0, 0, 0.5); }
+  50% {
+    left: 130%;
+    background: rgba(0, 0, 0, 0.5); }
+  51% {
+    background: rgba(255, 255, 255, 0.5); }
+  100% {
+    background: rgba(255, 255, 255, 0.5); } }
+
 .main {
   width: 70%;
   margin-left: 30%; }
