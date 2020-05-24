@@ -178,7 +178,7 @@
             <div class="about__me">
               喜歡設計也喜歡寫程式，畢業後在動漫代理商擔任網頁視覺設計，規劃<span class="point">網頁UI及切版</span>與<span class="point">平面設計</span>。<br />
               因為喜歡日文，也曾於日本度過一年的打工度假生活，期間透過自學與接案持續增進技術。<br />
-              <div class="mt-3">目前於遊戲公司任職<span class="point">前端工程師</span>，可以獨立也可以團隊作業，希望累積的經驗及技術有機會能為各單位所服務，歡迎與我聯絡！</div>
+              <div class="mt-3">目前於遊戲公司任職<span class="point">前端工程師</span>，可以獨立也可以團隊作業，希望累積的經驗及技術有機會能為各單位所服務。</div>
             </div>
             <span class="about__title">Skill</span>
             <div class="about__skill">
@@ -213,6 +213,7 @@
                 <div>李英如</div>
                 <div>leeruru7@gmail.com</div>
               </div>
+              <!--表單 開始-->
               <div class="mail__form">
                 <form id="myform" method="post">
                   <input type="text" name="from_name" placeholder="Name*" />
@@ -222,7 +223,9 @@
                   <div class="mail__form--send"><span class="notice"></span><button id="send-btn">Send</button></div>
                 </form>
               </div>
+              <!--表單 結束-->
             </div>
+            <div class="ruru"><img src="img/ruru.png" alt="" /></div>
           </div>
         </section>
         <!--contact 結束-->
@@ -242,7 +245,7 @@
       myform.submit(function (event) {
         event.preventDefault()
         if ($('input[name=from_name]').val() == '' || $('input[name=reply_to]').val() == '' || $('textarea[name=message_html]').val() == '') {
-          $('.notice').text('請填寫必填項目')
+          $('.notice').text('*請填寫必填項目')
           return false
         }
         // Change to your service ID, or keep using the default service
@@ -264,6 +267,11 @@
           }
         )
         return false
+      })
+
+      //content-btn
+      $('.content-btn').click(function () {
+        $('html,body').animate({ scrollTop: $('.contact').offset().top }, 500)
       })
     </script>
   </body>

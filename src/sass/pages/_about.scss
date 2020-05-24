@@ -45,3 +45,20 @@
 .point {
   color: #e85b6f;
 }
+@include media-breakpoint-down(md) {
+  .about {
+    padding: 3rem 0;
+    &__box {
+      width: 80%;
+    }
+    &__skill {
+      display: block;
+      &--item {
+        width: 100%;
+        &:nth-child(1) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

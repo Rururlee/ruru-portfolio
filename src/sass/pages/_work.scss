@@ -36,7 +36,7 @@ $grid-num: 12;
     @extend %col;
     width: 100% * ($i / $grid-num);
     @include pad {
-      width: 50%;
+      width: 100%;
     }
   }
 }
@@ -100,5 +100,20 @@ $grid-num: 12;
   &__skill {
     color: $ruru-word-l;
     font-size: 0.8rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .work {
+    padding: 3rem 0;
+    &__box {
+      width: 80%;
+    }
+    &__line {
+      margin: 0.8rem 0 0.5rem;
+    }
+  }
+  .box {
+    margin: 0.5rem 0 1.5rem;
   }
 }

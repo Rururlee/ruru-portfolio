@@ -7744,6 +7744,7 @@ a.text-purple:hover, a.text-purple:focus {
   color: #a68a7f;
   display: flex;
   align-items: baseline;
+  cursor: pointer;
   transition: 0.3s ease; }
   .content-btn:hover {
     opacity: 0.7; }
@@ -7756,6 +7757,15 @@ a.text-purple:hover, a.text-purple:focus {
     margin-right: 0.5rem;
     transition: 0.3s ease; }
 
+@media (max-width: 991.98px) {
+  .header {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    padding: 10rem 0; } }
+
 .footer {
   background: #a68a7f;
   padding: 0.2rem 0;
@@ -7767,6 +7777,11 @@ a.text-purple:hover, a.text-purple:focus {
 .main {
   width: 70%;
   margin-left: 30%; }
+
+@media (max-width: 991.98px) {
+  .main {
+    width: 100%;
+    margin-left: 0; } }
 
 .box {
   margin: 0.5rem 0 1rem; }
@@ -7851,73 +7866,73 @@ a.text-purple:hover, a.text-purple:focus {
   width: 8.33333%; }
   @media (max-width: 768px) {
     .ru-col-1 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-2 {
   width: 16.66667%; }
   @media (max-width: 768px) {
     .ru-col-2 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-3 {
   width: 25%; }
   @media (max-width: 768px) {
     .ru-col-3 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-4 {
   width: 33.33333%; }
   @media (max-width: 768px) {
     .ru-col-4 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-5 {
   width: 41.66667%; }
   @media (max-width: 768px) {
     .ru-col-5 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-6 {
   width: 50%; }
   @media (max-width: 768px) {
     .ru-col-6 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-7 {
   width: 58.33333%; }
   @media (max-width: 768px) {
     .ru-col-7 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-8 {
   width: 66.66667%; }
   @media (max-width: 768px) {
     .ru-col-8 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-9 {
   width: 75%; }
   @media (max-width: 768px) {
     .ru-col-9 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-10 {
   width: 83.33333%; }
   @media (max-width: 768px) {
     .ru-col-10 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-11 {
   width: 91.66667%; }
   @media (max-width: 768px) {
     .ru-col-11 {
-      width: 50%; } }
+      width: 100%; } }
 
 .ru-col-12 {
   width: 100%; }
   @media (max-width: 768px) {
     .ru-col-12 {
-      width: 50%; } }
+      width: 100%; } }
 
 .work {
   width: 100%;
@@ -7970,6 +7985,16 @@ a.text-purple:hover, a.text-purple:focus {
     color: #f5eee8;
     font-size: 0.8rem; }
 
+@media (max-width: 991.98px) {
+  .work {
+    padding: 3rem 0; }
+    .work__box {
+      width: 80%; }
+    .work__line {
+      margin: 0.8rem 0 0.5rem; }
+  .box {
+    margin: 0.5rem 0 1.5rem; } }
+
 .about {
   width: 100%;
   padding: 5rem 0;
@@ -8010,7 +8035,20 @@ a.text-purple:hover, a.text-purple:focus {
 .point {
   color: #e85b6f; }
 
+@media (max-width: 991.98px) {
+  .about {
+    padding: 3rem 0; }
+    .about__box {
+      width: 80%; }
+    .about__skill {
+      display: block; }
+      .about__skill--item {
+        width: 100%; }
+        .about__skill--item:nth-child(1) {
+          margin-bottom: 1rem; } }
+
 .contact {
+  position: relative;
   width: 100%;
   padding: 5rem 0;
   background: url("../img/ruru.png") no-repeat;
@@ -8068,7 +8106,7 @@ a.text-purple:hover, a.text-purple:focus {
     display: flex;
     justify-content: space-between; }
     .mail__form--send .notice {
-      color: #f5eee8;
+      color: #b33245;
       font-size: 0.9rem; }
     .mail__form--send button {
       font-size: 0.9rem;
@@ -8081,6 +8119,43 @@ a.text-purple:hover, a.text-purple:focus {
       cursor: pointer; }
       .mail__form--send button:hover {
         background: #c93a4f; }
+
+.ruru {
+  display: none; }
+
+@media (max-width: 991.98px) {
+  .contact {
+    padding: 3rem 0 7rem;
+    background-position: 50% 100%; }
+    .contact__box {
+      width: 80%; }
+    .contact__me {
+      display: block; }
+  .mail__form {
+    margin-left: 0;
+    margin-top: 0.5rem; }
+    .mail__form input,
+    .mail__form textarea {
+      width: 100%; }
+    .mail__form--send {
+      width: 100%; } }
+
+@media (max-width: 767.98px) {
+  .contact {
+    background: #ca9f8e; }
+    .contact__me {
+      margin: 2rem 0 6rem; }
+  .ruru {
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    margin: auto; }
+    .ruru img {
+      width: 15rem; } }
 
 html {
   font-size: 0.8rem;
@@ -8115,7 +8190,11 @@ html {
 
 @media (min-width: 992px) {
   html {
-    font-size: 1rem; } }
+    font-size: 0.8rem; } }
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1em; } }
 
 html,
 body {
