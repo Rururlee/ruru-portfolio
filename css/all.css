@@ -8045,7 +8045,9 @@ a.text-purple:hover, a.text-purple:focus {
       .about__skill--item {
         width: 100%; }
         .about__skill--item:nth-child(1) {
-          margin-bottom: 1rem; } }
+          margin-bottom: 1rem; }
+      .about__skill span {
+        line-height: 2rem; } }
 
 .contact {
   position: relative;
