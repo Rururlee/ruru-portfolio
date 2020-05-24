@@ -284,7 +284,9 @@
       })
 
       window.addEventListener('load', function (event) {
-        $('.loading').fadeOut(1000)
+        setTimeout(function () {
+          $('.loading').fadeOut(1000)
+        }, 500)
       })
     </script>
   </body>
