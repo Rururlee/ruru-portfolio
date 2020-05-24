@@ -12,43 +12,46 @@
   align-items: center;
   background-color: $ruru-bg-d;
   z-index: 999;
-}
-.spinner {
-  width: 4rem;
-  height: 4rem;
-  &.spinner5 {
-    margin-top: 2rem; // just for centering the demo
-    overflow: hidden;
-    position: relative;
-    height: 0.5rem;
-    background: rgba($white, 0.25);
-    &::before {
-      content: '';
-      position: absolute;
-      left: -130%;
-      width: 100%;
-      height: 100%;
-      background: rgba($black, 0.5);
-      animation: progress 4s linear infinite;
-    }
+  & img {
+    width: 5rem;
   }
 }
-@keyframes progress {
-  0% {
-    left: -130%;
-    background: rgba($black, 0.5);
-  }
-  50% {
-    left: 130%;
-    background: rgba($black, 0.5);
-  }
-  51% {
-    background: rgba($white, 0.5);
-  }
-  100% {
-    background: rgba($white, 0.5);
-  }
-}
+// .spinner {
+//   width: 4rem;
+//   height: 4rem;
+//   &.spinner5 {
+//     margin-top: 2rem; // just for centering the demo
+//     overflow: hidden;
+//     position: relative;
+//     height: 0.5rem;
+//     background: rgba($white, 0.25);
+//     &::before {
+//       content: '';
+//       position: absolute;
+//       left: -130%;
+//       width: 100%;
+//       height: 100%;
+//       background: rgba($black, 0.5);
+//       animation: progress 4s linear infinite;
+//     }
+//   }
+// }
+// @keyframes progress {
+//   0% {
+//     left: -130%;
+//     background: rgba($black, 0.5);
+//   }
+//   50% {
+//     left: 130%;
+//     background: rgba($black, 0.5);
+//   }
+//   51% {
+//     background: rgba($white, 0.5);
+//   }
+//   100% {
+//     background: rgba($white, 0.5);
+//   }
+// }
 .main {
   width: 70%;
   margin-left: 30%;

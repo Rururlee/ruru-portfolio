@@ -19,7 +19,7 @@
   <body>
     <div class="content-wrapper">
       <div class="loading">
-        <div class="spinner spinner5"></div>
+        <img src="img/loading.gif" alt="" />
       </div>
 
       <!-- https://www.cakeresume.com/resumes/lynnlee/draft -->
@@ -283,11 +283,8 @@
         $('html,body').animate({ scrollTop: $('.contact').offset().top }, 500)
       })
 
-      // $(window).load(function () {
-      //   $('.loading').fadeOut()
-      // })
       window.addEventListener('load', function (event) {
-        $('.loading').fadeOut()
+        $('.loading').fadeOut(1000)
       })
     </script>
   </body>
