@@ -219,13 +219,16 @@
                   <input type="text" name="reply_to" placeholder="Email*" />
                   <input type="text" name="message_title" placeholder="Title" />
                   <textarea name="message_html" rows="4" cols="50" placeholder="Your message*"></textarea>
-                  <div class="mail__form--send"><button id="send-btn">Send</button></div>
+                  <div class="mail__form--send"><span class="notice"></span><button id="send-btn">Send</button></div>
                 </form>
               </div>
             </div>
           </div>
         </section>
         <!--contact 結束-->
+        <!--footer 開始-->
+        <footer class="footer">© RURUR STUDIO 2020</footer>
+        <!--footer 結束-->
       </main>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
@@ -239,7 +242,7 @@
       myform.submit(function (event) {
         event.preventDefault()
         if ($('input[name=from_name]').val() == '' || $('input[name=reply_to]').val() == '' || $('textarea[name=message_html]').val() == '') {
-          alert('表單不為空')
+          $('.notice').text('請填寫必填項目')
           return false
         }
         // Change to your service ID, or keep using the default service
@@ -253,6 +256,7 @@
             myform.find('button#send-btn').text('Send')
             myform.find('input').val('')
             myform.find('textarea').val('')
+            myform.find('.notice').text('')
           },
           function (err) {
             alert('Send email failed!\r\n Response:\n ' + JSON.stringify(err))
