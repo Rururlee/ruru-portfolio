@@ -8203,7 +8203,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: white; }
+  background-color: #a68a7f; }
 
 .wrapper {
   flex: 1 0 auto;
