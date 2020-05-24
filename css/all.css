@@ -7961,7 +7961,8 @@ a.text-purple:hover, a.text-purple:focus {
   .work__img {
     cursor: pointer;
     margin-bottom: 0.5rem;
-    position: relative; }
+    position: relative;
+    display: block; }
     .work__img::after {
       content: 'open';
       display: flex;
