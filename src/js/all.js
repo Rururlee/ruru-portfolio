@@ -8,7 +8,7 @@ $('.nav-link:nth-child(2)').click(function () {
 })
 
 $('.nav-link:nth-child(3)').click(function () {
-  $('html,body').animate({ scrollTop: $('.contact__title').offset().top }, 500)
+  $('html,body').animate({ scrollTop: $('.contact__title').offset().top - 50 }, 500)
 })
 
 //content-btn
