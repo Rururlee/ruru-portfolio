@@ -13,22 +13,28 @@
     <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
     <link rel="stylesheet" href="css/all.css" />
-    <script src="js/jquery.min.js"></script>
   </head>
 
   <body>
+    <div class="loading">
+      <img src="img/loading.gif" alt="" />
+    </div>
     <div class="content-wrapper">
-      <div class="loading">
-        <img src="img/loading.gif" alt="" />
-      </div>
       <!--平面設計展示 開始-->
       <div class="show__work">
+        <div class="show__work--close"></div>
         <div class="show__work--wrap">
           <img class="show__work--img" src="" alt="" />
         </div>
       </div>
       <!--平面設計展示 結束-->
-      <!-- https://www.cakeresume.com/resumes/lynnlee/draft -->
+      <!--手機 menu 開始-->
+      <nav class="nav">
+        <a class="nav-link" href="javascript:;">WORKS</a>
+        <a class="nav-link" href="javascript:;">ABOUT</a>
+        <a class="nav-link" href="javascript:;">CONTACT</a>
+      </nav>
+      <!--手機 menu 結束-->
       <!-- 左側 -->
       <header class="header">
         <div>
@@ -36,7 +42,7 @@
           <h5>| FRONT-END DEV</h5>
           <h5>| UI DESIGN</h5>
           <h5>| GRAPHIC</h5>
-          <h6>我是Ruru<br />目前專職於前端網頁開發，熱愛專研前端技術</h6>
+          <h6>嗨！我是Lynn<br />目前專職於前端網頁開發，熱愛專研前端技術</h6>
         </div>
         <div class="content-btn">
           <span class="line"></span>
@@ -136,49 +142,49 @@
             <div class="ru-row">
               <div class="ru-col-4">
                 <div class="box box-1">
-                  <div class="work__img" id="design_1" onclick="showWorks(this.id)"><img src="img/design_1.jpg" alt="" /></div>
+                  <div class="work__img work__img--show" id="design_1"><img src="img/design_1.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">台灣Star - LOGO</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-2">
-                  <div class="work__img" id="design_2" onclick="showWorks(this.id)"><img src="img/design_2.jpg" alt="" /></div>
+                  <div class="work__img work__img--show" id="design_2"><img src="img/design_2.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">招財犬柯基</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-3">
-                  <div class="work__img" id="design_3" onclick="showWorks(this.id)"><img src="img/design_3.jpg" alt="" /></div>
+                  <div class="work__img work__img--show" id="design_3"><img src="img/design_3.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">Q版人物</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-1">
-                  <div class="work__img" id="design_4" onclick="showWorks(this.id)"><img src="img/design_4.jpg" alt="" /></div>
+                  <div class="work__img work__img--show" id="design_4"><img src="img/design_4.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">Ｑちゃん包子店傳單</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-2">
-                  <div class="work__img" id="design_5" onclick="showWorks(this.id)"><img src="img/design_5.jpg" alt="" /></div>
+                  <div class="work__img work__img--show" id="design_5"><img src="img/design_5.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">動漫節活動Banner</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-3">
-                  <div class="work__img" id="design_6" onclick="showWorks(this.id)"><img src="img/design_6.jpg" alt="" /></div>
+                  <div class="work__img work__img--show" id="design_6"><img src="img/design_6.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">麵包超人遊戲書Banner</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-3">
-                  <div class="work__img" id="design_7" onclick="showWorks(this.id)"><img src="img/design_7.jpg" alt="" /></div>
+                  <div class="work__img work__img--show" id="design_7"><img src="img/design_7.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">麵包超人商品電子報</div>
                 </div>
@@ -226,7 +232,7 @@
             <span class="contact__title">Contact</span>
             <div class="contact__me">
               <div>
-                <div>李英如</div>
+                <div>Lynn Lee</div>
                 <div>leeruru7@gmail.com</div>
               </div>
               <!--表單 開始-->
@@ -250,6 +256,8 @@
         <!--footer 結束-->
       </main>
     </div>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/all.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">
       ;(function () {
@@ -283,36 +291,6 @@
           }
         )
         return false
-      })
-
-      //content-btn
-      $('.content-btn').click(function () {
-        $('html,body').animate({ scrollTop: $('.contact').offset().top }, 500)
-      })
-
-      window.addEventListener('load', function (event) {
-        setTimeout(function () {
-          $('.loading').fadeOut(1000)
-        }, 500)
-      })
-
-      //平面設計lightbox
-      function showWorks(id) {
-        console.log(id)
-        let imgUrl = 'img/' + id + '_2.png'
-        console.log(imgUrl)
-        $('.show__work').fadeIn('fast')
-        $('.show__work--img').attr('src', imgUrl)
-        //$('body').addClass('overflow-hidden')
-      }
-
-      $('.show__work').click(function () {
-        $('.show__work').fadeOut('fast')
-        // $('body').removeClass('overflow-hidden')
-      })
-      $('.header').click(function () {
-        $('.show__work').fadeOut('fast')
-        // $('body').removeClass('overflow-hidden')
       })
     </script>
   </body>

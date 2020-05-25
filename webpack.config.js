@@ -24,7 +24,7 @@ module.exports = (env) => {
       ],
     },
     devServer: {
-      contentBase: './',
+      contentBase: './js',
       hot: true,
     },
   }
