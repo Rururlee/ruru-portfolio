@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>RURUR STUDIO</title>
-    <meta property="og:title" content="RURUR" />
+    <title>A9 STUDIO</title>
+    <meta property="og:title" content="A9 STUDIO" />
     <meta property="og:url" content="rurulee.com" />
     <meta property="og:image" content="https://rurulee.com/img/og.jpg" />
-    <meta property="og:description" content="RURUR個人作品集 , Front-End Web Development , 前端網頁開發" />
+    <meta property="og:description" content="Ruru's portfolio , Front-End Web Development , 前端網頁開發" />
     <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
     <link rel="stylesheet" href="css/all.css" />
@@ -21,16 +21,22 @@
       <div class="loading">
         <img src="img/loading.gif" alt="" />
       </div>
-
+      <!--平面設計展示 開始-->
+      <div class="show__work">
+        <div class="show__work--wrap">
+          <img class="show__work--img" src="" alt="" />
+        </div>
+      </div>
+      <!--平面設計展示 結束-->
       <!-- https://www.cakeresume.com/resumes/lynnlee/draft -->
       <!-- 左側 -->
       <header class="header">
         <div>
-          <h1>RURUR STUDIO</h1>
+          <h1>A9 STUDIO</h1>
           <h5>| FRONT-END DEV</h5>
           <h5>| UI DESIGN</h5>
           <h5>| GRAPHIC</h5>
-          <h6>目前專職於前端網頁開發，熱愛專研前端技術</h6>
+          <h6>我是Ruru<br />目前專職於前端網頁開發，熱愛專研前端技術</h6>
         </div>
         <div class="content-btn">
           <span class="line"></span>
@@ -39,6 +45,7 @@
       </header>
       <main class="main">
         <!--work 開始-->
+
         <section class="work">
           <div class="work__box">
             <span class="work__title">Works</span>
@@ -129,49 +136,49 @@
             <div class="ru-row">
               <div class="ru-col-4">
                 <div class="box box-1">
-                  <div class="work__img"><img src="img/design_1.jpg" alt="" /></div>
+                  <div class="work__img" id="design_1" onclick="showWorks(this.id)"><img src="img/design_1.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">台灣Star - LOGO</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-2">
-                  <div class="work__img"><img src="img/design_2.jpg" alt="" /></div>
+                  <div class="work__img" id="design_2" onclick="showWorks(this.id)"><img src="img/design_2.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">招財犬柯基</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-3">
-                  <div class="work__img"><img src="img/design_3.jpg" alt="" /></div>
+                  <div class="work__img" id="design_3" onclick="showWorks(this.id)"><img src="img/design_3.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">Q版人物</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-1">
-                  <div class="work__img"><img src="img/design_4.jpg" alt="" /></div>
+                  <div class="work__img" id="design_4" onclick="showWorks(this.id)"><img src="img/design_4.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">Ｑちゃん包子店傳單</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-2">
-                  <div class="work__img"><img src="img/design_5.jpg" alt="" /></div>
+                  <div class="work__img" id="design_5" onclick="showWorks(this.id)"><img src="img/design_5.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">動漫節活動Banner</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-3">
-                  <div class="work__img"><img src="img/design_6.jpg" alt="" /></div>
+                  <div class="work__img" id="design_6" onclick="showWorks(this.id)"><img src="img/design_6.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">麵包超人遊戲書Banner</div>
                 </div>
               </div>
               <div class="ru-col-4">
                 <div class="box box-3">
-                  <div class="work__img"><img src="img/design_7.jpg" alt="" /></div>
+                  <div class="work__img" id="design_7" onclick="showWorks(this.id)"><img src="img/design_7.jpg" alt="" /></div>
                   <div class="work__line"></div>
                   <div class="work__item">麵包超人商品電子報</div>
                 </div>
@@ -239,7 +246,7 @@
         </section>
         <!--contact 結束-->
         <!--footer 開始-->
-        <footer class="footer">© RURUR STUDIO 2020</footer>
+        <footer class="footer">© A9 STUDIO 2020</footer>
         <!--footer 結束-->
       </main>
     </div>
@@ -287,6 +294,25 @@
         setTimeout(function () {
           $('.loading').fadeOut(1000)
         }, 500)
+      })
+
+      //平面設計lightbox
+      function showWorks(id) {
+        console.log(id)
+        let imgUrl = 'img/' + id + '_2.png'
+        console.log(imgUrl)
+        $('.show__work').fadeIn('fast')
+        $('.show__work--img').attr('src', imgUrl)
+        //$('body').addClass('overflow-hidden')
+      }
+
+      $('.show__work').click(function () {
+        $('.show__work').fadeOut('fast')
+        // $('body').removeClass('overflow-hidden')
+      })
+      $('.header').click(function () {
+        $('.show__work').fadeOut('fast')
+        // $('body').removeClass('overflow-hidden')
       })
     </script>
   </body>
