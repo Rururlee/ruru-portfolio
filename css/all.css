@@ -7737,6 +7737,12 @@ a.text-purple:hover, a.text-purple:focus {
     margin-top: 1rem;
     color: #ad988c; }
 
+.social__link {
+  margin-top: 1rem; }
+  .social__link img {
+    width: 1.5rem;
+    margin-right: 0.5rem; }
+
 .content-btn {
   position: absolute;
   right: 15px;
