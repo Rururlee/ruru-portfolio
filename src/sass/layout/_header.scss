@@ -58,7 +58,7 @@
 .nav {
   display: none;
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   .header {
     position: relative;
     top: auto;

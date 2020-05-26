@@ -163,7 +163,7 @@ $grid-num: 12;
     max-height: 100%;
   }
 }
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
   .work {
     padding: 3rem 0;
     &__box {

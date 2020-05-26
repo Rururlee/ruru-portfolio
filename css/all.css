@@ -7766,7 +7766,7 @@ a.text-purple:hover, a.text-purple:focus {
 .nav {
   display: none; }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .header {
     position: relative;
     top: auto;
@@ -7821,7 +7821,7 @@ a.text-purple:hover, a.text-purple:focus {
   width: 70%;
   margin-left: 30%; }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .main {
     width: 100%;
     margin-left: 0; } }
@@ -8122,7 +8122,7 @@ a.text-purple:hover, a.text-purple:focus {
     max-width: 100%;
     max-height: 100%; }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .work {
     padding: 3rem 0; }
     .work__box {
