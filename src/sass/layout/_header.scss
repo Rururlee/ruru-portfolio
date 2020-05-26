@@ -26,9 +26,16 @@
 
 .social__link {
   margin-top: 1rem;
+
   & img {
     width: 1.5rem;
     margin-right: 0.5rem;
+  }
+  & a {
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 .content-btn {
