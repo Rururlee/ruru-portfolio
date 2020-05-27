@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>A9 STUDIO</title>
+    <meta property="og:title" content="A9 STUDIO" />
+    <meta property="og:url" content="rurulee.com" />
+    <meta property="og:image" content="https://rurulee.com/img/og.jpg" />
+    <meta property="og:description" content="Ruru's portfolio , Front-End Web Development , 前端網頁開發" />
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="css/all.css" />
+    <style>
+      .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 5rem auto 0;
+        background-color: white;
+        width: 50%;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease-in;
+        transform: translate(0, 0);
+        transform-origin: bottom right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content-wrapper position-relative" style="padding-bottom: 100rem;">
+      <div class="box">
+        倒數計時:5日15小時5分
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      var wh = $(window).height() //視窗可視高
+      var $window = $(window)
+      var $box = $('.box')
+
+      $window.scroll(function () {
+        var scrollTop = $window.scrollTop()
+        console.log(scrollTop)
+        if (scrollTop >= 200 && scrollTop < 400) {
+          $box.css({ transform: 'translate(50%,' + (wh - wh / 4) + 'px)' })
+          $box.css({ position: 'fixed' })
+          $box.css({ left: '57%', width: '20%' })
+          $box.css({ margin: '0 auto' })
+        } else if (scrollTop < 200) {
+          $box.css({ transform: 'translate(0, 0)' })
+          $box.css({ position: 'absolute' })
+          $box.css({ left: '0', width: '50%' })
+          $box.css({ margin: '5rem auto 0' })
+        }
+      })
+    </script>
+  </body>
+</html>
