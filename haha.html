@@ -52,10 +52,12 @@
     <script>
       //總達成目標 = 5000
       //級距 1000 , 2000 , 5000
-      let goalCount = 1000
+      let goalCount = 1000 //目前達成人數
+
+      console.log($('html,body').animate({ scrollTop: $('.work__title').offset() }))
       setTimeout(function () {
         if (goalCount == 1000) {
-          $('#prog').css('width', Math.round((1000 / 5000) * 100) + '%') //寬度部分後端依目標人數去計算
+          $('#prog').css('width', Math.round((1000 / 5000) * 100) + '%')
           $('#proglabel').text(goalCount)
         } else if (goalCount == 2000) {
           $('#prog').css('width', Math.round((2000 / 5000) * 100) + '%')
