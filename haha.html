@@ -31,38 +31,128 @@
         transform: translate(0, 0);
         transform-origin: bottom right;
       }
+      .progress-bar {
+        /* animation-duration: 2s; */
+      }
+
+      /*30人*/
+      @keyframes lengthen30 {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: calc(((30 / 300) * 100));
+        }
+      }
+      /*100人*/
+      @keyframes lengthen100 {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: calc(((100 / 300) * 100));
+        }
+      }
+      /*達標300人*/
+      @keyframes lengthen300 {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: calc(((300 / 300) * 100));
+        }
+      }
     </style>
   </head>
 
   <body>
-    <div class="content-wrapper position-relative" style="padding-bottom: 100rem;">
-      <div class="box">
-        倒數計時:5日15小時5分
+    <div class="content-wrapper position-relative" style="padding-top: 30rem; padding-bottom: 100rem;">
+      <div class="w-50 mx-auto">
+        <!-- <div class="progress" style="height: 20px;">
+          <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div> -->
+        <div class="progress progress-striped active">
+          <div id="prog" class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: 0%; min-width: 3em;">
+            <span id="proglabel">正在傳送...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="box h2">
+        放大
       </div>
     </div>
+
     <script src="js/jquery.min.js"></script>
     <script>
+      $(function () {
+        // 模擬進度條：百分數增加，0-30時為紅色，30-60為黃色，60-90為藍色，>90為綠色
+        var value = 0
+        setInterval(function (e) {
+          if (value != 100) {
+            value = parseInt(value) + 1
+            $('#prog')
+              .css('width', value + '%')
+              .text(value + '%')
+            if (value >= 0 && value <= 30) {
+              $('#prog').addClass('progress-bar-danger')
+            } else if (value >= 30 && value <= 60) {
+              $('#prog').removeClass('progress-bar-danger')
+              $('#prog').addClass('progress-bar-warning')
+            } else if (value >= 60 && value <= 90) {
+              $('#prog').removeClass('progress-bar-warning')
+              $('#prog').addClass('progress-bar-info')
+            } else if (value >= 90 && value < 100) {
+              $('#prog').removeClass('progress-bar-info')
+              $('#prog').addClass('progress-bar-success')
+            }
+          }
+        }, 50)
+      })
+      //總達成目標 = 300
+      //級距 30 , 100 , 300
+      // let goalCount = 100
+      // if (goalCount == 30) {
+      //   $('.progress-bar').css('animation-name', 'lengthen30')
+      //   $('.progress-bar').css('width', Math.round((30 / 300) * 100) + '%') //寬度部分後端依目標人數去計算
+      // } else if (goalCount == 100) {
+      //   $('.progress-bar').css('animation-name', 'lengthen100')
+      //   $('.progress-bar').css('width', Math.round((100 / 300) * 100) + '%')
+      // } else if (goalCount == 300) {
+      //   $('.progress-bar').css('animation-name', 'lengthen300')
+      //   $('.progress-bar').css('width', Math.round((300 / 300) * 100) + '%')
+      // }
+
       var wh = $(window).height() //視窗可視高
       var $window = $(window)
       var $box = $('.box')
 
-      $window.scroll(function () {
-        var scrollTop = $window.scrollTop()
-        console.log(scrollTop)
-        if (scrollTop >= 200 && scrollTop < 400) {
-          $box.css({ transform: 'translate(50%,' + (wh - wh / 4) + 'px)' })
-          $box.css({ position: 'fixed' })
-          $box.css({ left: '65%', width: '15%' })
-          $box.css({ margin: '0 auto' })
-          $box.css({ height: '10rem' })
-        } else if (scrollTop == 0) {
-          $box.css({ transform: 'translate(0, 0)' })
-          $box.css({ position: 'absolute' })
-          $box.css({ left: '0', width: '50%' })
-          $box.css({ margin: '5rem auto 0' })
-          $box.css({ height: '15rem' })
-        }
+      //裝置變動時，重抓高度
+      $(window).resize(function () {
+        wh = $(window).height()
       })
+      timeBox()
+      function timeBox() {
+        $window.scroll(function () {
+          var scrollTop = $window.scrollTop()
+          console.log(scrollTop)
+          if (scrollTop >= 200 && scrollTop < 400) {
+            $box.css({ transform: 'translate(50%,' + (wh - wh / 4) + 'px)' })
+            $box.css({ position: 'fixed' })
+            $box.css({ left: '65%', width: '15%' })
+            $box.css({ margin: '0 auto' })
+            $box.css({ height: '10rem' })
+            $box.html('縮小')
+          } else if (scrollTop == 0) {
+            $box.css({ transform: 'translate(0, 0)' })
+            $box.css({ position: 'absolute' })
+            $box.css({ left: '0', width: '50%' })
+            $box.css({ margin: '5rem auto 0' })
+            $box.css({ height: '15rem' })
+            $box.html('放大')
+          }
+        })
+      }
     </script>
   </body>
 </html>
