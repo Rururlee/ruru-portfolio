@@ -36,41 +36,58 @@
 
   <body>
     <div class="content-wrapper position-relative" style="padding-top: 30rem; padding-bottom: 100rem;">
-      <div class="w-50 mx-auto">
-        <!-- 要滑動到這塊才開始跑進度條 -->
-        <div class="progress" style="height: 20px;">
-          <div id="prog" style="width: 0; transition: 1.5s linear;" class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span id="proglabel"></span></div>
-        </div>
-      </div>
-
       <div class="box h2">
         放大
+      </div>
+
+      <div class="w-50 mx-auto">
+        <!-- 要滑動到這塊才開始跑進度條 -->
+        <div class="progress" style="height: 20px; margin-top: 20rem;">
+          <div id="prog" style="width: 0; transition: 1.5s linear;" class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span id="proglabel"></span></div>
+        </div>
       </div>
     </div>
 
     <script src="js/jquery.min.js"></script>
     <script>
+      let wh = $(window).height() //視窗可視高
+      //   let threshold = 50 // 可以指定提前加载的距离
+      let lock = false // 如果到达指定位置，则不再执行打印log
+
       //總達成目標 = 5000
       //級距 1000 , 2000 , 5000
       let goalCount = 1000 //目前達成人數
 
-      console.log($('html,body').animate({ scrollTop: $('.work__title').offset() }))
-      setTimeout(function () {
-        if (goalCount == 1000) {
-          $('#prog').css('width', Math.round((1000 / 5000) * 100) + '%')
-          $('#proglabel').text(goalCount)
-        } else if (goalCount == 2000) {
-          $('#prog').css('width', Math.round((2000 / 5000) * 100) + '%')
-          $('#proglabel').text(goalCount)
-        } else if (goalCount == 5000) {
-          $('#prog').css('width', Math.round((5000 / 5000) * 100) + '%')
-          $('#proglabel').text(goalCount)
-        }
-      }, 10)
+      window.addEventListener('scroll', function () {
+        // getBoundingClientRect()-得到矩形元素的界线
+        // 可返回top, left, right,bottom 四個屬性
+        // 視窗左上角開始計算
+        let targetRect = $('.progress')[0].getBoundingClientRect()
+        let targetTop = targetRect.top //元素到top視窗頂端的距離
 
-      var wh = $(window).height() //視窗可視高
-      var $window = $(window)
-      var $box = $('.box')
+        if (lock) {
+          //lock開啟-->不跑進度條
+          return false
+        } else {
+          //如果目標元素小於[視窗可視高度的一半]就跑進度條(也就是進度條位置到視窗的中間才動作)
+          if (targetTop < wh / 2) {
+            lock = true
+            if (goalCount == 1000) {
+              $('#prog').css('width', Math.round((1000 / 5000) * 100) + '%')
+              $('#proglabel').text(goalCount)
+            } else if (goalCount == 2000) {
+              $('#prog').css('width', Math.round((2000 / 5000) * 100) + '%')
+              $('#proglabel').text(goalCount)
+            } else if (goalCount == 5000) {
+              $('#prog').css('width', Math.round((5000 / 5000) * 100) + '%')
+              $('#proglabel').text(goalCount)
+            }
+          }
+        }
+      })
+
+      let $window = $(window)
+      let $box = $('.box')
 
       //裝置變動時，重抓高度
       $(window).resize(function () {
@@ -80,7 +97,6 @@
       function timeBox() {
         $window.scroll(function () {
           var scrollTop = $window.scrollTop()
-          console.log(scrollTop)
           if (scrollTop >= 200 && scrollTop < 400) {
             $box.css({ transform: 'translate(50%,' + (wh - wh / 4) + 'px)' })
             $box.css({ position: 'fixed' })
