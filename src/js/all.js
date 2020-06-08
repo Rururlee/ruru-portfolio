@@ -25,7 +25,7 @@ window.addEventListener('load', function (event) {
 //平面設計lightbox
 $('.work__img--show').click(function () {
   //console.log(this.id)
-  let imgUrl = 'img/' + this.id + '_2.png'
+  let imgUrl = 'img/' + this.id + '_2.jpg'
   //console.log(imgUrl)
   $('.show__work').fadeIn('fast')
   $('.show__work--img').attr('src', imgUrl)

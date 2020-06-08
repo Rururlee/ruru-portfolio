@@ -8100,11 +8100,10 @@ a.text-purple:hover, a.text-purple:focus {
     top: 32px;
     width: 32px;
     height: 32px;
-    opacity: 0.5;
     cursor: pointer;
-    transition: 0.3s ease; }
+    transition: 0.5s ease; }
     .show__work--close:hover {
-      opacity: 1; }
+      transform: rotate(180deg); }
     .show__work--close:before, .show__work--close:after {
       position: absolute;
       left: 15px;
