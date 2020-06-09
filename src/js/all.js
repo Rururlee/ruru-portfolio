@@ -30,11 +30,14 @@ $('.work__img--show').click(function () {
   //console.log(imgUrl)
   let image = new Image();
   image.src = imgUrl;
+  $('.show__work--img').hide()
+  $('.show__work--img').attr('src', imgUrl) 
 
   image.onload = function() {
     $('.lds-ellipsis').fadeOut()
     console.log('img loaded')
-    $('.show__work--img').attr('src', imgUrl) 
+    $('.show__work--img').fadeIn()
+    
   } 
 
 })
