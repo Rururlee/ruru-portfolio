@@ -24,6 +24,7 @@ window.addEventListener('load', function (event) {
 
 //平面設計lightbox
 $('.work__img--show').click(function () {
+  $('.lds-ellipsis').show()
   $('.show__work').fadeIn('fast')
   //console.log(this.id)
   let imgUrl = 'img/' + this.id + '_2.jpg'
@@ -32,14 +33,11 @@ $('.work__img--show').click(function () {
   image.src = imgUrl;
   $('.show__work--img').hide()
   $('.show__work--img').attr('src', imgUrl) 
-
   image.onload = function() {
     $('.lds-ellipsis').fadeOut()
-    console.log('img loaded')
     $('.show__work--img').fadeIn()
     
   } 
-
 })
 
 
@@ -48,12 +46,10 @@ $('.work__img--show').click(function () {
 $('.show__work').click(function () {
   $('.show__work').fadeOut('fast')
   $('.show__work--img').attr('src', '')
-  $('.lds-ellipsis').fadeIn()
   // $('body').removeClass('overflow-hidden')
 })
 $('.header').click(function () {
   $('.show__work').fadeOut('fast')
   $('.show__work--img').attr('src', '')
-  $('.lds-ellipsis').fadeIn()
   // $('body').removeClass('overflow-hidden')
 })
