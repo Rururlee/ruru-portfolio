@@ -8356,12 +8356,13 @@ a.text-purple:hover, a.text-purple:focus {
   color: #888; }
 
 .resume .box {
-  width: 80%; }
+  width: 85%; }
 
 .resume .top {
   display: flex;
   justify-content: space-between;
-  margin: 2rem auto;
+  padding-top: 10rem;
+  margin: 5rem auto 2rem;
   align-items: center;
   border-bottom: 1px solid #c5c5c5;
   padding: 2rem 0; }
@@ -8420,6 +8421,7 @@ a.text-purple:hover, a.text-purple:focus {
       margin-top: 2.5rem; }
 
 .resume .works {
+  margin-top: 30rem;
   margin-bottom: 10rem; }
   .resume .works h2 {
     letter-spacing: 2px; }
