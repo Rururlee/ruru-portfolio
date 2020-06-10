@@ -1,0 +1,75 @@
+.resume {
+  .box {
+    width: 80%;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto;
+    align-items: center;
+    border-bottom: 1px solid #c5c5c5;
+    padding: 2rem 0;
+    & .right {
+      & img {
+        width: 10rem;
+        border-radius: 50%;
+      }
+    }
+  }
+  .main {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    padding-bottom: 100rem;
+    & .left {
+      width: 35%;
+      & .link::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100px;
+        margin: 5rem 0;
+        background-color: #c5c5c5;
+      }
+      & h2 {
+        letter-spacing: 3px;
+      }
+      & .education,.skill {
+        margin: 10rem auto 0;
+        &::after {
+          content: '';
+          position: absolute;
+          height: 1px;
+          width: 100px;
+          margin: 5rem 0;
+          background-color: #c5c5c5;
+        }
+        & .item{
+            line-height: 2rem;
+        }
+      }
+    }
+    & .right {
+      width: 65%;
+      border-left: 1px solid #c5c5c5;
+      padding: 0 2rem 0 4rem;
+      & .profile,
+      .experience {
+        border-bottom: 1px solid #c5c5c5;
+        padding-bottom: 5rem;
+        & h2 {
+          letter-spacing: 3px;
+        }
+        & h5 {
+          padding-top: 0.7rem;
+          letter-spacing: 1px;
+          text-align: justify;
+          line-height: 25px;
+        }
+      }
+      & .experience {
+        padding-top: 5rem;
+      }
+    }
+  }
+}

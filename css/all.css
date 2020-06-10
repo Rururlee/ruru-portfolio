@@ -8352,6 +8352,67 @@ a.text-purple:hover, a.text-purple:focus {
     .ruru img {
       width: 15rem; } }
 
+.resume .box {
+  width: 80%; }
+
+.resume .top {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+  align-items: center;
+  border-bottom: 1px solid #c5c5c5;
+  padding: 2rem 0; }
+  .resume .top .right img {
+    width: 10rem;
+    border-radius: 50%; }
+
+.resume .main {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  padding-bottom: 100rem; }
+  .resume .main .left {
+    width: 35%; }
+    .resume .main .left .link::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100px;
+      margin: 5rem 0;
+      background-color: #c5c5c5; }
+    .resume .main .left h2 {
+      letter-spacing: 3px; }
+    .resume .main .left .education, .resume .main .left .skill {
+      margin: 10rem auto 0; }
+      .resume .main .left .education::after, .resume .main .left .skill::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100px;
+        margin: 5rem 0;
+        background-color: #c5c5c5; }
+      .resume .main .left .education .item, .resume .main .left .skill .item {
+        line-height: 2rem; }
+  .resume .main .right {
+    width: 65%;
+    border-left: 1px solid #c5c5c5;
+    padding: 0 2rem 0 4rem; }
+    .resume .main .right .profile,
+    .resume .main .right .experience {
+      border-bottom: 1px solid #c5c5c5;
+      padding-bottom: 5rem; }
+      .resume .main .right .profile h2,
+      .resume .main .right .experience h2 {
+        letter-spacing: 3px; }
+      .resume .main .right .profile h5,
+      .resume .main .right .experience h5 {
+        padding-top: 0.7rem;
+        letter-spacing: 1px;
+        text-align: justify;
+        line-height: 25px; }
+    .resume .main .right .experience {
+      padding-top: 5rem; }
+
 html {
   font-size: 0.8rem;
   position: relative; }
