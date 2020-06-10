@@ -8352,6 +8352,9 @@ a.text-purple:hover, a.text-purple:focus {
     .ruru img {
       width: 15rem; } }
 
+.resume .txt {
+  color: #888; }
+
 .resume .box {
   width: 80%; }
 
@@ -8369,8 +8372,9 @@ a.text-purple:hover, a.text-purple:focus {
 .resume .main {
   width: 100%;
   display: flex;
-  margin: auto;
-  padding-bottom: 100rem; }
+  margin: 0 auto 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #c5c5c5; }
   .resume .main .left {
     width: 35%; }
     .resume .main .left .link::after {
@@ -8382,36 +8386,57 @@ a.text-purple:hover, a.text-purple:focus {
       background-color: #c5c5c5; }
     .resume .main .left h2 {
       letter-spacing: 3px; }
-    .resume .main .left .education, .resume .main .left .skill {
+    .resume .main .left .education,
+    .resume .main .left .skill {
       margin: 10rem auto 0; }
-      .resume .main .left .education::after, .resume .main .left .skill::after {
-        content: '';
-        position: absolute;
-        height: 1px;
-        width: 100px;
-        margin: 5rem 0;
-        background-color: #c5c5c5; }
-      .resume .main .left .education .item, .resume .main .left .skill .item {
+      .resume .main .left .education .item,
+      .resume .main .left .skill .item {
         line-height: 2rem; }
   .resume .main .right {
     width: 65%;
     border-left: 1px solid #c5c5c5;
-    padding: 0 2rem 0 4rem; }
+    padding: 0 0 0 4rem; }
     .resume .main .right .profile,
     .resume .main .right .experience {
       border-bottom: 1px solid #c5c5c5;
       padding-bottom: 5rem; }
       .resume .main .right .profile h2,
       .resume .main .right .experience h2 {
-        letter-spacing: 3px; }
+        letter-spacing: 2px; }
       .resume .main .right .profile h5,
       .resume .main .right .experience h5 {
-        padding-top: 0.7rem;
         letter-spacing: 1px;
         text-align: justify;
-        line-height: 25px; }
+        line-height: 27px; }
     .resume .main .right .experience {
-      padding-top: 5rem; }
+      padding-top: 5rem;
+      border-bottom: 0; }
+      .resume .main .right .experience ul {
+        padding: 0 0rem 0 2rem;
+        font-size: 1.25rem;
+        letter-spacing: 2px;
+        line-height: 30px; }
+    .resume .main .right .content {
+      margin-top: 2.5rem; }
+
+.resume .works {
+  margin-bottom: 10rem; }
+  .resume .works h2 {
+    letter-spacing: 2px; }
+  .resume .works h5 {
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 27px; }
+  .resume .works .item {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center; }
+    .resume .works .item a img {
+      width: 22rem; }
+    .resume .works .item div {
+      padding: 0 2rem; }
+      .resume .works .item div a {
+        font-weight: bold; }
 
 html {
   font-size: 0.8rem;

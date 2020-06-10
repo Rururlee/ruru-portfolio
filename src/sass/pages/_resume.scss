@@ -1,4 +1,7 @@
 .resume {
+  .txt {
+    color: #888;
+  }
   .box {
     width: 80%;
   }
@@ -19,8 +22,9 @@
   .main {
     width: 100%;
     display: flex;
-    margin: auto;
-    padding-bottom: 100rem;
+    margin: 0 auto 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #c5c5c5;
     & .left {
       width: 35%;
       & .link::after {
@@ -34,42 +38,70 @@
       & h2 {
         letter-spacing: 3px;
       }
-      & .education,.skill {
+      & .education,
+      .skill {
         margin: 10rem auto 0;
-        &::after {
-          content: '';
-          position: absolute;
-          height: 1px;
-          width: 100px;
-          margin: 5rem 0;
-          background-color: #c5c5c5;
-        }
-        & .item{
-            line-height: 2rem;
+        & .item {
+          line-height: 2rem;
         }
       }
     }
     & .right {
       width: 65%;
       border-left: 1px solid #c5c5c5;
-      padding: 0 2rem 0 4rem;
+      padding: 0 0 0 4rem;
       & .profile,
       .experience {
         border-bottom: 1px solid #c5c5c5;
         padding-bottom: 5rem;
         & h2 {
-          letter-spacing: 3px;
+          letter-spacing: 2px;
         }
         & h5 {
-          padding-top: 0.7rem;
           letter-spacing: 1px;
           text-align: justify;
-          line-height: 25px;
+          line-height: 27px;
         }
       }
       & .experience {
         padding-top: 5rem;
+        border-bottom: 0;
+        & ul {
+          padding: 0 0rem 0 2rem;
+          font-size: 1.25rem;
+          letter-spacing: 2px;
+          line-height: 30px;
+        }
       }
+      & .content {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  .works {
+      margin-bottom: 10rem;
+    & h2 {
+      letter-spacing: 2px;
+    }
+    & h5 {
+      letter-spacing: 1px;
+      text-align: justify;
+      line-height: 27px;
+    }
+    & .item{
+        margin-top: 2.5rem;
+        display: flex;
+        align-items: center;
+        & a img{
+            width: 22rem;
+        }
+        & div{
+            padding:0 2rem;
+            & a{
+               font-weight: bold;
+            }
+        }
     }
   }
 }
