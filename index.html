@@ -63,11 +63,11 @@
       <!-- 左側 -->
       <header class="header">
         <div>
-          <h1>RURUR STUDIO</h1>
-          <h5>| FRONT-END DEV</h5>
-          <h5>| UI DESIGN</h5>
-          <h5>| GRAPHIC</h5>
-          <h6>嗨！我是Ruru<br />目前專職於前端網頁開發，熱愛專研前端技術</h6>
+          <h1>{{ title }}</h1>
+          <h5>{{ skill.a }}</h5>
+          <h5>{{ skill.b }}</h5>
+          <h5>{{ skill.c }}</h5>
+          <h6 v-html="description"></h6>
           <div class="social__link">
             <a href="https://medium.com/@leeruru7" target="_blank"><img src="img/social-medium.svg" alt="" /></a>
             <a href="https://github.com/Rururlee" target="_blank"><img src="img/social-github.svg" alt="" /></a>
@@ -255,12 +255,15 @@
                 <span>HTML/CSS</span>
                 <span>SASS</span>
                 <span>Boostrap</span>
-                <span>Javascript/jQuery</span>
+                <span>Javascript</span>
+                <span>jQuery</span>
                 <span>AJAX</span>
                 <span>Vue.js/Vuex</span>
                 <span>Webpack</span>
                 <span>git</span>
+                <span>gitbook</span>
                 <span>NPM</span>
+                <span>VS Code</span>
               </div>
               <div class="about__skill--item">
                 <h6 class="mb-1">Other</h6>
@@ -297,7 +300,7 @@
         </section>
         <!--contact 結束-->
         <!--footer 開始-->
-        <footer class="footer">© RURUR STUDIO 2020</footer>
+        <footer class="footer">{{ copyright }}</footer>
         <!--footer 結束-->
       </main>
     </div>
@@ -336,6 +339,23 @@
           }
         )
         return false
+      })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script>
+      new Vue({
+        el: '.header',
+        data: {
+          title: 'RURUR STUDIO',
+          skill: { a: '| FRONT-END DEV', b: '| UI DESIGN', c: '| GRAPHIC' },
+          description: '嗨！我是Ruru<br>目前專職於前端網頁開發，熱愛專研前端技術',
+        },
+      })
+      new Vue({
+        el: '.footer',
+        data: {
+          copyright: '© RURUR STUDIO ' + new Date().getFullYear(),
+        },
       })
     </script>
   </body>
