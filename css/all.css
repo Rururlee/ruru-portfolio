@@ -8216,6 +8216,8 @@ a.text-purple:hover, a.text-purple:focus {
     letter-spacing: 0.5px; }
     .about__skill--item {
       width: 50%; }
+      .about__skill--item:nth-child(1) {
+        margin-right: 2rem; }
     .about__skill span {
       font-size: 0.9rem;
       color: #f5eee8;
@@ -8238,6 +8240,7 @@ a.text-purple:hover, a.text-purple:focus {
       .about__skill--item {
         width: 100%; }
         .about__skill--item:nth-child(1) {
+          margin-right: 0;
           margin-bottom: 1rem; }
       .about__skill span {
         line-height: 2rem; } }
