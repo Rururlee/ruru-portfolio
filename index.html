@@ -89,19 +89,20 @@
           <span class="work__title">Works</span>
           <div class="work__title--secondary">網頁前端</div>
           <div class="ru-row">
-
-            <div v-for="page in pageWork" class="ru-col-4">
+            <!--網頁-->
+            <div v-for="web of showWebItem" class="ru-col-4">
               <div class="box box-1">
-                <a :href="page.url" target="_blank" class="work__img"><img :src="page.img" alt="" /></a>
+                <a :href="web.url" target="_blank" class="work__img"><img :src="web.img" alt="" /></a>
                 <div class="work__line"></div>
-                <div class="work__item">{{ page.name }}</div>
-                <div class="work__skill">{{ page.tool }}</div>
+                <div class="work__item">{{ web.name }}</div>
+                <div class="work__skill">{{ web.tool }}</div>
               </div>
             </div>
           </div>
           <div class="work__title--secondary">Banner / 平面設計</div>
           <div class="ru-row">
-            <div v-for="graphic in graphicWork" class="ru-col-4">
+            <!--平面-->
+            <div v-for="graphic of showGraphicItem" class="ru-col-4">
               <div class="box box-1">
                 <div class="work__img work__img--show" :id="graphic.id"><img :src="graphic.img" alt="" /></div>
                 <div class="work__line"></div>
