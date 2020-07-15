@@ -9,6 +9,13 @@ new Vue({
     copyright: '© RURUR STUDIO ' + new Date().getFullYear(),
     workList: [
       {
+        name: 'WAKOOL數位生活館',
+        url: 'https://ctbc.wakool.net/',
+        img: 'img/work_0715.jpg',
+        tool: 'HTML / SCSS , jQuery , API串接',
+        type: 'web'
+      },
+      {
         name: 'S5遊戲館 - 皇者天下活動',
         url: 'https://rurulee.com/works/200610/index.html',
         img: 'img/work_0609.jpg',
