@@ -8365,7 +8365,7 @@ a.text-purple:hover, a.text-purple:focus {
   display: flex;
   justify-content: space-between;
   padding-top: 10rem;
-  margin: 2rem auto 2rem;
+  margin: 0 auto 2rem;
   align-items: center;
   border-bottom: 1px solid #c5c5c5;
   padding: 2rem 0; }
@@ -8380,7 +8380,7 @@ a.text-purple:hover, a.text-purple:focus {
   padding-bottom: 2.5rem;
   border-bottom: 1px solid #c5c5c5; }
   .resume .main .left {
-    width: 35%; }
+    width: 30%; }
     .resume .main .left .link::after {
       content: '';
       position: absolute;
@@ -8397,13 +8397,13 @@ a.text-purple:hover, a.text-purple:focus {
       .resume .main .left .skill .item {
         line-height: 2rem; }
   .resume .main .right {
-    width: 65%;
+    width: 70%;
     border-left: 1px solid #c5c5c5;
     padding: 0 0 0 4rem; }
     .resume .main .right .profile,
     .resume .main .right .experience {
       border-bottom: 1px solid #c5c5c5;
-      padding-bottom: 5rem; }
+      padding-bottom: 3rem; }
       .resume .main .right .profile h2,
       .resume .main .right .experience h2 {
         letter-spacing: 2px; }
@@ -8413,7 +8413,7 @@ a.text-purple:hover, a.text-purple:focus {
         text-align: justify;
         line-height: 27px; }
     .resume .main .right .experience {
-      padding-top: 5rem;
+      padding-top: 3rem;
       border-bottom: 0; }
       .resume .main .right .experience ul {
         padding: 0 0rem 0 2rem;
@@ -8424,7 +8424,6 @@ a.text-purple:hover, a.text-purple:focus {
       margin-top: 2.5rem; }
 
 .resume .works {
-  margin-top: 30rem;
   margin-bottom: 10rem; }
   .resume .works h2 {
     letter-spacing: 2px; }
