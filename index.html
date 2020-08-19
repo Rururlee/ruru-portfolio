@@ -226,7 +226,6 @@
   </script>
   <script>
     if ('serviceWorker' in navigator) {
-      alert('serviceWorker ok')
       navigator.serviceWorker
         .register('service-worker.js') // 註冊 Service Worker
         .then(function (reg) {
@@ -250,7 +249,7 @@
 
       btnSave.addEventListener('click', (e) => {
         // hide our user interface that shows our A2HS button
-        // btnSave.style.display = 'none';
+        btnSave.style.display = 'none';
         // Show the prompt
         deferredPrompt.prompt();
         // Wait for the user to respond to the prompt
