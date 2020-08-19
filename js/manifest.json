@@ -1,0 +1,15 @@
+{
+    "short_name": "shortcut text",
+    "name": "shortcut name",
+    "icons": [
+        {
+            "src": "../img/apple-touch-icon.png",
+            "sizes": "180×180",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "http://127.0.0.1:5502/index.html",
+    "background_color": "#000",
+    "theme_color": "#536878",
+    "display": "fullscreen"
+}

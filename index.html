@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>RURUR STUDIO</title>
+  <link rel="manifest" href="js/manifest.json" />
   <meta property="og:title" content="RURUR STUDIO" />
   <meta property="og:url" content="rurulee.com" />
   <meta property="og:image" content="https://rurulee.com/img/og.jpg" />
@@ -60,6 +61,7 @@
       <a class="nav-link" href="javascript:;">WORKS</a>
       <a class="nav-link" href="javascript:;">ABOUT</a>
       <a class="nav-link" href="javascript:;">CONTACT</a>
+      <button id="btn-save" class="btn btn-light">加入主畫面</button>
     </nav>
     <!--手機 menu 結束-->
     <!-- 左側 -->
@@ -86,6 +88,7 @@
 
       <section class="work">
         <div class="work__box">
+
           <span class="work__title">Works</span>
           <div class="work__title--secondary">網頁前端</div>
           <div class="ru-row">
@@ -221,6 +224,36 @@
     })
 
 // --- emailjs end --- //
+  </script>
+  <script>
+    let deferredPrompt;
+    const btnSave = document.querySelector('#btn-save')
+    btnSave.style.display = 'none';
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent Chrome 67 and earlier from automatically showing the prompt
+      e.preventDefault();
+      // Stash the event so it can be triggered later.
+      deferredPrompt = e;
+      // Update UI to notify the user they can add to home screen
+      addBtn.style.display = 'block';
+
+      addBtn.addEventListener('click', (e) => {
+        // hide our user interface that shows our A2HS button
+        addBtn.style.display = 'none';
+        // Show the prompt
+        deferredPrompt.prompt();
+        // Wait for the user to respond to the prompt
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the A2HS prompt');
+          } else {
+            console.log('User dismissed the A2HS prompt');
+          }
+          deferredPrompt = null;
+        });
+      });
+    });
+
   </script>
 </body>
 
