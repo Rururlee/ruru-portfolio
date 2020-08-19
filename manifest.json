@@ -8,7 +8,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "https://rurulee.com/",
+    "start_url": "/",
     "background_color": "#000",
     "theme_color": "#536878",
     "display": "fullscreen"
