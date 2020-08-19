@@ -18,7 +18,7 @@
   <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
   <link rel="stylesheet" href="css/all.css" />
-
+  <script src="js/service-worker.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169405867-1"></script>
   <script>
@@ -226,6 +226,17 @@
 // --- emailjs end --- //
   </script>
   <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('js/service-worker.js') // 註冊 Service Worker
+        .then(function (reg) {
+          console.log('Registration succeeded. Scope is ' + reg.scope); // 註冊成功
+        })
+        .catch(function (error) {
+          console.log('Registration failed with ' + error); // 註冊失敗
+        });
+    }
+
     let deferredPrompt;
     const btnSave = document.querySelector('#btn-save')
     btnSave.style.display = 'none';
