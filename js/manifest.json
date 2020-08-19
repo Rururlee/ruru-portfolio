@@ -3,8 +3,8 @@
     "name": "shortcut name",
     "icons": [
         {
-            "src": "../img/apple-touch-icon.png",
-            "sizes": "180×180",
+            "src": "../img/icon-144x144.png",
+            "sizes": "144x144",
             "type": "image/png"
         }
     ],
