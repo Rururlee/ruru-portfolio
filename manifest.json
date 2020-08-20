@@ -1,6 +1,6 @@
 {
-    "short_name": "shortcut text",
-    "name": "shortcut name",
+    "short_name": "Rurur Studio",
+    "name": "Rurur Studio",
     "icons": [
         {
             "src": "../img/icon-144x144.png",
@@ -11,5 +11,5 @@
     "start_url": "/",
     "background_color": "#000",
     "theme_color": "#536878",
-    "display": "fullscreen"
+    "display": "standalone"
 }

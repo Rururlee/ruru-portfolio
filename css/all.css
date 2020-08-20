@@ -7825,10 +7825,25 @@ a.text-purple:hover, a.text-purple:focus {
   width: 70%;
   margin-left: 30%; }
 
+#btn-save {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  color: #777;
+  border: 1px dashed #777;
+  background: none;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  cursor: crosshair; }
+  #btn-save:focus {
+    outline: none; }
+
 @media (max-width: 1199.98px) {
   .main {
     width: 100%;
-    margin-left: 0; } }
+    margin-left: 0; }
+  #btn-save {
+    display: none; } }
 
 .box {
   margin: 0.5rem 0 1rem; }

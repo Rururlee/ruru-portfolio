@@ -21,9 +21,27 @@
   margin-left: 30%;
 }
 
+#btn-save {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  color: #777;
+  border: 1px dashed #777;
+  background: none;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  cursor: crosshair;
+  &:focus {
+    outline: none;
+  }
+}
 @include media-breakpoint-down(lg) {
   .main {
     width: 100%;
     margin-left: 0;
+  }
+
+  #btn-save {
+    display: none;
   }
 }

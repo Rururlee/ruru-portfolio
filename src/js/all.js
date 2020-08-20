@@ -217,3 +217,48 @@ $('.header').click(function () {
 
 
 
+// ------------ 加入捷徑功能 開始 ------------ //
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('service-worker.js') // 註冊 Service Worker
+    .then(function (reg) {
+      console.log('Registration succeeded.'); // 註冊成功
+    })
+    .catch(function (error) {
+      console.log('Registration failed with ' + error); // 註冊失敗
+    });
+}
+
+let deferredPrompt;
+const btnSave = document.querySelector('#btn-save')
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to home screen
+
+
+});
+
+// 若安裝過就不會再顯示捷徑鈕
+btnSave.addEventListener('click', (e) => {
+  // hide our user interface that shows our A2HS button
+  // Show the prompt
+  deferredPrompt.prompt();
+
+  deferredPrompt.userChoice.then((choiceResult) => {
+    if (choiceResult.outcome === 'accepted') {
+      console.log('User accepted the A2HS prompt');
+    } else {
+      console.log('User dismissed the A2HS prompt');
+    }
+    deferredPrompt = null;
+  });
+
+
+});
+
+
+// ------------ 加入捷徑功能 結束 ------------ //
