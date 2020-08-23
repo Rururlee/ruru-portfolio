@@ -66,7 +66,7 @@ new Vue({
       },
       {
         name: 'Ｑちゃん包子饅頭店',
-        url: 'https://rururlee.github.io/qchanpaoz/',
+        url: 'https://qchanpaoz.com/',
         img: 'img/work_10.jpg',
         tool: 'UI / UX , HTML / CSS , jQuery',
         type: 'web'
