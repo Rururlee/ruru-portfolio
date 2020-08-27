@@ -7736,6 +7736,16 @@ a.text-purple:hover, a.text-purple:focus {
   .header h6 {
     margin-top: 1rem;
     color: #ad988c; }
+  .header .tip-word {
+    position: absolute;
+    left: 20px;
+    bottom: 43px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 0.3rem;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    display: none; }
 
 .social__link {
   margin-top: 1rem; }

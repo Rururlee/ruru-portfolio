@@ -260,5 +260,20 @@ btnSave.addEventListener('click', (e) => {
 
 });
 
+//apple 不支援捷徑功能
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+  // --- 跳出使用chrome提示 --- //
+  $('.tip').append(`<span class="tip-word">請在chrome使用此功能(⁎⁍̴̛ᴗ⁍̴̛⁎)</span>`)
+  
+  $('#btn-save').mouseover(function () {
+    $('.tip-word').addClass('d-block')
+  });
 
+  $('#btn-save').mouseout(function () {
+    $('.tip-word').removeClass('d-block')
+  });
+
+}
 // ------------ 加入捷徑功能 結束 ------------ //
+
+
