@@ -1,4 +1,6 @@
 .resume {
+  width: 60%;
+  margin: auto;
   .txt {
     color: #888;
   }
@@ -75,11 +77,11 @@
         }
       }
       & .content {
-        margin-top: 2.5rem;
+        margin-top: 0.5rem;
       }
     }
   }
-
+  
   .works {
     // margin-top: 30rem;
     margin-bottom: 10rem;
@@ -95,6 +97,7 @@
       margin-top: 2.5rem;
       display: flex;
       align-items: center;
+      position: relative;
       & a img {
         width: 22rem;
       }
@@ -103,6 +106,11 @@
         & a {
           font-weight: bold;
         }
+      }
+      & .demo{
+        position: absolute;
+        right:0;
+        top:8px;
       }
     }
   }
