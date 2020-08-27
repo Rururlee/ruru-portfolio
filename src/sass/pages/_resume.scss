@@ -1,8 +1,9 @@
 .resume {
-  width: 60%;
+  width: 75%;
   margin: auto;
   .txt {
     color: #888;
+    font-size:1.1rem
   }
   .box {
     width: 85%;
@@ -17,7 +18,7 @@
     padding: 2rem 0;
     & .right {
       & img {
-        width: 10rem;
+        width: 8rem;
         border-radius: 50%;
       }
     }
@@ -67,11 +68,10 @@
         }
       }
       & .experience {
-        padding-top: 3rem;
+        padding-top: 2rem;
         border-bottom: 0;
         & ul {
           padding: 0 0rem 0 2rem;
-          font-size: 1.25rem;
           letter-spacing: 2px;
           line-height: 30px;
         }

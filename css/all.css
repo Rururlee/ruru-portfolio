@@ -8371,10 +8371,11 @@ a.text-purple:hover, a.text-purple:focus {
       width: 15rem; } }
 
 .resume {
-  width: 65%;
+  width: 75%;
   margin: auto; }
   .resume .txt {
-    color: #888; }
+    color: #888;
+    font-size: 1.1rem; }
   .resume .box {
     width: 85%; }
   .resume .top {
@@ -8386,7 +8387,7 @@ a.text-purple:hover, a.text-purple:focus {
     border-bottom: 1px solid #c5c5c5;
     padding: 2rem 0; }
     .resume .top .right img {
-      width: 10rem;
+      width: 8rem;
       border-radius: 50%; }
   .resume .main {
     width: 100%;
@@ -8428,11 +8429,10 @@ a.text-purple:hover, a.text-purple:focus {
           text-align: justify;
           line-height: 27px; }
       .resume .main .right .experience {
-        padding-top: 3rem;
+        padding-top: 2rem;
         border-bottom: 0; }
         .resume .main .right .experience ul {
           padding: 0 0rem 0 2rem;
-          font-size: 1.25rem;
           letter-spacing: 2px;
           line-height: 30px; }
       .resume .main .right .content {
