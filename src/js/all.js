@@ -60,14 +60,14 @@ new Vue({
       {
         name: 'H5千元禮包大放送',
         url: 'https://iplay.wakool.net/event/201909/',
-        img: 'img/work_0909.jpg',
+        img: 'img/work_0909.webp',
         tool: 'HTML / SCSS , jQuery',
         type: 'web'
       },
       {
         name: 'Ｑちゃん包子饅頭店',
         url: 'https://qchanpaoz.com/',
-        img: 'img/work_10.jpg',
+        img: 'img/work_10.webp',
         tool: 'UI / UX , HTML / CSS , jQuery',
         type: 'web'
       },
