@@ -3,6 +3,8 @@
 function cls(){
     $('#page1').fadeOut(500);
     setTimeout(function(){location.href ="#";},350);
+    $('.tree').fadeOut(500);
+    $('.roll').fadeOut(500);
 };   
 
 // JavaScript Document
