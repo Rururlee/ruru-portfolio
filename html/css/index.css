@@ -1148,3 +1148,12 @@ img {
     bottom: 20px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 960px){
+    #gotop {
+        right: 2%;
+        bottom: 15%;
+        width: 15%;
+        height: auto;
+    }
+}
