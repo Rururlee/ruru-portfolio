@@ -3,11 +3,18 @@
 new Vue({
   el: '.content-wrapper',
   data: {
-    title: 'RURUR STUDIO',
+    title: `RURU'S`,
     skill: { a: '| FRONT-END DEV', b: '| UI DESIGN', c: '| GRAPHIC' },
     description: '嗨！我是Ruru<br>目前專職於前端網頁開發，熱愛專研前端技術',
-    copyright: '© RURUR STUDIO ' + new Date().getFullYear(),
+    copyright: `© RURU'S ` + new Date().getFullYear(),
     workList: [
+      {
+        name: '《星之夢幻島》事前登錄頁面',
+        url: 'https://nl.futuregame.com.tw/pre-order',
+        img: 'img/work_1021.jpg',
+        tool: 'Vue-cli , Tailwind Css , API串接',
+        type: 'web'
+      },
       {
         name: 'WAKOOL數位生活館',
         url: 'https://ctbc.wakool.net/',
@@ -72,23 +79,9 @@ new Vue({
         type: 'web'
       },
       {
-        name: '飛行鼠歷險記繪本',
-        url: 'https://www.e-kids.com.tw/books/maus/',
-        img: 'img/work_6.jpg',
-        tool: 'UI / UX , HTML / CSS , jQuery',
-        type: 'web'
-      },
-      {
         name: '傷物語電影版',
         url: 'https://www.mightymedia.com.tw/kizumonogatari/index.html',
         img: 'img/work_7.jpg',
-        tool: 'UI / UX , HTML / CSS , jQuery',
-        type: 'web'
-      },
-      {
-        name: '火影忍者 - 慕留人',
-        url: 'https://www.naruto.com.tw/BORUTOmovie/index.html',
-        img: 'img/work_8.jpg',
         tool: 'UI / UX , HTML / CSS , jQuery',
         type: 'web'
       },
@@ -264,7 +257,7 @@ btnSave.addEventListener('click', (e) => {
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
   // --- 跳出使用chrome提示 --- //
   $('.tip').append(`<span class="tip-word">請在chrome使用此功能(⁎⁍̴̛ᴗ⁍̴̛⁎)</span>`)
-  
+
   $('#btn-save').mouseover(function () {
     $('.tip-word').addClass('d-block')
   });
