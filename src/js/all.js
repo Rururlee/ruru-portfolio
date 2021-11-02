@@ -9,6 +9,13 @@ new Vue({
     copyright: `© RURU'S ` + new Date().getFullYear(),
     workList: [
       {
+        name: '《星之夢幻島》遊戲官網',
+        url: 'https://nl.futuregame.com.tw/',
+        img: 'img/work_1102.jpg',
+        tool: 'Vue-cli , Tailwind Css , API串接',
+        type: 'web'
+      },
+      {
         name: '《星之夢幻島》事前登錄頁面',
         url: 'https://nl.futuregame.com.tw/pre-order',
         img: 'img/work_1021.jpg',
