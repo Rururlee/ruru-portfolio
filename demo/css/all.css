@@ -1590,6 +1590,7 @@
   position: absolute;
   z-index: 20;
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   top: 3.5vw;
@@ -1621,10 +1622,9 @@
 
 .section_6 .content .swipper_content .bg_paper .npc {
   position: absolute;
-  right: 0px;
-  top: 3vw;
-  right: -580px;
-  width: 833px;
+  left: 34.8vw;
+  width: 43.4vw;
+  bottom: 2.8vw;
   max-width: initial;
 }
 
@@ -1928,9 +1928,9 @@ button:focus {
   width: 100%;
   background: url(../images/p6logo12.png), #000;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 34vw;
   background-position: center;
-  height: 120px;
+  height: 5vw;
 }
 
 @media (max-width: 768px) {
