@@ -78,7 +78,11 @@
                 <div class="content">
                     <img src="./images/p2tit.png" alt="" class="title">
                     <div class="video_wrapper">
-                        
+                        <iframe id="firstPageVideo" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/rHinOk2dqhw?enablejsapi=1" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="bg"></div>
@@ -363,4 +367,44 @@
 <script src="./js/all.js"></script>
 <script src="./js/tsparticles.js"></script>
 <script src="./js/html2canvas.min.js"></script>
+<script>
+    const iframeContent = `<iframe id="firstPageVideo" width="100%" height="100%"
+            src="https://www.youtube.com/embed/rHinOk2dqhw?autoplay=1&loop=1&autopause=0&mute=1" title="YouTube video player"
+            frameborder="0"
+            allow="autoplay"
+            allowfullscreen></iframe>`;
+
+    function play() {
+        console.log('play')
+        document.querySelector('.video_wrapper').innerHTML = iframeContent;
+        // 開啟影片
+        let iframe = document.getElementById('firstPageVideo');
+        iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    }
+
+    function pause() {
+        console.log('pause')
+        document.querySelector('.video_wrapper').innerHTML = '';
+    }
+
+
+
+    let fullPageInstance = new fullpage('#fullpage', {
+        anchors: ['headPage', 'firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
+        afterLoad: function (origin, destination, direction) {
+            if (destination.anchor === 'firstPage') {
+                play()
+                // let iframe = document.getElementById('firstPageVideo');
+                // // 開啟影片
+                // iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            }
+        },
+        onLeave: function (origin, destination, direction) {
+            if (origin.anchor === 'firstPage') {
+                pause();
+            }
+        },
+    });
+</script>
+
 </html>
