@@ -14,7 +14,7 @@ new Vue({
         img: 'img/work_1102.jpg',
         tool: 'Vue-cli , Tailwind Css , API串接',
         type: 'web'
-      },
+      }
       {
         name: '《星之夢幻島》事前登錄頁面',
         url: 'https://nl.futuregame.com.tw/pre-order',
