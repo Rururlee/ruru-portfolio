@@ -4,7 +4,7 @@ new Vue({
   el: '.content-wrapper',
   data: {
     title: `RURU'S`,
-    skill: { a: '| FRONT-END DEV', b: '| UI DESIGN', c: '| GRAPHIC' },
+    skill: { a: 'FRONT-END DEV' },
     description: '嗨！我是Ruru<br>目前專職於前端網頁開發，熱愛專研前端技術',
     copyright: `© RURU'S ` + new Date().getFullYear(),
     workList: [
