@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <meta name="keywords" content="Gran Saga,GranSaga,格蘭騎士團,手機遊戲,手遊,遊戲,註冊,下載,MMO,RPG,MMORPG,3D,角色扮演,UE4,卡牌,大世界,3A,3A Lite,跨平台,跨裝置,格蘭武器,格蘭,グランサガ,NPIXEL,電腦遊戲,PCGAME,PC GAME,少女時代,少時,少女時代隊長,韓國女團,太妍,天野喜孝,下村陽子,梶裕貴,沢城みゆき,澤城美雪,鬼頭明里,悠木碧,安元洋貴,諏訪部順一">
+  <meta name="description" content="《Gran Saga：格蘭騎士團》韓國少女時代「太妍」傾情代言！遊戲是使用UE4引擎所打造的次世代3A日韓大作，描述騎士團為了解除巨龍施加在王國的詛咒，而踏上冒險旅程的故事，遊戲中玩家可收集超過千種的「格蘭武器」及「神器」，還可隨著關卡搭配提供更多玩法上的變化，帶給玩家前所未有的跨時代3A Lite冒險風格！">
+  <title>《Gran Saga：格蘭騎士團》首款3A Lite大世界冒險RPG！韓國少女時代「太妍」代言！ </title>
+  <link rel="stylesheet" href="css/main.css"> 
+  <link rel="stylesheet" href="css/main800.css">
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/video-js.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="warpper">
+<a id="click-tag" href="https://www.gamer.com.tw/adcounter.php?id=235196" target="_blank"></a> 
+ <div class="sound"><i class="material-icons"><img src="images/close.png"></i></div> 
+ <div class="age"><img src="images/15+.png"></div>
+  <div class="content">    
+    <div class="pic">
+      <img src="images/pic.png" alt="">
+    </div>
+    <div class="video_box">
+      <div class="video_wrap">
+        <video data-v-a379813c="" poster="" loop="loop" playsinline="" src="https://dm1-dl.oss-cn-hongkong.aliyuncs.com/public/video/20221128/ba_v1.mp4" autoplay="autoplay" preload="auto" id="video"  class="bgvideo video bg-video"  ></video>
+      </div>
+      <img class="cover" src="images/part1_video_bg.png">
+    
+    </div>
+ 
+    <div class="logo"><img src="images/logo.png"></div>
+    <div class="text"><img src="images/text.png"></div>
+    <div class="left_ico"><img src="images/left_ico.png"></div>
+    
+    <div class="login_btn sure_btn" id="sure_btn">
+      <a href="https://www.gamer.com.tw/adcounter.php?id=235196"><img src="images/part1_btn.png"></a>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- <script src="js/devicerem.js"></script> -->
+<script  src="js/video.js"></script>
+<script  src="js/videojs-http-streaming.js"></script>
+
+<script>
+  var off=true;
+    $("video").prop('muted', true);
+  $('body').on("click", '.sound', function () {
+    if (off) {
+    $('.sound').html('<i class="material-icons"><img src="images/open.png"></i>');
+  $("video").prop('muted', false);
+    $('#video')[0].play();
+   
+  } else {
+    $('.sound').html('<i class="material-icons"><img src="images/close.png"></i>');
+    $("video").prop('muted', true);
+   // $('#video')[0].pause();
+  }
+  off=!off;
+  });
+    </script>
+
+<script>
+
+var html = document.getElementsByTagName('html')[0];
+var rate = 1920/1080;
+function resize () {
+  var vh = document.documentElement.clientHeight;
+  var vw = vh * rate;
+  html.style.fontSize = (vw / 1920 * 100 ) + 'px'; 
+
+}
+resize();
+
+window.addEventListener('resize', resize);
+
+
+</script>
+
+</body>
+</html>

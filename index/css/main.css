@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/*預設歸零***********************/
+img,ul,ol,p,li,h1,h2,h3,h4,h5,h6,th,b,input,select {font-family:"Helvetica Neue",Arial,"Heiti TC","LiHei Pro","微軟正黑體","Microsoft Jhenghei",sans-serif; margin: 0px; padding: 0px; list-style-type: none; font-weight: normal;font-size: 100%;border:0px;}
+a {text-decoration: none;}
+
+/*反白**************************/
+body::selection, a::selection, iframe::selection, div::selection, span::selection, img::selection, ul::selection, ol::selection, p::selection, li::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, input::selection {
+color:#FFF; background-color:#FC0; font-family:}
+div, li{font-family:"Helvetica Neue",Arial,"Heiti TC","LiHei Pro","微軟正黑體","Microsoft Jhenghei",sans-serif; }
+img{ width:100%}
+body {margin:0px; padding:0px; font-size: 14px; 
+
+
+    background: rgba(235,233,249,1);
+background: -moz-linear-gradient(top, rgba(235,233,249,1) 0%, rgba(193,191,234,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(235,233,249,1)), color-stop(100%, rgba(193,191,234,1)));
+background: -webkit-linear-gradient(top, rgba(235,233,249,1) 0%, rgba(193,191,234,1) 100%);
+background: -o-linear-gradient(top, rgba(235,233,249,1) 0%, rgba(193,191,234,1) 100%);
+background: -ms-linear-gradient(top, rgba(235,233,249,1) 0%, rgba(193,191,234,1) 100%);
+background: linear-gradient(to bottom, rgba(235,233,249,1) 0%, rgba(193,191,234,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', endColorstr='#c1bfea', GradientType=0 );
+
+
+}
+html, body { font-family: 'Nunito Sans', sans-serif; color: #333; font-size: 16px; background-color:#000;}
+html { box-sizing: border-box;}
+ul { margin:0; padding:0; text-decoration:none; list-style:none;}
+li { padding:0;	margin:0;}
+p { line-height: 1.6; max-width: 50em;}
+button, input {  font-family:inherit;  font-size: 1rem;  outline: none;}
+*, *:before, *:after {
+  box-sizing: inherit; }
+ body, html { height: 100%;width: 100%;}
+/**符合i phoneX手機邊界**/
+.container {
+    padding-top: constant(safe-area-inset-top);
+    padding-right: constant(safe-area-inset-right);
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-left: constant(safe-area-inset-left);
+}
+
+.warpper{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    background-image: url(../images/bg.jpg); background-size:cover;
+    background-position: center center;
+}
+
+.warpper .content {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width:10rem;
+    max-width: 50vw;
+    height: 100%;
+    margin:0 auto;
+}
+.logo{
+    width:6.61rem; position: absolute;
+   top:-0.3rem;  left: -3.1rem;
+   font-size: 0;
+}
+
+.logo img{
+    width:90%;
+    height: auto;
+}
+
+.warpper .content .video_box {
+    width: 8.66rem;
+    height: 5.18rem;
+    z-index: 9;
+    position: absolute;
+    top: 45%;
+    left: -4.2rem;
+    transform: translateY(-13%);
+}
+.warpper .content .video_box .cover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8.66rem;
+    height: 5.18rem;
+    pointer-events: none;
+}
+.video_wrap{
+  position: absolute;
+  left: 0.24rem;
+  top: 0.24rem;
+}
+.left_ico{
+    position: absolute;
+    left: -4.2rem;
+    bottom: 0.4rem;
+    width: 8.64rem;
+    height:0.99rem;
+    pointer-events: none;
+}
+.left_ico img{ width: 8.64rem;
+    height:0.99rem;}
+
+.text{
+    position: absolute;
+    right: -2.8rem;
+    top: 57%;
+    width: 7.56rem;
+    height:2.72rem;
+    pointer-events: none;
+}
+.text img{   width: 7.56rem;
+    height:2.72rem;}
+
+.bg-video {
+    width: 8.2rem;
+    height:4.75rem;
+    display: block;
+    object-fit: fill;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.pic {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(31%);
+    z-index: 0;
+    font-size: 0px;
+}
+.pic img {
+    height: 92vh;
+    width: auto;
+}
+
+#img-area {
+    display: block;
+    position: absolute;
+    width: 5.1rem;
+    height: 2.64rem;
+    top:2.03rem;
+    right:-1.36rem;
+    overflow: hidden;
+    z-index: 10;
+}
+.sound {
+    display: block;
+    position: absolute;
+    width:1rem;
+    height: 2rem;
+    left: 50%;
+    top: 45%;
+    cursor: pointer;
+    z-index: 9999;
+    color: #fff;
+    transform: translate(-1.5rem, -0.5rem);
+}
+.age{position: absolute;bottom:0;left:0; font-size: 0;}
+.material-icons img{width:0.59rem;height:0.63rem;}
+#click-tag { position: absolute; display: block; height: 100%; width: 100%; z-index: 7;}
+  
+/* #myVideo {position: absolute; right: 25.8%; width: 18.5%; z-index:999;} */
+
+
+
+    
+.login_btn {
+    width:4.83rem;height:1.28rem;
+    position:absolute;
+    bottom: 0.2rem;
+    right:-1rem;
+    -webkit-animation: magnify .6s linear infinite alternate;
+    -moz-animation: magnify .6s linear infinite alternate;
+    animation: magnify .6s linear infinite alternate;
+}
+.login_btn img{width:4.83rem;height:1.28rem;}
+/*立即预约按钮上下起伏*/
+@-webkit-keyframes magnify {
+	0% {
+	-webkit-transform: scale(0.96);
+}
+100% {
+	-webkit-transform: scale(1);
+}
+}
+@-moz-keyframes magnify {
+	0% {
+	-moz-transform: scale(1);
+}
+100% {
+	-moz-transform: scale(0.96);
+}
+}
+@keyframes magnify {
+	0% {
+	transform: scale(1);
+}
+100% {
+	transform: scale(0.96);
+}
+}
+
+
+    
+    /* body {
+    margin: 0;
+    background-color: #000;
+    background-image: url(https://p2.bahamut.com.tw/PRJ/cover/20190101/cover.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    } */
+    
+ 
+  
