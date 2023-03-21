@@ -9,24 +9,31 @@ new Vue({
     copyright: `© RURU'S ` + new Date().getFullYear(),
     workList: [
       {
+        name: 'HalohaloNEWS',
+        url: 'https://halohalonews.com/',
+        img: 'img/work_1104.jpg',
+        tool: 'Nuxt , Tailwind Css , API串接',
+        type: 'web'
+      },
+      {
+        name: '未來全球官網',
+        url: 'https://www.futuregame.com.tw/',
+        img: 'img/work_1103.jpg',
+        tool: 'Vue-cli , Tailwind Css , API串接',
+        type: 'web'
+      },
+      {
         name: '《星之夢幻島》遊戲官網',
         url: 'https://nl.futuregame.com.tw/',
         img: 'img/work_1102.jpg',
         tool: 'Vue-cli , Tailwind Css , API串接',
         type: 'web'
-      }
+      },
       {
         name: '《星之夢幻島》事前登錄頁面',
         url: 'https://nl.futuregame.com.tw/pre-order',
         img: 'img/work_1021.jpg',
         tool: 'Vue-cli , Tailwind Css , API串接',
-        type: 'web'
-      },
-      {
-        name: 'WAKOOL數位生活館',
-        url: 'https://ctbc.wakool.net/',
-        img: 'img/work_0715.jpg',
-        tool: 'HTML / SCSS , jQuery , API串接',
         type: 'web'
       },
       {
@@ -37,28 +44,7 @@ new Vue({
         type: 'web'
       },
       {
-        name: 'iplay福利中心',
-        url: 'https://iplay.wakool.net/playgame.php?gameid=20000993',
-        img: 'img/work_1.jpg',
-        tool: 'HTML / SCSS , jQuery , API串接',
-        type: 'web'
-      },
-      {
-        name: '發財星',
-        url: 'https://iplay.wakool.net/playgame.php?gameid=20000995',
-        img: 'img/work_2.jpg',
-        tool: 'HTML / SCSS , jQuery , API串接',
-        type: 'web'
-      },
-      {
-        name: '百寶屋',
-        url: 'https://iplay.wakool.net/playgame.php?gameid=20000998',
-        img: 'img/work_3.jpg',
-        tool: 'HTML / SCSS , jQuery , API串接',
-        type: 'web'
-      },
-      {
-        name: 'S5遊戲館(Xtemplate開發)',
+        name: 'S5遊戲館',
         url: 'https://game.setn.com/',
         img: 'img/work_4.jpg',
         tool: 'HTML / SCSS , jQuery , 日常維護',
@@ -82,20 +68,6 @@ new Vue({
         name: 'Ｑちゃん包子饅頭店',
         url: 'https://qchanpaoz.com/',
         img: 'img/work_10.webp',
-        tool: 'UI / UX , HTML / CSS , jQuery',
-        type: 'web'
-      },
-      {
-        name: '傷物語電影版',
-        url: 'https://www.mightymedia.com.tw/kizumonogatari/index.html',
-        img: 'img/work_7.jpg',
-        tool: 'UI / UX , HTML / CSS , jQuery',
-        type: 'web'
-      },
-      {
-        name: 'Free!劇場版 - High‧Speed!',
-        url: 'https://www.mightymedia.com.tw/Free/Movie/',
-        img: 'img/work_9.jpg',
         tool: 'UI / UX , HTML / CSS , jQuery',
         type: 'web'
       },
