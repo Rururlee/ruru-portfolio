@@ -8107,11 +8107,11 @@ a.text-purple:hover, a.text-purple:focus {
     font-size: 0.8rem; }
 
 .show__work {
-  width: 70%;
+  width: 75%;
   height: 100%;
   position: fixed;
   top: 0;
-  left: 30%;
+  left: 25%;
   right: 0;
   bottom: 0;
   margin: auto;
