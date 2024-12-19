@@ -7,76 +7,111 @@ new Vue({
     skill: { a: 'Front-end Web Developer' },
     description: '嗨！我是Ruru<br>目前專職於前端網頁開發，熱愛專研前端技術',
     copyright: `© RURU'S ` + new Date().getFullYear(),
-    workList: [
+    workList: [,
       {
         name: 'HalohaloNEWS',
-        url: 'https://halohalonews.com/',
+        url: 'https://halohalonews.netlify.app',
         img: 'img/work_1104.jpg',
         tool: 'Nuxt , Tailwind Css , API串接',
         type: 'web'
       },
       {
-        name: '未來全球官網',
+        name: 'FUTURELA - Work project demo',
+        url: 'http://175.97.177.18:8892/',
+        img: 'img/work_0531.jpg',
+        tool: 'Vue3+Vite , Tailwind Css , Json Server',
+        type: 'web'
+      },
+      {
+        name: 'Future game official website',
         url: 'https://www.futuregame.com.tw/',
         img: 'img/work_1103.jpg',
         tool: 'Vue-cli , Tailwind Css , API串接',
         type: 'web'
       },
       {
-        name: '《星之夢幻島》遊戲官網',
+        name: '《星之夢幻島》official website',
         url: 'https://nl.futuregame.com.tw/',
         img: 'img/work_1102.jpg',
         tool: 'Vue-cli , Tailwind Css , API串接',
         type: 'web'
       },
       {
-        name: '《星之夢幻島》事前登錄頁面',
+        name: '《星之夢幻島》Pre-registration page',
         url: 'https://nl.futuregame.com.tw/pre-order',
         img: 'img/work_1021.jpg',
         tool: 'Vue-cli , Tailwind Css , API串接',
         type: 'web'
       },
       {
-        name: 'S5遊戲館 - 皇者天下活動',
-        url: 'https://rurulee.com/works/200610/index.html',
-        img: 'img/work_0609.jpg',
-        tool: 'HTML / SCSS , jQuery',
+        name: '《閃之軌跡》Cosplay event',
+        url: 'https://mojoy.io/event/ltn/',
+        img: 'img/work_221210.jpg',
+        tool: 'HTML , CSS , 串接 Google Sheet',
         type: 'web'
       },
       {
-        name: 'S5遊戲館',
-        url: 'https://game.setn.com/',
-        img: 'img/work_4.jpg',
-        tool: 'HTML / SCSS , jQuery , 日常維護',
+        name: 'KIWIPIN',
+        url: 'https://stalwart-semolina-6e1192.netlify.app/',
+        img: 'img/work_0532.jpg',
+        tool: 'HTML , CSS , Javascript',
         type: 'web'
       },
       {
-        name: 'Y5遊戲 - 龍之塔防活動頁',
-        url: 'https://yahoo.wakool.net/hilife?tdsourcetag=s_pcqq_aiomsg',
-        img: 'img/work_5.jpg',
-        tool: 'HTML / SCSS , jQuery',
+        name: '《古劍奇譚網路版》Event page',
+        url: 'https://idyllic-kringle-fbc658.netlify.app/',
+        img: 'img/work_230603.jpg',
+        tool: 'HTML , CSS , Javascript',
         type: 'web'
       },
       {
-        name: 'H5千元禮包大放送',
-        url: 'https://iplay.wakool.net/event/201909/',
-        img: 'img/work_0909.webp',
-        tool: 'HTML / SCSS , jQuery',
+        name: '《未來戰》Event page',
+        url: 'https://elaborate-shortbread-5e482c.netlify.app/',
+        img: 'img/work_230602.jpg',
+        tool: 'HTML , CSS , Javascript',
         type: 'web'
       },
+      // {
+      //   name: 'S5遊戲館 - 皇者天下活動',
+      //   url: 'https://rurulee.com/works/200610/index.html',
+      //   img: 'img/work_0609.jpg',
+      //   tool: 'HTML / SCSS , jQuery',
+      //   type: 'web'
+      // },
+      // {
+      //   name: 'S5遊戲館',
+      //   url: 'https://game.setn.com/',
+      //   img: 'img/work_4.jpg',
+      //   tool: 'HTML / SCSS , jQuery , 日常維護',
+      //   type: 'web'
+      // },
+      // {
+      //   name: 'Y5遊戲 - 龍之塔防活動頁',
+      //   url: 'https://yahoo.wakool.net/hilife?tdsourcetag=s_pcqq_aiomsg',
+      //   img: 'img/work_5.jpg',
+      //   tool: 'HTML / SCSS , jQuery',
+      //   type: 'web'
+      // },
+      // {
+      //   name: 'H5千元禮包大放送',
+      //   url: 'https://iplay.wakool.net/event/201909/',
+      //   img: 'img/work_0909.webp',
+      //   tool: 'HTML / SCSS , jQuery',
+      //   type: 'web'
+      // },
       {
-        name: 'Ｑちゃん包子饅頭店',
+        name: 'Ｑちゃん包子饅頭店 official website',
         url: 'https://qchanpaoz.com/',
         img: 'img/work_10.webp',
         tool: 'UI / UX , HTML / CSS , jQuery',
         type: 'web'
       },
-      {
-        id: 'design_1',
-        name: '台灣Star - LOGO',
-        img: 'img/design_1.jpg',
-        type: 'graphic'
-      },
+      // {
+      //   id: 'design_1',
+      //   name: '台灣Star - LOGO',
+      //   img: 'img/design_1.jpg',
+      //   type: 'graphic'
+      // },
       {
         id: 'design_2',
         name: '招財犬柯基',
@@ -117,6 +152,11 @@ new Vue({
   },
   computed: {
     showWebItem() {
+      return this.workList.filter((work) => {
+        return work.type === 'web'
+      })
+    },
+    showEWebItem() {
       return this.workList.filter((work) => {
         return work.type === 'web'
       })

@@ -3,7 +3,7 @@
   margin: auto;
   .txt {
     color: #888;
-    font-size:1.1rem
+    font-size: 1.1rem;
   }
   .box {
     width: 85%;
@@ -11,15 +11,14 @@
   .top {
     display: flex;
     justify-content: space-between;
-    padding-top:10rem;
-    margin:0 auto 2rem;
+    padding-top: 10rem;
+    margin: 0 auto 2rem;
     align-items: center;
     border-bottom: 1px solid #c5c5c5;
     padding: 2rem 0;
     & .right {
       & img {
-        width: 8rem;
-        border-radius: 50%;
+        width: 100%;
       }
     }
   }
@@ -31,14 +30,14 @@
     border-bottom: 1px solid #c5c5c5;
     & .left {
       width: 30%;
-      & .link::after {
-        content: '';
-        position: absolute;
-        height: 1px;
-        width: 100px;
-        margin: 5rem 0;
-        background-color: #c5c5c5;
-      }
+      // & .link::after {
+      //   content: '';
+      //   position: absolute;
+      //   height: 1px;
+      //   width: 100px;
+      //   margin: 5rem 0;
+      //   background-color: #c5c5c5;
+      // }
       & h2 {
         letter-spacing: 3px;
       }
@@ -81,7 +80,7 @@
       }
     }
   }
-  
+
   .works {
     // margin-top: 30rem;
     margin-bottom: 10rem;
@@ -107,10 +106,10 @@
           font-weight: bold;
         }
       }
-      & .demo{
+      & .demo {
         position: absolute;
-        right:0;
-        top:8px;
+        right: 0;
+        top: 8px;
       }
     }
   }

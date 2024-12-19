@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>RURU'S</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta property="og:title" content="RURU'S" />
+  <meta property="og:url" content="rurulee.com" />
+  <meta property="og:image" content="https://rurulee.com/img/og.jpg" />
+  <meta property="og:image:width" content="520" />
+  <meta property="og:image:height" content="260" />
+  <meta property="og:description" content="Ruru's portfolio , Front-End Web Development , 前端網頁開發" />
+  <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/all.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169405867-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+
+    gtag('js', new Date())
+
+    gtag('config', 'UA-169405867-1')
+  </script>
+</head>
+
+<body>
+  <div class="loading">
+    <img src="img/loading.gif" alt="" />
+  </div>
+  <div class="content-wrapper">
+    <!--平面設計展示 開始-->
+    <div class="show__work">
+      <div class="show__work--close"></div>
+      <div class="show__work--wrap">
+        <div class="lds-ellipsis">
+          <!--形成像是循環的loading-->
+          <div></div>
+          <!--做縮放-->
+          <div></div>
+          <!--做往右移-->
+          <div></div>
+          <!--做往右移-->
+          <div></div>
+          <!--做縮放-->
+        </div>
+        <img class="show__work--img" src="" alt="" />
+      </div>
+    </div>
+    <!--平面設計展示 結束-->
+    <!--手機 menu 開始-->
+    <nav class="nav">
+      <a class="nav-link" href="javascript:;">WORKS</a>
+      <a class="nav-link" href="javascript:;">ABOUT</a>
+      <a class="nav-link" href="javascript:;">CONTACT</a>
+    </nav>
+    <!--手機 menu 結束-->
+    <!-- 左側 -->
+    <header class="header">
+      <div class="header-item">
+        <h1>{{ title }}</h1>
+        <h5>{{ skill.a }}</h5>
+        <!--        <h6 v-html="description"></h6>-->
+        <!--        <div class="social__link">-->
+        <!--          <a href="https://medium.com/@leeruru7" target="_blank"><img src="img/social-medium.svg" alt="" /></a>-->
+        <!--          <a href="https://github.com/Rururlee" target="_blank"><img src="img/social-github.svg" alt="" /></a>-->
+        <!--          &lt;!&ndash; <a href="#"><img src="img/social-linkedin.svg" alt="" /></a> &ndash;&gt;-->
+        <!--        </div>-->
+      </div>
+      <div class="tip">
+
+      </div>
+      <button id="btn-save">Join the main screen</button>
+      <div class="content-btn">
+        <span class="line"></span>
+        <span>Contact me</span>
+      </div>
+    </header>
+    <main class="main">
+      <!--work 開始-->
+
+      <section class="work">
+        <div class="work__box">
+
+          <span class="work__title">Works</span>
+          <div class="work__title--secondary">Game-related</div>
+          <!-- <div class="work__title--secondary">Front-end web development</div> -->
+          <div class="ru-row">
+            <!--網頁-->
+            <div v-for="web of showWebItem" class="ru-col-4">
+              <div class="box box-1">
+                <a :href="web.url" target="_blank" class="work__img"><img :src="web.img" alt="" /></a>
+                <div class="work__line"></div>
+                <div class="work__item">{{ web.name }}</div>
+                <div class="work__skill">{{ web.tool }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="work__title--secondary">E-commerce-related</div>
+          <div class="ru-row">
+            <!--e 網頁-->
+            <div v-for="web of showEWebItem" class="ru-col-4">
+              <div class="box box-1">
+                <a :href="web.url" target="_blank" class="work__img"><img :src="web.img" alt="" /></a>
+                <div class="work__line"></div>
+                <div class="work__item">{{ web.name }}</div>
+                <div class="work__skill">{{ web.tool }}</div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="work__title--secondary">Banner / 平面設計</div>
+          <div class="ru-row">
+            <div v-for="graphic of showGraphicItem" class="ru-col-4">
+              <div class="box box-1">
+                <div class="work__img work__img--show" :id="graphic.id"><img :src="graphic.img" alt="" />
+                </div>
+                <div class="work__line"></div>
+                <div class="work__item">{{ graphic.name }}</div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+      <!--work 結束-->
+      <!--about 開始-->
+      <section class="about">
+        <div class="about__box">
+          <span class="about__title">About</span>
+          <div class="about__me">
+            <div class="mt-3">I have a strong specialization in <span class="point">front-end development</span> and possess the ability to excel both independently and within a team.<br> I am eager to leverage my extensive experience and skills to make a meaningful impact in diverse organizations
+            </div>
+          </div>
+          <span class="about__title">Skills</span>
+          <div class="about__skill">
+            <div class="about__skill--item">
+              <h6 class="mb-1">Front end</h6>
+              <span>HTML</span>
+              <span>Tailwind Css</span>
+              <span>Javascript</span>
+              <span>Vue</span>
+              <span>Nuxt</span>
+              <span>jQuery</span>
+              <span>AJAX</span>
+              <span>Webpack</span>
+              <span>git</span>
+              <span>NPM</span>
+            </div>
+            <div class="about__skill--item">
+              <h6 class="mb-1">Other</h6>
+              <span>Photoshop</span>
+              <span>JLPT N3</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--about 結束-->
+      <!--contact 開始-->
+      <section class="contact">
+        <div class="contact__box">
+          <span class="contact__title">Contact</span>
+          <div class="contact__me">
+            <div>
+              <div>Ruru Lee</div>
+              <div>leeruru7@gmail.com</div>
+            </div>
+            <!--表單 開始-->
+            <div class="mail__form">
+              <form id="myform" method="post">
+                <input type="text" name="from_name" placeholder="Name*" />
+                <input type="text" name="reply_to" placeholder="Email*" />
+                <input type="text" name="message_title" placeholder="Title" />
+                <textarea name="message_html" rows="4" cols="50" placeholder="Your message*"></textarea>
+                <div class="mail__form--send"><span class="notice"></span>
+                  <button id="send-btn">Send</button>
+                </div>
+              </form>
+            </div>
+            <!--表單 結束-->
+          </div>
+          <div class="ruru"><img src="img/ruru.png" alt="" /></div>
+        </div>
+      </section>
+      <!--contact 結束-->
+      <!--footer 開始-->
+      <footer class="footer">{{ copyright }}</footer>
+      <!--footer 結束-->
+    </main>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+  <script type="text/javascript" src="js/all.js"></script>
+  <script>
+      // --- emailjs start --- //
+      ; (function () {
+        emailjs.init('user_GHEjPRHq2yygUPpiehcI9')
+      })()
+
+    var myform = $('form#myform')
+
+    myform.submit(function (event) {
+      event.preventDefault()
+      if ($('input[name=from_name]').val() == '' || $('input[name=reply_to]').val() == '' || $('textarea[name=message_html]').val() == '') {
+        $('.notice').text('*Please fill in the required fields.')
+        return false
+      }
+      // Change to your service ID, or keep using the default service
+      var service_id = 'ruru'
+      var template_id = 'template_IKtJvu9Y'
+
+      myform.find('button#send-btn').text('Sending...')
+      emailjs.sendForm(service_id, template_id, myform[0]).then(
+        function () {
+          alert('Sent.')
+          myform.find('button#send-btn').text('Send')
+          myform.find('input').val('')
+          myform.find('textarea').val('')
+          myform.find('.notice').text('')
+        },
+        function (err) {
+          alert('Send email failed!\r\n Response:\n ' + JSON.stringify(err))
+          myform.find('button#send-btn').text('Send')
+        }
+      )
+      return false
+    })
+
+    // --- emailjs end --- //
+
+
+  </script>
+</body>
+
+</html>

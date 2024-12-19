@@ -15,11 +15,12 @@
     padding-right: 1rem;
   }
   &__me {
+    width: 40rem;
+    max-width: 100%;
     margin: 2rem 0 3rem;
     font-size: 1rem;
     color: $ruru-word-d;
     letter-spacing: 0.5px;
-    text-align: justify;
   }
   &__skill {
     display: flex;
