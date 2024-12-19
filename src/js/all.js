@@ -7,7 +7,14 @@ new Vue({
     skill: { a: 'Front-end Web Developer' },
     description: '嗨！我是Ruru<br>目前專職於前端網頁開發，熱愛專研前端技術',
     copyright: `© RURU'S ` + new Date().getFullYear(),
-    workList: [,
+    workList: [
+      {
+        name: 'foodomo 外送外帶行動美食平台',
+        url: 'https://www.foodomo.com/',
+        img: 'img/work_240603.jpg',
+        tool: 'Vue3+Vite, API串接',
+        type: 'web'
+      },
       {
         name: 'HalohaloNEWS',
         url: 'https://halohalonews.netlify.app',
